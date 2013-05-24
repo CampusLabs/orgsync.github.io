@@ -3833,8 +3833,9 @@ ul{
     margin-top: 50px;
 }
 ul.three-up.block-grid li{
-    width: 28%;
-    margin-right: 5%;
+  width: 28%;
+  margin-right: 5%;
+  list-style-type: none;
 }
 ul.three-up img{
     width: 100%;
@@ -3843,17 +3844,17 @@ ul.three-up li a p{
     margin-bottom: 0;
 }
 ul.three-up li a{
-    text-decoration: none;
-    border: 1px solid transparent;
-    display: block;
-    padding: 10px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    color: #575757;
+  text-decoration: none;
+  border: 1px solid transparent;
+  display: block;
+  padding: 10px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: #575757;
 }
 ul.three-up li a:hover{
-    background: #f4f4f4;
-    border: 1px solid #eee;
-    border-radius: 5px;
-    box-shadow: inset 0px 0px 1px #fff;
+  background: #f4f4f4;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 1px #fff;
 }
