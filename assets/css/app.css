@@ -3819,6 +3819,9 @@ table {
     max-width: 800px; }
 
 /* Tyler's Code */
+body, h1, p, h2, h3{
+  font-family: 'proxima nova';
+}
 .title{
     font-weight: bold;
     text-align: center;
@@ -3829,21 +3832,21 @@ table {
     line-height: 18px;
     text-align: center;
 }
-ul{
+ul.three-up{
     margin-top: 50px;
 }
-ul.three-up.block-grid li{
+.row ul.three-up li{
   width: 28%;
   margin-right: 5%;
   list-style-type: none;
 }
-ul.three-up img{
+.row ul.three-up img{
     width: 100%;
 }
-ul.three-up li a p{
+.row ul.three-up li a p{
     margin-bottom: 0;
 }
-ul.three-up li a{
+.row ul.three-up li a{
   text-decoration: none;
   border: 1px solid transparent;
   display: block;
@@ -3852,7 +3855,7 @@ ul.three-up li a{
   -moz-box-sizing: border-box;
   color: #575757;
 }
-ul.three-up li a:hover{
+.row ul.three-up li a:hover{
   background: #f4f4f4;
   border: 1px solid #eee;
   border-radius: 5px;
