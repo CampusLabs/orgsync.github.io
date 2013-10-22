@@ -9,5 +9,6 @@
   .projects li{
     width: 100%;
     text-align: left;
+    min-height: inherit;
   }
 }
