@@ -29,22 +29,26 @@
         <li><a href="http://www.orgsync.com/company">About OrgSync</a></li>
       </ul>
     </div>
-    {{ page.content }}
-    <div class="row">
+    <div class="js-main-content main-content row">
       <div class="large-12 columns">
-        <ul class="large-block-grid-3 small-block-grid-1 projects">
-          {% for post in site.posts %}
-            <li>
-              <a href="{{ post.github_url }}">
-                <img src="{{ post.image }}">
-                <span class="title">{{ post.title }}</span>
-                <p class="note">
-                  {{ post.description }}
-                </p>
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
+        {{ page.content }}
+        <div class="row">
+          <div class="large-12 columns">
+            <ul class="large-block-grid-3 small-block-grid-1 projects">
+              {% for post in site.posts %}
+                <li>
+                  <a href="{{ post.github_url }}">
+                    <img src="{{ post.image }}">
+                    <span class="title">{{ post.title }}</span>
+                    <p class="note">
+                      {{ post.description }}
+                    </p>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <script>
