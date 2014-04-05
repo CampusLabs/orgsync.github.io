@@ -6,6 +6,7 @@ description: ActiveInteraction is a gem for managing application specific busine
 comments: true
 post_name: confidently-manage-business-logic-activeinteraction
 tags: patterns rails
+layout: single
 ---
 
 _Co-authored by Taylor Fausak_
