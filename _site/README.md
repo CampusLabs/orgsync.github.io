@@ -12,9 +12,9 @@ Basically a standard jekyll setup.
 
 ### To Deploy:
 
-Using standard github pages so just push to gh-pages branch
+Push to master
 
-### To Write:
+### To Write A New Blog Post:
 
 - Create a new file in _posts named with the convention: YYYY-MM-DD-title-dasherized
 
@@ -38,3 +38,8 @@ You can tag your post anything you want. The only ones that will get colored are
 [patterns, ruby, rails, security, design, hack, iOS, testing, hack]. If there is another tag we are going to be repeating we can
 add it to the css. Otherwise, your tags will still be listed, just not colored to standout.
 
+### Team Members :
+- Edit team.yml
+
+### Open Source Projects:
+- Edit open_source.yml

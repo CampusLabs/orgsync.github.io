@@ -1,3 +1,13 @@
+- name: Active Interaction
+  image: http://cl.ly/image/3a3w442k2X2b/construction.png
+  github_url: https://github.com/orgsync/active_interaction
+  description: Take back control. Slim down models and wrangle monstrous controller methods.
+
+- name: Servo
+  image: http://cl.ly/image/3a3w442k2X2b/construction.png
+  github_url: https://github.com/orgsync/servo
+  description: An image resizing service to sit behind a dynamic cache (like cloudfront)
+
 - name: Jquery - Aria
   github_url: https://github.com/orgsync/jquery-aria
   image: http://devblog.orgsync.com/wp-content/themes/cp-minimal/images/open-source/jquery-aria.png
@@ -27,13 +37,3 @@
   github_url: https://github.com/orgsync/savvy
   image: http://devblog.orgsync.com/wp-content/themes/cp-minimal/images/open-source/old-spice.png
   description: The button your save button could be like.
-
-- name: Active Interaction
-  image: http://cl.ly/image/3a3w442k2X2b/construction.png
-  github_url: https://github.com/orgsync/active_interaction
-  description: Take back control. Slim down models and wrangle monstrous controller methods.
-
-- name: Servo
-  image: http://cl.ly/image/3a3w442k2X2b/construction.png
-  github_url: https://github.com/orgsync/servo
-  description: An image resizing service to sit behind a dynamic cache (like cloudfront)
