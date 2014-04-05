@@ -16,7 +16,7 @@
 - name: Olay
   github_url: https://github.com/orgsync/olay
   image: http://devblog.orgsync.com/wp-content/themes/cp-minimal/images/open-source/olay-icon.png
-  description: Awesome, accessible overlays, pop-ups and modals, now with scrolling!
+  description: "Awesome, accessible overlays, pop-ups and modals, now with scrolling!"
 
 - name: Rec
   github_url: https://github.com/orgsync/rec
@@ -31,7 +31,7 @@
 - name: Hangover
   github_url: https://github.com/orgsync/hangover
   image: http://devblog.orgsync.com/wp-content/themes/cp-minimal/images/open-source/hangover.png
-  description: So you've gotten Tipsy, now comes the Hangover.
+  description: "So you've gotten Tipsy, now comes the Hangover."
 
 - name: Savvy
   github_url: https://github.com/orgsync/savvy
