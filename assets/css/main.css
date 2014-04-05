@@ -330,6 +330,9 @@ h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{
   article{
     padding: 20px;
   }
+  h1.page-title{
+    padding-left: 20px;
+  }
   .highlight pre{
     width: 90%;
   }
@@ -337,11 +340,14 @@ h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{
     margin-top: 0;
   }
   nav{
-    padding: 20px 20px 0 20px;
+    padding: 10px 0;
   }
   nav ul{
     float: inherit;
     padding: 0;
+    width: 100%;
+  }
+  nav ul li{
     width: 100%;
   }
   nav li a{
@@ -357,5 +363,20 @@ h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{
   }
   .hero p{
     max-width: 100%;
+  }
+  .open-source{
+    margin: 0;
+    padding: 20px;
+  }
+  .open-source li{
+    width: 100%;
+  }
+  .open-source li a{
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  .open-source li img{
+    width: 50%;
   }
 }
