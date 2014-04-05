@@ -311,7 +311,7 @@ h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{
   float: left;
   list-style-type: none;
   margin-right: 5%;
-  min-height: 300px;
+  min-height: 320px;
   width: 20%;
 }
 .open-source li img{
