@@ -311,11 +311,11 @@ h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{
   float: left;
   list-style-type: none;
   margin-right: 5%;
-  min-height: 320px;
-  width: 20%;
+  min-height: 400px;
+  width: 28%;
 }
 .open-source li img{
-  width: 100%;
+  width: 80%;
 }
 .open-source li a{
   color: #818486;
