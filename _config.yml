@@ -1,0 +1,5 @@
+highlighter: pygments
+markdown: redcarpet
+name: The OrgSync DevBlog
+description: "OrgSync Developer Musings on: rails, ruby, testing, security, and development in general"
+url: http://devblog.orgsync.com/

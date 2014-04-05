@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+  {% include header.html %}
+  <body>
+    {{ page.content }}
+      <ul class="open-source">
+        {% for project in site.data.open_source %}
+          <li>
+            <a href="{{ project.github_url }}">
+              <img src="{{ project.image }}">
+              <span class="title">{{ project.title }} </span>
+              <p class="note">
+                {{ project.description }}
+              </p>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+  </body>
+</html>

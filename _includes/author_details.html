@@ -1,0 +1,22 @@
+<hr>
+
+<div class="media-box">
+  <div class="pull-left">
+    <img src="{{ author.picture }}">
+  </div>
+  <div class="media-body">
+    <p>
+      <strong>{{ author.name }}</strong>
+      {% if author.description %}
+        {{ author.description }}
+      {% endif %}
+    </p>
+    {% if author.twitter %}
+      <a href="http://twitter.com/{{ author.twitter }}">Follow me on Twitter</a><br>
+    {% endif %}
+    {% if author.email %}
+      <a href="mailto:{{author.email}}">Email Me</a>
+    {% endif %}
+  </div>
+</div>
+<hr>

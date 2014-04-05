@@ -1,0 +1,35 @@
+{% capture lvl %}{{ page.url | append:'index.html' | split:'/' | size }}{% endcapture %}
+{% capture relative %}{% for i in (3..lvl) %}../{% endfor %}{% endcapture %}
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>{{ page.title }}</title>
+
+  <meta name="description" content="A diatribe on rails, servers, things that developers talk about" />
+  <meta name="keywords" content="ruby,rails,RoR,software development" />
+  <meta property="og:type" content="blog" />
+  <meta property="og:title" content="OrgSync Developer Blog" />
+  <meta property="og:description" content="A diatribe on rails, servers, things that developers talk about" />
+  <meta property="og:url" content="http://devblog.orgsync.com/" />
+  <meta property="og:site_name" content="OrgSync Developer Blog" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="google-site-verification" content="8LWd8KL9rKVucWlDxoy9FPR6Njg3gsMY0qTY00q2EBo" />
+
+  <link href="{{ relative }}assets/css/main.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="{{ relative }}assets/css/syntax.css" rel="stylesheet" type="text/css" media="all"/>
+
+  <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ relative }}/feed.xml">
+</head>
+
+<div class="nav-wrap">
+  <nav>
+    <h1><a href="{{ relative }}/index.html">The OrgSync Dev Blog</a></h1>
+    <ul>
+      <li><a href="{{ relative }}/index.html">Home</a></li>
+      <li><a href="{{ relative }}/team.html">Team</a></li>
+      <li><a href="{{ relative }}/open_source.html">Open Source</a></li>
+      <li><a href="http://www.orgsync.com/company/careers">Job Openings</a></li>
+    </ul>
+  </nav>
+</div>

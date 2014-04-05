@@ -1,0 +1,26 @@
+// Redirects old blog urls
+{
+    "confidently-manage-business-logic-activeinteraction/"        : "/2014/01/23/confidently-manage-business-logic-activeinteraction.html",
+    "write-faster-tests-factory-context/" : "/2014/01/13/write-faster-tests-factory-context.html",
+    "building-custom-rails-attribute-validators/"       : "/2013/10/29/building-custom-rails-attribute-validators.html",
+    "building-a-better-gemfile/": "/2013/08/08/building-a-better-gemfile.html",
+    "immediately-migrating-existing-passwords-bcrypt/": "/2013/06/18/immediately-migrating-existing-passwords-bcrypt.html",
+    "maintaining-a-large-test-suite-a-dry-approach-to-rspec/": "/2013/06/04/maintaining-a-large-test-suite-a-dry-approach-to-rspec.html",
+    "reflections-on-learning-to-code/": "/2013/05/29/reflections-on-learning-to-code.html",
+    "private-and-protected-they-might-not-mean-what-you-think-they-mean/": "/2013/05/20/private-and-protected-they-might-not-mean-what-you-think-they-mean.html",
+    "upgrading-to-bcrypt/": "/2013/05/08/upgrading-to-bcrypt.html",
+    "rest-api-integration-testing-with-gatling/": "/2013/05/03/rest-api-integration-testing-with-gatling.html",
+    "creating_scrolling_filmstrip_within_uitableview/": "/2013/04/26/creating_scrolling_filmstrip_within_uitableview.html",
+    "orgsync-hack-night-arduino/": "/2013/04/19/orgsync-hack-night-arduino.html",
+    "common-backbone-patterns-simplified-with-marionette/": "/2013/04/16/common-backbone-patterns-simplified-with-marionette.html",
+    "recap-of-cocoaconf-dallas/": "/2013/04/10/recap-of-cocoaconf-dallas.html",
+    "frictionless-project-organization-for-ios/": "/2013/04/05/frictionless-project-organization-for-ios.html",
+    "designers-workflow-for-html-emails-in-a-rails-app/": "/2013/03/29/designers-workflow-for-html-emails-in-a-rails-app.html",
+    "decorate-your-ruby-objects-like-a-boss/": "/2013/03/22/decorate-your-ruby-objects-like-a-boss.html",
+    "the-big-ruby-conf/": "/2013/03/11/the-big-ruby-conf.html",
+    "stubbing-external-service-calls-with-rspec/": "/2013/03/07/stubbing-external-service-calls-with-rspec.html",
+    "big-ruby-presentation-round-up/": "/2013/03/04/selecting-overloaded-java-methods-in-jruby.html",
+    "selecting-overloaded-java-methods-in-jruby/": "/2013/03/04/redos_regular_expression_denial_of_service.html",
+    "redos_regular_expression_denial_of_service/": "/2013/03/04/big-ruby-presentation-round-up.html",
+    "hacking-hubot-with-hubot/": "/2013/02/26/hacking-hubot-with-hubot.html"
+}

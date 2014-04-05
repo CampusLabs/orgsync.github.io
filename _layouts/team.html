@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+  {% include header.html %}
+  <body>
+    {{ page.content }}
+    <div class="main-content team-page">
+      {% for member in site.data.team %}
+        {% assign author = member[1] %}
+        {% include author_details.html %}
+      {% endfor %}
+    </div>
+  </body>
+</html>
+

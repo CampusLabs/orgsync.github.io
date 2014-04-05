@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+  {% include header.html %}
+  {% if page.author %}
+    {% assign author = site.data.team[page.author] %}
+  {% endif %}
+  <body>
+    <div class="main-content show-article">
+      <article>
+        <h2>{{ page.title }}</h2>
+        <div class="posted-at">
+          Posted {{ page.date | date: "%B %-d, %Y" }}
+          {% if author %}
+            by {{ author.name }}
+          {% endif %}
+        </div>
+        {{ content }}
+        {% if author %}
+          {% include author_details.html %}
+        {% endif %}
+        {% if page.comments %}
+          {% include comments.html %}
+        {% endif %}
+      </div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>
+

@@ -1,135 +1,695 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>OrgSync Open Source Projects</title>
-    <link href="assets/css/normalize.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="assets/css/foundation.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="assets/css/api.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="assets/css/app.css" rel="stylesheet" type="text/css" media="all"/>
-    <script src="assets/js/vendor/custom.modernizr.min.js"></script>
-    <script type="text/javascript" src="//use.typekit.net/eyn6hnr.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  </head>
-  <body>
-    <div class="js-secondary nav secondary">
-      <img src="http://cl.ly/image/2A283S413S1a/dev-logo.png">
-      <h2>OrgSync Developers</h2>
-      <ul>
-        <li><a href="http://devblog.orgsync.com">Developer Blog</a></li>
-        <li><a href="http://orgsync.github.io">Open Source Projects</a></li>
-        <li><a href="http://api.orgsync.com/api">The OrgSync API</a></li>
-      </ul>
-      <h2>Work With Us</h2>
-      <p>We're always looking for talented developers and designers. Find out more:</p>
-      <ul>
-        <li><a href="http://www.orgsync.com/company/careers">Job Openings</a></li>
-        <li><a href="http://www.orgsync.com/company">About OrgSync</a></li>
-      </ul>
-    </div>
-    <div class="js-main-content main-content row">
-      <div class="large-12 columns">
-        <h1>Open Source Projects</h1>
-<p>As a company built upon open source projects we love to contribute back to the community. Here are some of the projects we're working to share back with the community.</p>
+  
 
-        <div class="row">
-          <div class="large-12 columns">
-            <ul class="large-block-grid-3 small-block-grid-1 projects">
-              
-                <li>
-                  <a href="https://github.com/orgsync/servo">
-                    <img src="http://cl.ly/image/3a3w442k2X2b/construction.png">
-                    <span class="title">Servo</span>
-                    <p class="note">
-                      An image resizing service to sit behind a dynamic cache (like cloudfront)
-                    </p>
-                  </a>
-                </li>
-              
-                <li>
-                  <a href="https://github.com/orgsync/active_interaction">
-                    <img src="http://cl.ly/image/3a3w442k2X2b/construction.png">
-                    <span class="title">Active Interaction</span>
-                    <p class="note">
-                      Take back control. Slim down models and wrangle monstrous controller methods.
-                    </p>
-                  </a>
-                </li>
-              
-                <li>
-                  <a href="https://github.com/orgsync/savvy">
-                    <img src="http://devblog.orgsync.com/wp-content/themes/cp-minimal/images/open-source/old-spice.png">
-                    <span class="title">Savvy</span>
-                    <p class="note">
-                      The button your save button could be like.
-                    </p>
-                  </a>
-                </li>
-              
-                <li>
-                  <a href="https://github.com/orgsync/hangover">
-                    <img src="http://devblog.orgsync.com/wp-content/themes/cp-minimal/images/open-source/hangover.png">
-                    <span class="title">Hangover</span>
-                    <p class="note">
-                      So you've gotten Tipsy, now comes the Hangover.
-                    </p>
-                  </a>
-                </li>
-              
-                <li>
-                  <a href="https://github.com/orgsync/toke">
-                    <img src="http://devblog.orgsync.com/wp-content/themes/cp-minimal/images/open-source/toke.png">
-                    <span class="title">Toke</span>
-                    <p class="note">
-                      Smokin' hot token input with love from Rec.
-                    </p>
-                  </a>
-                </li>
-              
-                <li>
-                  <a href="https://github.com/orgsync/rec">
-                    <img src="http://devblog.orgsync.com/wp-content/themes/cp-minimal/images/open-source/rec-icon.png">
-                    <span class="title">Rec</span>
-                    <p class="note">
-                      Recommendations as you type.
-                    </p>
-                  </a>
-                </li>
-              
-                <li>
-                  <a href="https://github.com/orgsync/olay">
-                    <img src="http://devblog.orgsync.com/wp-content/themes/cp-minimal/images/open-source/olay-icon.png">
-                    <span class="title">Olay</span>
-                    <p class="note">
-                      Awesome, accessible overlays, pop-ups and modals, now with scrolling!
-                    </p>
-                  </a>
-                </li>
-              
-                <li>
-                  <a href="https://github.com/orgsync/jquery-aria">
-                    <img src="http://devblog.orgsync.com/wp-content/themes/cp-minimal/images/open-source/jquery-aria.png">
-                    <span class="title">Jquery Aria</span>
-                    <p class="note">
-                      A jQuery plugin that adds support for ARIA attributes.
-                    </p>
-                  </a>
-                </li>
-              
-            </ul>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title></title>
+
+  <meta name="description" content="A diatribe on rails, servers, things that developers talk about" />
+  <meta name="keywords" content="ruby,rails,RoR,software development" />
+  <meta property="og:type" content="blog" />
+  <meta property="og:title" content="OrgSync Developer Blog" />
+  <meta property="og:description" content="A diatribe on rails, servers, things that developers talk about" />
+  <meta property="og:url" content="http://devblog.orgsync.com/" />
+  <meta property="og:site_name" content="OrgSync Developer Blog" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="google-site-verification" content="8LWd8KL9rKVucWlDxoy9FPR6Njg3gsMY0qTY00q2EBo" />
+
+  <link href="assets/css/main.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="assets/css/syntax.css" rel="stylesheet" type="text/css" media="all"/>
+
+  <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+</head>
+
+<div class="nav-wrap">
+  <nav>
+    <h1><a href="/index.html">The OrgSync Dev Blog</a></h1>
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/team.html">Team</a></li>
+      <li><a href="/open_source.html">Open Source</a></li>
+      <li><a href="http://www.orgsync.com/company/careers">Job Openings</a></li>
+    </ul>
+  </nav>
+</div>
+
+  <body>
+    <div class="hero">
+  <p>
+    OrgSync started out as a small Rails application and has grown into a swiss-army knife of tools. We're learning the best way to scale rails, exploring other languages, implementing new features, plugging security issues and building with the community. That's what we are here to talk about.
+  </p>
+</div>
+
+    <div class="main-content summary">
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/aaron-lasseigne-bw.png">
+            
+            
+              <div class="tags">
+                
+                  <span class="tag tag-patterns">patterns</span>
+                
+                  <span class="tag tag-rails">rails</span>
+                
+              </div>
+            
           </div>
-        </div>
-      </div>
+          <div class="media-body">
+            <h3><a href="/2014/01/23/confidently-manage-business-logic-activeinteraction.html">Confidently Manage Business Logic with ActiveInteraction</a></h3>
+            <div class="posted-at">
+              Posted January 23, 2014
+              
+                by Aaron Lasseigne
+              
+            </div>
+            ActiveInteraction is a gem for managing application specific business logic. Instead of living in controllers or models, business logic can find a home in interactions. They are designed to integrate seamlessly with Rails by behaving like ActiveModels. Use ActiveInteraction to shrink your controllers, slim your models, and DRY your code.
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/taylor-fausak-bw.png">
+            
+            
+              <div class="tags">
+                
+                  <span class="tag tag-testing">testing</span>
+                
+                  <span class="tag tag-ruby">ruby</span>
+                
+                  <span class="tag tag-rspec">rspec</span>
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2014/01/13/write-faster-tests-factory-context.html">Write Faster Tests with a Factory Context</a></h3>
+            <div class="posted-at">
+              Posted January 13, 2014
+              
+                by Taylor Fausak
+              
+            </div>
+            A while back, I noticed our tests were slowing down for no apparent reason. It turns out our factories were creating a bunch of duplicate objects behind the scenes we didn't need.
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/aaron-lasseigne-bw.png">
+            
+            
+              <div class="tags">
+                
+                  <span class="tag tag-rails">rails</span>
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/10/29/building-custom-rails-attribute-validators.html">Building Custom Rails Attribute Validators</a></h3>
+            <div class="posted-at">
+              Posted October 29, 2013
+              
+                by Aaron Lasseigne
+              
+            </div>
+            The validation that ships with Rails is useful, albeit generic. It leaves us to construct our own validators as dictated by our domains. The good news is that Rails gives us the tools necessary to build our own validators.
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/taylor-fausak-bw.png">
+            
+            
+              <div class="tags">
+                
+                  <span class="tag tag-rails">rails</span>
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/08/08/building-a-better-gemfile.html">Building a Better Gemfile</a></h3>
+            <div class="posted-at">
+              Posted August 8, 2013
+              
+                by Taylor Fausak
+              
+            </div>
+            If you've been hacking on a Rails project for a while, chances are your Gemfile has spiraled out of control.
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/taylor-fausak-bw.png">
+            
+            
+              <div class="tags">
+                
+                  <span class="tag tag-security">security</span>
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/06/18/immediately-migrating-existing-passwords-bcrypt.html">Immediately Migrating Existing Passwords to bcrypt</a></h3>
+            <div class="posted-at">
+              Posted June 18, 2013
+              
+                by Taylor Fausak
+              
+            </div>
+            Security cannot afford to be "eventually consistent".
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/justin-powell-bw.png">
+            
+            
+              <div class="tags">
+                
+                  <span class="tag tag-testing">testing</span>
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/06/04/maintaining-a-large-test-suite-a-dry-approach-to-rspec.html">Maintaining a Large Test Suite a DRY Approach to RSpec</a></h3>
+            <div class="posted-at">
+              Posted June 4, 2013
+              
+                by Justin Powell
+              
+            </div>
+            
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://ecx.images-amazon.com/images/I/51NhtW9exnL._SX300_.jpg">
+            
+            
+              <div class="tags">
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/05/29/reflections-on-learning-to-code.html">Reflections on Learning to Code</a></h3>
+            <div class="posted-at">
+              Posted May 29, 2013
+              
+                by Virginia Traweek
+              
+            </div>
+            
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/aaron-lasseigne-bw.png">
+            
+            
+              <div class="tags">
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/05/20/private-and-protected-they-might-not-mean-what-you-think-they-mean.html">Private and Protected They might not mean what you think they mean</a></h3>
+            <div class="posted-at">
+              Posted May 20, 2013
+              
+                by Aaron Lasseigne
+              
+            </div>
+            
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/taylor-fausak-bw.png">
+            
+            
+              <div class="tags">
+                
+                  <span class="tag tag-security">security</span>
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/05/08/upgrading-to-bcrypt.html">Upgrading to bcrypt</a></h3>
+            <div class="posted-at">
+              Posted May 8, 2013
+              
+                by Taylor Fausak
+              
+            </div>
+            
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/justin-steffy-bw.png">
+            
+            
+              <div class="tags">
+                
+                  <span class="tag tag-testing">testing</span>
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/05/03/rest-api-integration-testing-with-gatling.html">REST API Integration Testing with Gatling</a></h3>
+            <div class="posted-at">
+              Posted May 3, 2013
+              
+                by Justin Steffy
+              
+            </div>
+            
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/jim-clark-bw.png">
+            
+            
+              <div class="tags">
+                
+                  <span class="tag tag-iOS">iOS</span>
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/04/26/creating_scrolling_filmstrip_within_uitableview.html">Creating a Scrolling Filmstrip Within a UITableView</a></h3>
+            <div class="posted-at">
+              Posted April 26, 2013
+              
+                by Jim Clark
+              
+            </div>
+            
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="">
+            
+            
+              <div class="tags">
+                
+                  <span class="tag tag-hack">hack</span>
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/04/19/orgsync-hack-night-arduino.html">OrgSync Hack Night Arduino</a></h3>
+            <div class="posted-at">
+              Posted April 19, 2013
+              
+                by 
+              
+            </div>
+            
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/kevin-wade-bw.png">
+            
+            
+              <div class="tags">
+                
+                  <span class="tag tag-javascript">javascript</span>
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/04/16/common-backbone-patterns-simplified-with-marionette.html">Common Backbone Patterns Simplified with Marionette</a></h3>
+            <div class="posted-at">
+              Posted April 16, 2013
+              
+                by Kevin Wade
+              
+            </div>
+            
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/jim-clark-bw.png">
+            
+            
+              <div class="tags">
+                
+                  <span class="tag tag-iOS">iOS</span>
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/04/10/recap-of-cocoaconf-dallas.html">Recap of CocoaConf Dallas</a></h3>
+            <div class="posted-at">
+              Posted April 10, 2013
+              
+                by Jim Clark
+              
+            </div>
+            
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/cameron-desautels-bw.png">
+            
+            
+              <div class="tags">
+                
+                  <span class="tag tag-iOS">iOS</span>
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/04/05/frictionless-project-organization-for-ios.html">Frictionless Project Organization for iOS</a></h3>
+            <div class="posted-at">
+              Posted April 5, 2013
+              
+                by Cameron Desautels
+              
+            </div>
+            
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/tyler-lee-bw.png">
+            
+            
+              <div class="tags">
+                
+                  <span class="tag tag-design">design</span>
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/03/29/designers-workflow-for-html-emails-in-a-rails-app.html">A Designer's Workflow for HTML Emails in a Rails App</a></h3>
+            <div class="posted-at">
+              Posted March 29, 2013
+              
+                by Tyler Lee
+              
+            </div>
+            
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/sonny-garcia-bw.png">
+            
+            
+              <div class="tags">
+                
+                  <span class="tag tag-ruby">ruby</span>
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/03/22/decorate-your-ruby-objects-like-a-boss.html">Decorate your Ruby Objects "Like a Boss"</a></h3>
+            <div class="posted-at">
+              Posted March 22, 2013
+              
+                by Sonny Garcia
+              
+            </div>
+            
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/aaron-lasseigne-bw.png">
+            
+            
+              <div class="tags">
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/03/11/the-big-ruby-conf.html">The Big Ruby Conf</a></h3>
+            <div class="posted-at">
+              Posted March 11, 2013
+              
+                by Aaron Lasseigne
+              
+            </div>
+            
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/justin-powell-bw.png">
+            
+            
+              <div class="tags">
+                
+                  <span class="tag tag-testing">testing</span>
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/03/07/stubbing-external-service-calls-with-rspec.html">Stubbing External Service Calls with RSpec</a></h3>
+            <div class="posted-at">
+              Posted March 7, 2013
+              
+                by Justin Powell
+              
+            </div>
+            
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/sonny-garcia-bw.png">
+            
+            
+              <div class="tags">
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/03/04/selecting-overloaded-java-methods-in-jruby.html">Selecting Overloaded Java methods in JRuby</a></h3>
+            <div class="posted-at">
+              Posted March 4, 2013
+              
+                by Sonny Garcia
+              
+            </div>
+            
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/taylor-fausak-bw.png">
+            
+            
+              <div class="tags">
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/03/04/redos_regular_expression_denial_of_service.html">ReDoS Regular Expression Denial of Service</a></h3>
+            <div class="posted-at">
+              Posted March 4, 2013
+              
+                by Taylor Fausak
+              
+            </div>
+            
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/cameron-desautels-bw.png">
+            
+            
+              <div class="tags">
+                
+                  <span class="tag tag-ruby">ruby</span>
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/03/04/big-ruby-presentation-round-up.html">Big Ruby Presentation Round-up</a></h3>
+            <div class="posted-at">
+              Posted March 4, 2013
+              
+                by Cameron Desautels
+              
+            </div>
+            
+          </div>
+        </article>
+      
+        
+          
+        
+        <article class="media-box">
+          <div class="pull-left">
+            
+              <img src="http://www.orgsync.com/assets/team/taylor-fausak-bw.png">
+            
+            
+              <div class="tags">
+                
+                  <span class="tag tag-hack">hack</span>
+                
+              </div>
+            
+          </div>
+          <div class="media-body">
+            <h3><a href="/2013/02/26/hacking-hubot-with-hubot.html">Hacking Hubot with Hubot</a></h3>
+            <div class="posted-at">
+              Posted February 26, 2013
+              
+                by Taylor Fausak
+              
+            </div>
+            
+          </div>
+        </article>
+      
     </div>
-    <script>
-      document.write('<script src=' + ('__proto__' in {} ? 'assets/js/vendor/zepto.min.js' : 'assets/js/vendor/jquery.min.js') + '><\/script>')
-    </script>
-    <script src="assets/js/app.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
+    <div class="footer">
+  That's All Folks, For now.<br>
+  <a href="/feed.xml">Follow the RSS</a>
+</div>
+
   </body>
 </html>
 
