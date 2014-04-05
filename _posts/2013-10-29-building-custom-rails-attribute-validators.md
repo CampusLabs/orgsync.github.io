@@ -1,6 +1,7 @@
 ---
 title: Building Custom Rails Attribute Validators
 link: http://devblog.orgsync.com/building-custom-rails-attribute-validators/
+layout: single
 author: AaronLasseigne
 description: The validation that ships with Rails is useful, albeit generic. It leaves us to construct our own validators as dictated by our domains. The good news is that Rails gives us the tools necessary to build our own validators.
 comments: true

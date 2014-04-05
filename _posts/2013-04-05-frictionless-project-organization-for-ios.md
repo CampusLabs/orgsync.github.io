@@ -1,6 +1,7 @@
 ---
 title: Frictionless Project Organization for iOS
 link: http://devblog.orgsync.com/frictionless-project-organization-for-ios/
+layout: single
 author: camdez
 comments: true
 post_name: frictionless-project-organization-for-ios

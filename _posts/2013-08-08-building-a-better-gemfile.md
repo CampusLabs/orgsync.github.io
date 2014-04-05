@@ -1,6 +1,7 @@
 ---
 title: Building a Better Gemfile
 link: http://devblog.orgsync.com/building-a-better-gemfile/
+layout: single
 author: tfausak
 description: If you've been hacking on a Rails project for a while, chances are your Gemfile has spiraled out of control.
 comments: true

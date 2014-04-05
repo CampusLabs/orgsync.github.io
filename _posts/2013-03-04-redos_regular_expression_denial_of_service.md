@@ -1,6 +1,7 @@
 ---
 title: ReDoS Regular Expression Denial of Service
 link: http://devblog.orgsync.com/redos_regular_expression_denial_of_service/
+layout: single
 author: tfausak
 comments: true
 post_name: redos_regular_expression_denial_of_service

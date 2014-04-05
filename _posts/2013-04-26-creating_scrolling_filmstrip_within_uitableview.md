@@ -1,6 +1,7 @@
 ---
 title: Creating a Scrolling Filmstrip Within a UITableView
 link: http://devblog.orgsync.com/creating_scrolling_filmstrip_within_uitableview/
+layout: single
 author: macelangelo
 comments: true
 post_name: creating_scrolling_filmstrip_within_uitableview

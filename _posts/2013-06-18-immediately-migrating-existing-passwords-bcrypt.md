@@ -1,6 +1,7 @@
 ---
 title: Immediately Migrating Existing Passwords to bcrypt
 link: http://devblog.orgsync.com/immediately-migrating-existing-passwords-bcrypt/
+layout: single
 author: tfausak
 description: Security cannot afford to be "eventually consistent".
 comments: true

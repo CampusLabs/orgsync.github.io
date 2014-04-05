@@ -1,6 +1,7 @@
 ---
 title: Private and Protected They might not mean what you think they mean
 link: http://devblog.orgsync.com/private-and-protected-they-might-not-mean-what-you-think-they-mean/
+layout: single
 author: AaronLasseigne
 comments: true
 post_name: private-and-protected-they-might-not-mean-what-you-think-they-mean

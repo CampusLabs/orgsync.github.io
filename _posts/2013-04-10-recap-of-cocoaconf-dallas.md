@@ -1,6 +1,7 @@
 ---
 title: Recap of CocoaConf Dallas
 link: http://devblog.orgsync.com/recap-of-cocoaconf-dallas/
+layout: single
 author: macelangelo
 comments: true
 post_name: recap-of-cocoaconf-dallas

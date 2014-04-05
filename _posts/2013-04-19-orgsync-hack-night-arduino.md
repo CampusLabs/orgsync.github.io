@@ -1,6 +1,7 @@
 ---
 title: OrgSync Hack Night Arduino
 link: http://devblog.orgsync.com/orgsync-hack-night-arduino/
+layout: single
 author: Virgina Traweek
 comments: true
 post_name: orgsync-hack-night-arduino

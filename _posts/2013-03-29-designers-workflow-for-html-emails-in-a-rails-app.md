@@ -1,6 +1,7 @@
 ---
 title: A Designer's Workflow for HTML Emails in a Rails App
 link: http://devblog.orgsync.com/designers-workflow-for-html-emails-in-a-rails-app/
+layout: single
 author: tylerlee
 comments: true
 post_name: designers-workflow-for-html-emails-in-a-rails-app

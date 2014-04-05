@@ -1,6 +1,7 @@
 ---
 title: The Big Ruby Conf
 link: http://devblog.orgsync.com/the-big-ruby-conf/
+layout: single
 author: AaronLasseigne
 comments: true
 post_name: the-big-ruby-conf

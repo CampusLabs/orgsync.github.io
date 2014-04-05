@@ -1,6 +1,7 @@
 ---
 title: Big Ruby Presentation Round-up
 link: http://devblog.orgsync.com/big-ruby-presentation-round-up/
+layout: single
 author: camdez
 comments: true
 post_name: big-ruby-presentation-round-up

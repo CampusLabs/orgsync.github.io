@@ -1,6 +1,7 @@
 ---
 title: Decorate your Ruby Objects "Like a Boss"
 link: http://devblog.orgsync.com/decorate-your-ruby-objects-like-a-boss/
+layout: single
 author: drywheat
 comments: true
 post_name: decorate-your-ruby-objects-like-a-boss

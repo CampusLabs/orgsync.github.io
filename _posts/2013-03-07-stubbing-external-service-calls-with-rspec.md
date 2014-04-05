@@ -1,6 +1,7 @@
 ---
 title: Stubbing External Service Calls with RSpec
 link: http://devblog.orgsync.com/stubbing-external-service-calls-with-rspec/
+layout: single
 author: jpowell
 comments: true
 post_name: stubbing-external-service-calls-with-rspec

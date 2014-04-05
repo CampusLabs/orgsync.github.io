@@ -1,6 +1,7 @@
 ---
 title: Common Backbone Patterns Simplified with Marionette
 link: http://devblog.orgsync.com/common-backbone-patterns-simplified-with-marionette/
+layout: single
 author: mrwade
 comments: true
 post_name: common-backbone-patterns-simplified-with-marionette

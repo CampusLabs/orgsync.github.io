@@ -1,6 +1,7 @@
 ---
 title: REST API Integration Testing with Gatling
 link: http://devblog.orgsync.com/rest-api-integration-testing-with-gatling/
+layout: single
 author: justinsteffy
 comments: true
 post_name: rest-api-integration-testing-with-gatling

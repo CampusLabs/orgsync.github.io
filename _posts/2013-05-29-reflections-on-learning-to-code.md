@@ -1,6 +1,7 @@
 ---
 title: Reflections on Learning to Code
 link: http://devblog.orgsync.com/reflections-on-learning-to-code/
+layout: single
 author: vtraweek
 comments: true
 post_name: reflections-on-learning-to-code

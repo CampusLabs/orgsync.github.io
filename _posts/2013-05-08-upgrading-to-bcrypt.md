@@ -1,6 +1,7 @@
 ---
 title: Upgrading to bcrypt
 link: http://devblog.orgsync.com/upgrading-to-bcrypt/
+layout: single
 author: tfausak
 comments: true
 post_name: upgrading-to-bcrypt

@@ -1,6 +1,7 @@
 ---
 title: Selecting Overloaded Java methods in JRuby
 link: http://devblog.orgsync.com/selecting-overloaded-java-methods-in-jruby/
+layout: single
 author: drywheat
 comments: true
 post_name: selecting-overloaded-java-methods-in-jruby

@@ -1,6 +1,7 @@
 ---
 title: Maintaining a Large Test Suite a DRY Approach to RSpec
 link: http://devblog.orgsync.com/maintaining-a-large-test-suite-a-dry-approach-to-rspec/
+layout: single
 author: jpowell
 comments: true
 post_name: maintaining-a-large-test-suite-a-dry-approach-to-rspec

@@ -1,6 +1,7 @@
 ---
 title: Hacking Hubot with Hubot
 link: http://devblog.orgsync.com/hacking-hubot-with-hubot/
+layout: single
 author: tfausak
 comments: true
 post_name: hacking-hubot-with-hubot

@@ -1,6 +1,7 @@
 ---
 title: Write Faster Tests with a Factory Context
 link: http://devblog.orgsync.com/write-faster-tests-factory-context/
+layout: single
 author: tfausak
 description: A while back, I noticed our tests were slowing down for no apparent reason. It turns out our factories were creating a bunch of duplicate objects behind the scenes we didn't need.
 comments: true
