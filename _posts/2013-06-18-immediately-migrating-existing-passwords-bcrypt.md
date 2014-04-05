@@ -23,50 +23,51 @@ So I decided to do a little research. After all, combining cryptographic primiti
 
 Assume that everything's the same as before, except that the passwords are hashed. It doesn't matter how they're hashed or if a salt is used. Let's keep it simple by calling the hash function `digest` and storing the result in `password_hash`.
 
-
-    def digest(password)
-      password.hash.to_s
-    end
-    # user.password_hash = digest(password)
-
+{% highlight ruby %}
+  def digest(password)
+    password.hash.to_s
+  end
+  # user.password_hash = digest(password)
+{% endhighlight %}
 
 Setting the password is now slightly more complicated than before. Instead of simply using the plain text password as the input to bcrypt, we have to use the password hash. This adds a layer of indirection but allows us to migrate without knowing the original passwords.
 
-
-    def bcrypt=(new_password)
-      @bcrypt = self.bcrypt_hash =
-        Password.create(digest(new_password))
-    end
-
+{% highlight ruby %}
+  def bcrypt=(new_password)
+    @bcrypt = self.bcrypt_hash =
+      Password.create(digest(new_password))
+  end
+{% endhighlight %}
 
 Similarly, checking passwords now requires comparing against the hashed password.
 
-
-    def self.authenticate(username, password)
-      return unless user = find_by_username(username)
-      password_hash = digest(password)
-      if user.bcrypt?
-        user if user.bcrypt == password_hash
-      elsif user.password_hash == password_hash
-        user.bcrypt = password
-        user.save!
-        user
-      end
+{% highlight ruby %}
+  def self.authenticate(username, password)
+    return unless user = find_by_username(username)
+    password_hash = digest(password)
+    if user.bcrypt?
+      user if user.bcrypt == password_hash
+    elsif user.password_hash == password_hash
+      user.bcrypt = password
+      user.save!
+      user
     end
+  end
+{% endhighlight %}
 
 
 ### Migrate
 
 After doing that, the only thing left to do is the actual migration. Be warned: this will take a long time. Although the exact time depends on your machine, you can get an estimate using the [benchmark](http://www.ruby-doc.org/stdlib-2.0/libdoc/benchmark/rdoc/Benchmark.html) module.
 
-
-    Benchmark.measure do
-      100.times do
-        BCrypt::Password.create('secret')
-      end
-    end.total
-    # => 7.45
-
+{% highlight ruby %}
+  Benchmark.measure do
+    100.times do
+      BCrypt::Password.create('secret')
+    end
+  end.total
+  # => 7.45
+{% endhighlight %}
 
 The migration itself is pretty straightforward. It has three moving parts:
 
@@ -76,22 +77,23 @@ The migration itself is pretty straightforward. It has three moving parts:
 
   3. Save the bcrypt hash to the database. Using `update_column` avoids triggering callbacks or running validators.
 
-        class BcryptMigration < ActiveRecord::Migration
-      class User < ActiveRecord::Base; end
-      def up
-        loop do
-          users = User.select([:id, :password_hash]).
-            where(:bcrypt_hash => nil).order(:id).limit(100)
-          break if users.empty?
-          users.each do |user|
-            bcrypt_hash =
-              BCrypt::Password.create(user['password_hash'])
-            user.update_column(:bcrypt_hash, bcrypt_hash)
-          end
+{% highlight ruby %}
+  class BcryptMigration < ActiveRecord::Migration
+    class User < ActiveRecord::Base; end
+    def up
+      loop do
+        users = User.select([:id, :password_hash]).
+          where(:bcrypt_hash => nil).order(:id).limit(100)
+        break if users.empty?
+        users.each do |user|
+          bcrypt_hash =
+            BCrypt::Password.create(user['password_hash'])
+          user.update_column(:bcrypt_hash, bcrypt_hash)
         end
       end
     end
-
+  end
+{% endhighlight %}
 
 Although you could remove `password_hash` entirely in this migration, it's better to do that as a separate migration after this one finishes. That way if anything goes wrong with the switch to bcrypt you can fall back to the old method.
 

@@ -1,11 +1,9 @@
 ---
 title: Building a Better Gemfile
-link: http://devblog.orgsync.com/building-a-better-gemfile/
 layout: single
 author: tfausak
 description: If you've been hacking on a Rails project for a while, chances are your Gemfile has spiraled out of control.
 comments: true
-post_name: building-a-better-gemfile
 tags: rails
 ---
 
@@ -21,27 +19,27 @@ But none of them have any versions specified. You could argue that that's what `
 
 With one simple helper function, you can fix both problems. Drop this into your Gemfile before any gems:
 
-
-    def gem(name, version, options = {})
-      if options.has_key?(:require)
-        if options[:require].equal?(true)
-          options.delete(:require)
-        end
-      else
-        options.merge!(require: false)
+{% highlight ruby %}
+  def gem(name, version, options = {})
+    if options.has_key?(:require)
+      if options[:require].equal?(true)
+        options.delete(:require)
       end
-
-      super(name, version, options)
+    else
+      options.merge!(require: false)
     end
 
+    super(name, version, options)
+  end
+{% endhighlight %}
 
 ### Happier Developers with Versions
 
 By overwriting the `gem` function and requiring a `version` parameter, you can be sure you'll never end up with a gem with an unspecified version. If you try to, `bundle` will blow up at you:
 
-
-    .../Gemfile:3:in `gem': wrong number of arguments
-
+{% highlight ruby %}
+  .../Gemfile:3:in `gem': wrong number of arguments
+{% endhighlight %}
 
 This has the benefit of making `bundle update` much less risky to run. Also, it's a lot easier to tell at a glance which versions of gems your project needs.
 

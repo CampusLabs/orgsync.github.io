@@ -13,84 +13,114 @@ Ruby, like many other languages, provides a built-in way to change method visibi
 
 **In Ruby marking a method as `private` means that it can't have an explicit receiver.** Below we define a `Person` class that takes a first name, last name, and an age. People don't usually mind telling you their name but some are squeamish about revealing their age.
 
+{% highlight ruby %}
+  class Person
+    attr_reader :first_name, :last_name
 
-    class Person
-      attr_reader :first_name, :last_name
-
-      def initialize(first_name, last_name, age)
-        @first_name = first_name
-        @last_name = last_name
-        @age = age
-      end
-
-      def name
-        [first_name, last_name].join(' ')
-      end
-
-      private
-
-      attr_reader :age
+    def initialize(first_name, last_name, age)
+      @first_name = first_name
+      @last_name = last_name
+      @age = age
     end
 
-
-Let's create a new `Person` and ask them their name.
-
-
-    john = Person.new('John', 'Doe', 31)
-    # => <Person:0x110800cf8 @age=31, @last_name="Doe", @first_name="John">
-    john.name
-    # => "John Doe"
-
-
-What happens if we ask about their age?
-
-
-    john.age
-    # => NoMethodError: private method `age' called for #<Person:0x110800cf8>
-
-
-We get an error because `age` is called with the explicit receiver `john`. We can still access `age` we just have to do it inside of `Person` and without an explicit receiver. Let's explore this by equiping `Person` with a `birthday!` method.
-
-
-    def birthday!
-      age += 1
-
-      self
+    def name
+      [first_name, last_name].join(' ')
     end
 
     private
 
-    attr_accessor :age
+    attr_reader :age
+  end
+{% endhighlight %}
 
+Let's create a new `Person` and ask them their name.
+
+{% highlight ruby %}
+  john = Person.new('John', 'Doe', 31)
+  # => <Person:0x110800cf8 @age=31, @last_name="Doe", @first_name="John">
+  john.name
+  # => "John Doe"
+{% endhighlight %}
+
+What happens if we ask about their age?
+
+{% highlight ruby %}
+  john.age
+  # => NoMethodError: private method `age' called for #<Person:0x110800cf8>
+{% endhighlight %}
+
+We get an error because `age` is called with the explicit receiver `john`. We can still access `age` we just have to do it inside of `Person` and without an explicit receiver. Let's explore this by equiping `Person` with a `birthday!` method.
+
+{% highlight ruby %}
+  def birthday!
+    age += 1
+
+    self
+  end
+
+  private
+
+  attr_accessor :age
+{% endhighlight %}
 
 Now we can call `birthday!` to update their age.
 
-
-    john.birthday!
-    # => NoMethodError: undefined method `+' for nil:NilClass
-
+{% highlight ruby %}
+  john.birthday!
+  # => NoMethodError: undefined method `+' for nil:NilClass
+{% endhighlight %}
 
 Ruby thinks `age` is a local variable and it's defaulting to `nil`. When using a setter in Ruby we're supposed to use an explicit receiver like `self`. Here we have a private method that doesn't allow an explicit receiver. We appear to have reached an impasse. **In this case it turns out Ruby breaks its own rule.**
 
+{% highlight ruby %}
+  def birthday!
+    self.age += 1
 
-    def birthday!
-      self.age += 1
-
-      self
-    end
-
+    self
+  end
+{% endhighlight %}
 
 Now we've got it.
 
-
-    john.birthday!
-    # => NoMethodError: private method `age' called for #<Person:0x110800cf8>
-
+{% highlight ruby %}
+  john.birthday!
+  # => NoMethodError: private method `age' called for #<Person:0x110800cf8>
+{% endhighlight %}
 
 Ugh.
 
 We've used `+=` which means that `self.age` is being called as a getter and a setter. The setter needs an explicit receiver but the getter can't have one.
 
+{% highlight ruby %}
+  def birthday!
+    self.age = age + 1
+
+    self
+  end
+{% endhighlight %}
+
+One more time.
+
+{% highlight ruby %}
+  john.birthday!
+  # => #<Person:0x110800cf8 @age=32, @last_name="Doe", @first_name="John">
+{% endhighlight %}
+
+Hurrah! Let's see the final class.
+
+{% highlight ruby %}
+  class Person
+    attr_reader :first_name, :last_name
+
+    def initialize(first_name, last_name, age)
+      @first_name = first_name
+      @last_name = last_name
+      @age = age
+    end
+
+    def name
+      [first_name, last_name].join(' ')
+    end
 
     def birthday!
       self.age = age + 1
@@ -98,41 +128,11 @@ We've used `+=` which means that `self.age` is being called as a getter and a se
       self
     end
 
+    private
 
-One more time.
-
-
-    john.birthday!
-    # => #<Person:0x110800cf8 @age=32, @last_name="Doe", @first_name="John">
-
-
-Hurrah! Let's see the final class.
-
-
-    class Person
-      attr_reader :first_name, :last_name
-
-      def initialize(first_name, last_name, age)
-        @first_name = first_name
-        @last_name = last_name
-        @age = age
-      end
-
-      def name
-        [first_name, last_name].join(' ')
-      end
-
-      def birthday!
-        self.age = age + 1
-
-        self
-      end
-
-      private
-
-      attr_accessor :age
-    end
-
+    attr_accessor :age
+  end
+{% endhighlight %}
 
 What if we want to inherit from `Person`? **Those `private` methods will be available in the child class just like they are in the parent.** Remember, Ruby's only concern is how the method is called, not who's receiving the call.
 
@@ -142,70 +142,70 @@ Like `private`, `protected` also concerns itself with the receiver. **Methods ma
 
 Who's up for ping pong?
 
+{% highlight ruby %}
+  class AbstractPingPongPlayer
+    attr_reader :name
 
-    class AbstractPingPongPlayer
-      attr_reader :name
-
-      def initialize(name)
-        @name = name
-      end
-
-      def play(opponent)
-        # Here opponent is a different instance so if skill_level was private
-        # instead of protected it wouldn't be accessible.
-        winner = if opponent.skill_level > skill_level
-            opponent
-          else
-            self
-          end
-
-        puts "#{winner.name} wins!"
-      end
-
-      protected
-
-      attr_reader :skill_level
+    def initialize(name)
+      @name = name
     end
 
-    class AmateurPingPongPlayer < AbstractPingPongPlayer
-      def initialize(*args)
-        super
+    def play(opponent)
+      # Here opponent is a different instance so if skill_level was private
+      # instead of protected it wouldn't be accessible.
+      winner = if opponent.skill_level > skill_level
+          opponent
+        else
+          self
+        end
 
-        @skill_level = rand(50)
-      end
+      puts "#{winner.name} wins!"
     end
 
-    class ProPingPongPlayer < AbstractPingPongPlayer
-      def initialize(*args)
-        super
+    protected
 
-        @skill_level = rand(50) + 50
-      end
+    attr_reader :skill_level
+  end
+
+  class AmateurPingPongPlayer < AbstractPingPongPlayer
+    def initialize(*args)
+      super
+
+      @skill_level = rand(50)
     end
+  end
 
+  class ProPingPongPlayer < AbstractPingPongPlayer
+    def initialize(*args)
+      super
+
+      @skill_level = rand(50) + 50
+    end
+  end
+{% endhighlight %}
 
 First we'll need two players.
 
-
-    jane = ProPingPongPlayer.new('Jane')
-    # => #<ProPingPongPlayer:0x007fe7cb8dadf0 @name="Jane", @skill_level=95>
-    susan = AmateurPingPongPlayer.new('Susan')
-    # => #<AmateurPingPongPlayer:0x007fe7cb8ac748 @name="Susan", @skill_level=30>
-
+{% highlight ruby %}
+  jane = ProPingPongPlayer.new('Jane')
+  # => #<ProPingPongPlayer:0x007fe7cb8dadf0 @name="Jane", @skill_level=95>
+  susan = AmateurPingPongPlayer.new('Susan')
+  # => #<AmateurPingPongPlayer:0x007fe7cb8ac748 @name="Susan", @skill_level=30>
+{% endhighlight %}
 
 If you ask Jane how skilled she is you're not going to get an answer.
 
-
-    jane.skill_level
-    # => NoMethodError: protected method `skill_level' called for #<ProPingPongPlayer:0x007fe7cb8dadf0>`
-
+{% highlight ruby %}
+  jane.skill_level
+  # => NoMethodError: protected method `skill_level' called for #<ProPingPongPlayer:0x007fe7cb8dadf0>`
+{% endhighlight %}
 
 Play her and you'll quickly find out.
 
-
+{% highlight ruby %}
     susan.play(jane)
     # => "Jane wins!"
-
+{% endhighlight %}
 
 ### Rule of Thumb
 

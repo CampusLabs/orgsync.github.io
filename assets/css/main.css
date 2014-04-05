@@ -88,6 +88,9 @@ blockquote{
   line-height: 24px;
   padding: .25rem 1rem;
 }
+blockquote p:last-child{
+  margin-bottom: 0;
+}
 
 .nav-wrap{
   background: #258bb5;
@@ -128,6 +131,9 @@ article{
   margin-bottom: 4rem;
 }
 
+.main-content.show-article article{
+  max-width: 760px;
+}
 .show-article h2:first-child{
   margin-bottom: .5rem;
 }
@@ -193,6 +199,9 @@ hr{
 
 p{
   margin-top: 0;
+}
+p code{
+  font-weight: bold;
 }
 .highlight pre{
   background: #f4f4f4;
