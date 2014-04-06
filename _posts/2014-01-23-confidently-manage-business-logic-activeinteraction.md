@@ -59,44 +59,44 @@ This approach is littered with problems:
 If the business logic doesn't belong in the controller, where does it belong? The model is a natural fit since all this logic deals with it.
 
 {% highlight ruby %}
-    class User < ActiveRecord::Base
-      before_save :ensure_password
-      after_create :send_welcome_email
+  class User < ActiveRecord::Base
+    before_save :ensure_password
+    after_create :send_welcome_email
 
-      private
+    private
 
-      def ensure_password
-        if password.nil?
-          self.password = SecureRandom.hex
-        end
-      end
-
-      def send_welcome_email
-        Notifications.welcome(self).deliver
+    def ensure_password
+      if password.nil?
+        self.password = SecureRandom.hex
       end
     end
+
+    def send_welcome_email
+      Notifications.welcome(self).deliver
+    end
+  end
 {% endhighlight %}
 
 The controller slims down and stays focused on request logic.
 
 {% highlight ruby %}
-    class UserController < ActionController::Base
-      def create
-        @user = User.new(user_params)
+  class UserController < ActionController::Base
+    def create
+      @user = User.new(user_params)
 
-        if @user.save
-          redirect_to @user
-        else
-          render 'new'
-        end
-      end
-
-      private
-
-      def user_params
-        params.require(:user).permit(:email, :password)
+      if @user.save
+        redirect_to @user
+      else
+        render 'new'
       end
     end
+
+    private
+
+    def user_params
+      params.require(:user).permit(:email, :password)
+    end
+  end
 {% endhighlight %}
 
 Something still isn't right. The controller has to know which parameters the model cares about. And what if you don't want to send a welcome email? Skipping callbacks is possible, but it's a pain.
@@ -110,36 +110,36 @@ We couldn't help but feel like something was missing, but we didn't know what th
 We searched for a Ruby interactor library and found [Mutations](https://github.com/cypriss/mutations). It seemed to fit our needs, so we began moving our business logic into interactions.
 
 {% highlight ruby %}
-    class CreateUser < Mutations::Command
-      required do
-        string :email, matches: /^.+@.+$/
-        boolean :send_welcome_email, default: true
+  class CreateUser < Mutations::Command
+    required do
+      string :email, matches: /^.+@.+$/
+      boolean :send_welcome_email, default: true
+    end
+
+    optional do
+      string :password
+    end
+
+    def execute
+      ensure_password
+
+      user = User.create!(inputs.slice(:email, :password))
+
+      if send_welcome_email
+        Notifications.welcome(user).deliver
       end
 
-      optional do
-        string :password
-      end
+      user
+    end
 
-      def execute
-        ensure_password
+    private
 
-        user = User.create!(inputs.slice(:email, :password))
-
-        if send_welcome_email
-          Notifications.welcome(user).deliver
-        end
-
-        user
-      end
-
-      private
-
-      def ensure_password
-        unless password_present?
-          self.password = SecureRandom.hex
-        end
+    def ensure_password
+      unless password_present?
+        self.password = SecureRandom.hex
       end
     end
+  end
 {% endhighlight %}
 
 It resulted in more lines of code, but they were _better_ lines of code. We quickly saw the benefits of this approach. We were able to easily share code between the web and API controllers. And thanks to its declarative nature, generating documentation was a piece of cake.
@@ -155,27 +155,27 @@ Models no longer contained conceptually distinct but practically tangled busines
 The controller grew by a few lines but it still only dealt with what it had to.
 
 {% highlight ruby %}
-    class UserController < ActionController::Base
-      def create
-        outcome = CreateUser.run(params)
+  class UserController < ActionController::Base
+    def create
+      outcome = CreateUser.run(params)
 
-        if outcome.success?
-          redirect_to outcome.result
-        else
-          @user = User.new
+      if outcome.success?
+        redirect_to outcome.result
+      else
+        @user = User.new
 
-          outcome.errors.message.each do |attribute, message|
-            unless @user.has_attribute?(attribute)
-              attribute = :base
-            end
-
-            @user.errors.add(attribute, message)
+        outcome.errors.message.each do |attribute, message|
+          unless @user.has_attribute?(attribute)
+            attribute = :base
           end
 
-          render 'new'
+          @user.errors.add(attribute, message)
         end
+
+        render 'new'
       end
     end
+  end
 {% endhighlight %}
 
 This direction looked promising, but had a few problems. Notice how the controller creates a model solely for attaching errors. Mutation results don't quack like ActiveModels, so using them with forms feels like a square peg in a round hole.
@@ -189,59 +189,58 @@ We wanted our custom validators and times with zones. We wanted interoperability
 We took what we loved from Mutations and built the gem we wanted.
 
 {% highlight ruby %}
-    class CreateUser < ActiveInteraction::Base
-      string :email
-      string :password, default: nil
-      boolean :send_welcome_email, default: true
+  class CreateUser < ActiveInteraction::Base
+    string :email
+    string :password, default: nil
+    boolean :send_welcome_email, default: true
 
-      validate :ensure_password
+    validate :ensure_password
 
-      validates :email, email: true
-      validates :password, presence: true
+    validates :email, email: true
+    validates :password, presence: true
 
-      def execute
-        user = User.create!(inputs.slice(:email, :password))
+    def execute
+      user = User.create!(inputs.slice(:email, :password))
 
-        if send_welcome_email
-          Notifications.welcome(user).deliver
-        end
-
-        user
+      if send_welcome_email
+        Notifications.welcome(user).deliver
       end
 
-      private
+      user
+    end
 
-      def ensure_password
-        unless password?
-          self.password = SecureRandom.hex
-        end
+    private
+
+    def ensure_password
+      unless password?
+        self.password = SecureRandom.hex
       end
     end
+  end
 {% endhighlight %}
 
 Similar interfaces made the transition from Mutations to ActiveInteraction quick and painless. And just like before, the model ends up empty.
 
 {% highlight ruby %}
-    class User < ActiveRecord::Base; end
+  class User < ActiveRecord::Base; end
 {% endhighlight %}
 
 Unlike before, the controller changes very little.
 
 {% highlight ruby %}
-    class UserController < ActionController::Base
-      def create
-        outcome = CreateUser.run(params[:user])
+  class UserController < ActionController::Base
+    def create
+      outcome = CreateUser.run(params[:user])
 
-        if outcome.valid?
-          redirect_to outcome.result
-        else
-          @user = outcome
-          render 'new'
-        end
+      if outcome.valid?
+        redirect_to outcome.result
+      else
+        @user = outcome
+        render 'new'
       end
     end
+  end
 {% endhighlight %}
-
 
 Notice how the invalid outcome is assigned straight to `@user`. That's because the outcome of running an interaction quacks like an ActiveModel. It can be dropped right into a form without having to jump through any hoops.
 
