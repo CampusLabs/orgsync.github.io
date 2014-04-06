@@ -88,6 +88,13 @@ caseywebdev:
   picture: http://www.orgsync.com/assets/team/casey-foster-bw.png
   description: "is a full stack developer from Fullerton, California. He started contributing to the web when he was 13 and never looked back. He's worked with PHP, Ruby, ASP and others but has recently found interest in client-side and server-side JavaScript with the help of Node.js. When he's not staring at a computer screen, he likes to hang out with his wife Lacey, wrestle his puppy Gunner, rock out on guitar, play basketball and watch movies."
 
+clifton:
+  active: true
+  name: Clifton King
+  email: clifton@orgsync.com
+  picture: http://www.orgsync.com/assets/team/clifton-king-bw.png
+  description: "is a highly motivated software developer from McAllen, Texas. He attended the University of Texas at Austin and studied Computer Science. As a student he was active in Delta Sigma Phi fraternity, and has also served in the United States Army. Clifton has been designing web-based solutions for small companies since he was in middle school and looks forward to tackling new challenges daily for OrgSync clients. In his spare time he enjoys weightlifting, wakeboarding, and snowboarding."
+
 hadronzoo:
   active: true
   name: Joshua Griffith
