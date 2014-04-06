@@ -31,7 +31,7 @@ jpowell:
   name: Justin Powell
   email: justin@orgsync.com
   picture: http://www.orgsync.com/assets/team/justin-powell-bw.png
-  descriptin: "is an entrepreneur and Computer Science graduate from The University of Texas at Austin."
+  description: "is an entrepreneur and Computer Science graduate from The University of Texas at Austin."
 
 drywheat:
   active: true
@@ -72,22 +72,26 @@ tommyschaefer:
   name: Tommy Schaefer
   email: tommy@orgsync.com
   picture: http://ecx.images-amazon.com/images/I/51NhtW9exnL._SX300_.jpg
+  description: 'is our intern who has failed to fill out his biography yet.'
 
 valariems:
   active: true
   name: Valarie Stuart
   email: valarie@orgsync.com
   picture: http://www.orgsync.com/assets/team/valarie-stuart-bw.png
+  description: "Her design career began while she was a student at the University of Missouri, when the logo she submitted for the school's campus-wide philanthropy was selected as the winner and was featured on MTV when they broadcast from Mizzou during philanthropy week. Shortly after college and a rough Missouri winter, Valarie left St. Louis for the warmer climate of Dallas, where she worked as a freelance graphic designer for accounts including DFW Airport, La Madeleine, Mary Kay, Nokia, Pepsi, Pizza Hut and more. As the internet's popularity grew in the late 1990s, Valarie shifted her focus to web design, where her background in page layout and typography proved valuable to website design. She believes that user experience and content should drive design, and strives to build user interfaces that delight OrgSync's users. When she's not making the web a more beautiful place, Valarie likes to play golf, work in her garden, and admire her $0 electric bills, thanks to the solar panels she added to the roof of her house."
 
 caseywebdev:
   active: true
   name: Casey Foster
   email: casey@orgsync.com
   picture: http://www.orgsync.com/assets/team/casey-foster-bw.png
+  description: "is a full stack developer from Fullerton, California. He started contributing to the web when he was 13 and never looked back. He's worked with PHP, Ruby, ASP and others but has recently found interest in client-side and server-side JavaScript with the help of Node.js. When he's not staring at a computer screen, he likes to hang out with his wife Lacey, wrestle his puppy Gunner, rock out on guitar, play basketball and watch movies."
 
 hadronzoo:
   active: true
   name: Joshua Griffith
   email: joshua@orgsync.com
   picture: http://www.orgsync.com/assets/team/joshua-griffith-bw.png
+  description: "grew up in North Carolina and has been working with early-stage technology companies since 1997. After receiving his bachelors degree in Electrical Engineering from North Carolina State University in 2003, he moved to Dallas and has since worked on projects as diverse as designing a concentrating solar collector, engineering a broadband wireless system, and co-founding a facility-maintenance technology startup. In his free time, Joshua enjoys writing Clojure, reading philosophy, and spending time with his wife and three children."
 
