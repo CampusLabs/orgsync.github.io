@@ -101,6 +101,7 @@ p code{ font-weight: bold; }
 }
 
 .page-header h1{
+  left: 1.5rem;
   margin-top: 0;
   position: relative;
   top: 70px;
@@ -339,9 +340,6 @@ hr{
 @media only screen and (max-width: 768px){
   article{
     padding: 20px;
-  }
-  h1.page-title{
-    padding-left: 20px;
   }
   .highlight pre{
     width: 90%;
