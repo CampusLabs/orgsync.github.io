@@ -21,11 +21,11 @@ We use plugins so you can't just push to master. You must build Jekyll, so eithe
 - Fill out the following FrontMatter fields:
 ````
 ---
-title: Confidently Manage Business Logic with ActiveInteraction
-layout: single
-author: AaronLasseigne
-description: lorem ipsum
-comments: true
+title: Confidently Manage Business Logic with ActiveInteraction 
+layout: single <!-- posts always use single -->
+author: AaronLasseigne <!-- github username -->
+description: lorem ipsum <!-- used on index summary -->
+comments: true 
 tags: patterns rails
 ---
 ````
