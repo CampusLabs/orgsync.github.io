@@ -1,10 +1,10 @@
 ---
 title: Private and Protected They might not mean what you think they mean
-link: http://devblog.orgsync.com/private-and-protected-they-might-not-mean-what-you-think-they-mean/
 layout: single
 author: AaronLasseigne
 comments: true
-post_name: private-and-protected-they-might-not-mean-what-you-think-they-mean
+tags: ruby
+description:  If you’ve taken up Ruby after learning another language like C++ or Java and you haven’t reexamined the meaning of “private” and “protected” then you’re almost certainly not using them the right way. Let’s spend a minute investigating their use in Ruby.
 ---
 
 Ruby, like many other languages, provides a built-in way to change method visibility. Used properly it can help create a roadmap for other developers to follow. The problem is that markers of the same name can vary in meaning between languages. **If you've taken up Ruby after learning another language like C++ or Java and you haven't reexamined the meaning of "private" and "protected" then you're almost certainly not using them the right way.** Let's spend a minute investigating their use in Ruby.

@@ -8,7 +8,7 @@ post_name: upgrading-to-bcrypt
 tags: security
 ---
 
-![crypt](/wp-content/uploads/2013/05/crypt.jpg)
+![crypt](http://cl.ly/image/2L3J3n1I2k3S/Screen%20Shot%202014-04-05%20at%207.02.49%20PM.png)
 
 Every so often, someone hacks a company and steals their database. Usually the database contains a bunch of email addresses and passwords. Two weeks ago, [LivingSocial](https://www.livingsocial.com/createpassword) was hacked, leaking 50 million users' data. Even companies as big as [Sony](http://blog.us.playstation.com/2011/04/26/update-on-playstation-network-and-qriocity/) aren't immune; they were hacked in 2011 and had 77 million users' data stolen.
 
@@ -33,13 +33,14 @@ Let's say you're in the worst possible scenario: you store passwords in plain te
 
 Assuming a straightforward user model, you might authenticate users with a class method. All it does is try to find the user, then compare the passwords. If everything checks out, it returns the user. In all other cases, it returns `nil`.
 
-
-    class User < ActiveRecord::Base
-      def self.authenticate(username, password)
-        user = find_by_username(username)
-        user if user && password == user.password
-      end
+{% highlight ruby %}
+  class User < ActiveRecord::Base
+    def self.authenticate(username, password)
+      user = find_by_username(username)
+      user if user && password == user.password
     end
+  end
+{% endhighlight %}
 
 
 ### During
@@ -48,99 +49,99 @@ We want to jump straight to the best case scenario and start using bcrypt. Three
 
 Up first is adding a new field to the user model. We need to store the derived key bcrypt generates. A simple migration takes care of this step:
 
-
-    class AddBcryptHashToUser < ActiveRecord::Migration
-      def change
-        add_column :users, :bcrypt_hash, :string
-      end
+{% highlight ruby %}
+  class AddBcryptHashToUser < ActiveRecord::Migration
+    def change
+      add_column :users, :bcrypt_hash, :string
     end
-
+  end
+{% endhighlight %}
 
 Now we need a couple utility functions. They'll allow us to see which users use bcrypt, set the password, and compare strings against it. These all require the [bcrypt-ruby](https://github.com/codahale/bcrypt-ruby) gem, so add `gem 'bcrypt-ruby'` to your Gemfile.
 
-
-    require 'bcrypt'
-    class User < ActiveRecord::Base
-      include BCrypt
-      def bcrypt?
-        bcrypt_hash.present?
-      end
-      def bcrypt
-        @bcrypt ||= Password.new(bcrypt_hash) if bcrypt?
-      end
-      def bcrypt=(new_password)
-        @bcrypt = Password.create(new_password)
-        self.bcrypt_hash = @bcrypt
-      end
+{% highlight ruby %}
+  require 'bcrypt'
+  class User < ActiveRecord::Base
+    include BCrypt
+    def bcrypt?
+      bcrypt_hash.present?
     end
-
+    def bcrypt
+      @bcrypt ||= Password.new(bcrypt_hash) if bcrypt?
+    end
+    def bcrypt=(new_password)
+      @bcrypt = Password.create(new_password)
+      self.bcrypt_hash = @bcrypt
+    end
+  end
+{% endhighlight %}
 
 Lastly, the authenticate function needs to be modified. It should compare using bcrypt if the user has been updated. If they haven't, it should compare using the old method.
 
 Once a user authenticates using the old method, it should generate a bcrypt hash for them so it'll use that next time. In addition, it needs to delete data stored by the old method. If it doesn't, an attacker could just focus their efforts on the legacy data.
 
-
-    def self.authenticate(username, password)
-      user = find_by_username(username)
-      return unless user
-      if user.bcrypt?
-        user if user.bcrypt == password
-      elsif password == user.password
-        user.bcrypt = password
-        user.password = nil
-        user.save!
-        user
-      end
+{% highlight ruby %}
+  def self.authenticate(username, password)
+    user = find_by_username(username)
+    return unless user
+    if user.bcrypt?
+      user if user.bcrypt == password
+    elsif password == user.password
+      user.bcrypt = password
+      user.password = nil
+      user.save!
+      user
     end
-
+  end
+{% endhighlight %}
 
 ### After
 
 At some point you'll want to remove everything that's still stored in the old format. For users that haven't updated yet, a new password must be generated. You can either email it to them or they can rely on your password recovery service.
 
+{% highlight ruby %}
+  require 'bcrypt'
+  class RemovePasswordFromUser < ActiveRecord::Migration
+    def up
+      user_ids = ActiveRecord::Base.connection.select_all(
+          'SELECT id FROM users WHERE bcrypt_hash IS NULL').
+        map { |e| e['id'] }
+      remove_column :users, :password
+      return if user_ids.blank?
 
-    require 'bcrypt'
-    class RemovePasswordFromUser < ActiveRecord::Migration
-      def up
-        user_ids = ActiveRecord::Base.connection.select_all(
-            'SELECT id FROM users WHERE bcrypt_hash IS NULL').
-          map { |e| e['id'] }
-        remove_column :users, :password
-        return if user_ids.blank?
+      passwords = user_ids.length.times.
+        map { SecureRandom.hex }
+      bcrypt_hashes = passwords.
+        map { |e| BCrypt::Password.create(e) }
+      cases = user_ids.zip(bcrypt_hashes).
+        map { |a, b| "WHEN #{a} THEN '#{b}'" }
+      update_sql <<-SQL
+        UPDATE users
+        SET bcrypt_hash = CASE id #{cases.join(' ')} END
+        WHERE id IN (#{user_ids.join(', ')})
+      SQL
 
-        passwords = user_ids.length.times.
-          map { SecureRandom.hex }
-        bcrypt_hashes = passwords.
-          map { |e| BCrypt::Password.create(e) }
-        cases = user_ids.zip(bcrypt_hashes).
-          map { |a, b| "WHEN #{a} THEN '#{b}'" }
-        update_sql <<-SQL
-          UPDATE users
-          SET bcrypt_hash = CASE id #{cases.join(' ')} END
-          WHERE id IN (#{user_ids.join(', ')})
-        SQL
-
-        user_ids.zip(passwords).each do |user_id, password|
-          # Send an email, generate a notification, ...
-        end
+      user_ids.zip(passwords).each do |user_id, password|
+        # Send an email, generate a notification, ...
       end
     end
-
+  end
+{% endhighlight %}
 
 ### Testing
 
 Depending on how your tests are set up, switching to bcrypt could slow them down. Changing the work factor is the easiest way to avoid this slowdown. The next version of bcrypt-ruby will support setting the cost with `BCrypt::Engine.cost = x`. For the time being, monkey patching is the way to go. Drop this into `spec/support/bcrypt.rb`:
 
-
-    require 'bcrypt'
-    module BCrypt
-      class Engine
-        Kernel.silence_warnings do
-          DEFAULT_COST = 1
-        end
+{% highlight ruby %}
+  require 'bcrypt'
+  module BCrypt
+    class Engine
+      Kernel.silence_warnings do
+        DEFAULT_COST = 1
       end
     end
-
+  end
+{% endhighlight %}
 
 ### Conclusion
 
