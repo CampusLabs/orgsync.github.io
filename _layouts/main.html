@@ -2,7 +2,7 @@
   {% include header.html %}
   <body>
     {{ page.content }}
-    <div class="main-content summary">
+    <div class="main-content index-page">
       {% for post in site.posts %}
         {% if post.author %}
           {% assign author = site.data.team[post.author] %}

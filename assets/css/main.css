@@ -123,25 +123,25 @@ p code{ font-weight: bold; }
   max-width: 760px;
 }
 
-/* summary is the index */
-.main-content.summary{
+/* index-page is the index */
+.main-content.index-page{
   padding-top: 4rem;
 }
-.main-content.summary h3{
+.main-content.index-page h3{
   margin: 0;
 }
-.main-content.summary .media-box{
+.main-content.index-page .media-box{
   display: flex;
   margin-bottom: 3rem;
 }
 
 /* Show article is the show (single) page */
-.show-article h2:first-child{
+.single-page h2:first-child{
   margin-top: 4rem;
   margin-bottom: .5rem;
 }
 
-.show-article .posted-at{
+.single-page .posted-at{
   border-bottom: 3px dotted #dedede;
   margin-bottom: 2rem;
   padding-bottom: 2rem;
