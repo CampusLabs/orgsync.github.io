@@ -392,10 +392,33 @@ hr{
   .open-source li img{
     width: 50%;
   }
-  .pull-left{
-    width: 50px;
+  .main-content.index-page .pull-left{
+    width: 100%;
+    margin-right: 0;
   }
-  .media-body{
-    width: 75%;
+  .main-content.index-page .pull-left img{
+    display: none;
+  }
+  .main-content.index-page .pull-left .tag{
+    clear: none;
+    float: left;
+    margin-right: 10px;
+  }
+  .main-content.index-page .media-body{
+    width: 100%;
+  }
+  .main-content.index-page .media-box{
+    margin-bottom: .5rem;
+  }
+  .main-content.team-page{
+    padding: 20px;
+  }
+  .main-content.team-page .pull-left{
+    float: left;
+    width: 25%;
+    margin-right: 5%;
+  }
+  .main-content.team-page .media-body{
+    width: 70%;
   }
 }
