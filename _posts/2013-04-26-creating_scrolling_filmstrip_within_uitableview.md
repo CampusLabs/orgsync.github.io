@@ -1,11 +1,10 @@
 ---
 title: Creating a Scrolling Filmstrip Within a UITableView
-link: http://devblog.orgsync.com/creating_scrolling_filmstrip_within_uitableview/
 layout: single
 author: macelangelo
 comments: true
-post_name: creating_scrolling_filmstrip_within_uitableview
 tags: iOS
+description: While working on our current project, our UI designer came up with a mockup that displayed photo albums as a small horizontal scrolling filmstrip within a single table cell of a larger table view.
 ---
 
 While working on our current project, our UI designer came up with a mockup that displayed photo albums as a small horizontal scrolling filmstrip within a single table cell of a larger table view.
