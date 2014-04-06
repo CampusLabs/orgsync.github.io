@@ -23,17 +23,17 @@ It took a little bit of setup and testing but now I can say that I've solved HTM
 
 So I've got some tips for your next email project and how to get over some of these hurdles:
 
-#### Tip 1: Use Rails Layouts
+### Tip 1: Use Rails Layouts
 
 I'm not sure when ActionMailer layouts got added to Rails, but I know that it wasn't in the iteration of Rails we were using when our emails were first written. Every view was hand-coded, with the entire template from header to footer embedded around the actual content of the email. For some reason, there seem to be apps that still do it this way, which boggles my mind, and makes me feel better we weren't the only ones behind the times there.
 
 That being said: make the switch if you haven't. Pull out your template code, place it in a proper layout file like you would for anything else in Rails, and it works in the same way. Now when I need to make that change to the background color, I only have to change it in one spot, not 27.
 
-##### Sidenote: Suck It Up and Write Code Like It's 1998
+#### Sidenote: Suck It Up and Write Code Like It's 1998
 
 I didn't solve div support in email clients. I'm sorry if you thought I did; just embrace tables. Give up on trying to get divs to work. Use tables for everything. Use them like you did in 1998 and your email will be drastically more consistent than if you try to make divs work for layout.
 
-#### Tip 2: Use CSS the Way You Want To
+### Tip 2: Use CSS the Way You Want To
 
 Let's look at an old email in our app. I'm sure you've seen this code before.
 
@@ -96,4 +96,47 @@ Here's the setup for that task:
     # This is a good spot to do a little input-error checking. I don't trust myself (or my coworkers)
     # so I ran a check to make sure the account here exists as an administrator in our system
     # this prevents me from sending our suite of test emails to a random user.
+
+    # Based on the account, it's also a good idea to establish any other variables that might be used multiple
+    # times by your mailers so you're not establishing them multiple times below.
+
+    # send a payment message
+    amount = '55'
+    payment_type = 'Credit Card'
+    order = '20000'
+    MessageMailer.payment_message(account, user_group, amount, payment_type, order_number).deliver
+    print "Dues Payment Message Sent\n"
+
+    ## Now Rinse and Repeat.
+    ## We do this for every message in our system; establish basic defaults, then send a test.
+
 {% endhighlight %}
+
+Looking at the payment message again, we already had the account information for whomever initiated the test, and then just created some really simple examples of what those other objects might contain. This will take a little bit of research and app-knowledge on your first go-round of creating them–you need to know what type of objects to return, but this will save time down the road. Imagine all of your emails represented just like payent_message–now, whenever I change the look and feel of the OrgSync emails, all I have to do is run this rake task to see them all show up in my inbox.
+
+If I am just heavily testing one particular email, then I still open up the console and manually run my MessageMailer methods, but now that I have this rake task at least as a snippet directory, I don’t have to re-learn how to create the objects needed for each email.
+
+- You’ll probably have common elements between emails, so pull out what you can and define in one spot, in order to DRY up this code.
+
+- It’s better to reference real objects in your database rather than objects you build from scratch so that you recreate your app experience (this code was simplified to remove some domain-specific language).
+
+- Protip – With every message that goes out, I print out the type of message that was sent so that I can see the progress of the rake task as the emails are being sent, but it’s just as nice to print out a list of every message that wasn’t included in your testing at the very end of this script. I encountered a few emails where tests weren’t really needed, but I also wanted this rake task to include everything that message_mailer.rb defined, for sanity’s sake and for fellow comrades working on this part of the application. When I run this rake task, I know that every email will, at some point, be referenced in this file.
+
+### Email Client Support – Use Litmus App
+Testing email clients makes the browser wars look like child’s play. On the browser side of things, OrgSync officially supports IE8 , IE9, IE10, FF, Chrome, and Safari — that’s six browsers, and that covers 99.5% of users. My testing list for this project was: Android, Apple Mail 5, Apple Mail 6, Blackberry, Gmail, Hotmail, IPhone 5, IPhone 4, IPhone 3, IPad, Outlook 2003, Outlook 2007, Outlook 2013 and Yahoo Mail–and honestly I could have gone further if I was really trying to cover every base. So we’re looking at 14 different email clients. Note: If you thought Microsoft was dumb for some decisions it made regarding IE, just wait until you dig into Outlook.
+
+[Number of different types of emails we send] x [14 Email Clients] = A bunch of testing
+
+I can take that payment_message we defined above, send it to an email address that litmus provides me with, and, in just a couple of minutes, have a screenshot of what that email looks like in every client. I run through it, put a little checkmark on the clients that pass, and an “x” on what doesn’t. I can quickly see what works and what is going to need a little tender love and care.
+
+The killer feature though is Outlook Live-Editing. You can jump in and live-edit the HTML, change things on the fly, and see how they look in an Outlook client. It’s a slightly dumber version of using a web inspector on a webpage. If you’ve ever sent 30 emails in a row, tweaking individiual CSS attributes to try to fix a bug in Outlook, you can imagine how much time this saves.
+
+[Litmus App](http://www.litmusapp.com) costs a little bit for a monthly subscription, but I highly recommend it for ease of use and being really good at its job.
+
+### In Conclusion
+The great reward from both Email Layouts and Premailer is the DRY’ing up of our message mailer code. Those views are now a quarter of the code length from where they started before this implementation. Nailing down the right testing methods and building the rake task removes that uncertainty we talked about–uncertainty that a variation of an email was missed or that an email client wasn’t vetted for compatibility; both make me more confident that our users are seeing what I want them to see.
+
+#### Next Steps
+The next thing I really want to do on this project is to combine our two types of testing. Litmus has an API for customers that from the looks of it will be perfect for sending emails via the rake task outlined above, and then we can test our entire suite of emails at once in every client out there.
+
+I’d love any comments you have about the ways you streamlined your processes in regards to email, or suggestions for this process. Just remember: I am a designer, so take it easy when you rip apart my code.
