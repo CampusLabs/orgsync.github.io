@@ -388,4 +388,7 @@ h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{
   .open-source li img{
     width: 50%;
   }
+  .pull-left{
+    width: 50px;
+  }
 }

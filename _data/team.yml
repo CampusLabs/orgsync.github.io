@@ -3,19 +3,21 @@ tfausak:
   name: Taylor Fausak
   email: taylor@orgsync.com
   picture: http://www.orgsync.com/assets/team/taylor-fausak-bw.png
+  description: "was born in California, but he got to Texas as soon as he could. He studied Computer Science at the University of Texas at Austin before entering the wild world of software development. After a brief stint at Cisco, he started his career at Famigo working on all aspects of web development. Then he swapped his Django experience for a chunky slice of Rails bacon and joined OrgSync in the fall of 2012. When he's not slinging code around, he likes riding bikes, playing Magic, and throwing frisbees."
 
 AaronLasseigne:
   active: true
   name: Aaron Lasseigne
   picture: http://www.orgsync.com/assets/team/aaron-lasseigne-bw.png
   email: aaron@orgsync.com
-  description: strives to design comprehensive solutions that provide structural stability and a positive customer experience. He is a graduate of The Ohio State University with a degree in Computer and Information Science. Before coming to OrgSync, Aaron worked as a Developer for Monster Worldwide in their FastWeb division and then as a Manager of Application Development at HRsmart Inc. Outside of work Aaron likes to travel, read, cook, and is an avid fan of Chicago Bears and Buckeye football.
+  description: "strives to design comprehensive solutions that provide structural stability and a positive customer experience. He is a graduate of The Ohio State University with a degree in Computer and Information Science. Before coming to OrgSync, Aaron worked as a Developer for Monster Worldwide in their FastWeb division and then as a Manager of Application Development at HRsmart Inc. Outside of work Aaron likes to travel, read, cook, and is an avid fan of Chicago Bears and Buckeye football."
 
 camdez:
   active: true
   name: Cameron Desautels
   email: cameron@orgsync.com
   picture: http://www.orgsync.com/assets/team/cameron-desautels-bw.png
+  description: "is a polyglot developer originally from Colorado Springs, CO. He holds a masters degree in Computer Science from The University of Texas at Dallas, in OrgSync's own backyard. He joined OrgSync in April of 2012 after a three year foray into mobile app development. Cameron firmly believes that being a good developer implies being a good designer—that developers must have an in-depth understanding of the way non-technical users think and interact with products and should design to align with user intuitions. In his free time he enjoys drinking tea, coding in Lisp, and studying Japanese."
 
 macelangelo:
   active: true
