@@ -3,6 +3,7 @@ title: ReDoS Regular Expression Denial of Service
 layout: single
 author: tfausak
 comments: true
+tags: rails ruby perl ReDoS regex
 description: On Thursday, I ran into a puzzling issue at work. It first occurred three weeks ago and remained uninvestigated because it appeared to be a duplicate of another issue. When I deployed the fix for the other issue, I expected it to fix this one too. Turns out, it didn't.
 ---
 
