@@ -1,11 +1,10 @@
 ---
 title: Big Ruby Presentation Round-up
-link: http://devblog.orgsync.com/big-ruby-presentation-round-up/
 layout: single
 author: camdez
 comments: true
-post_name: big-ruby-presentation-round-up
 tags: ruby
+description: Last week the OrgSync development team was out en masse at Big Ruby Conf in our own backyard of Dallas, TX. We had a great time and listened to so many fantastic talks that it's hard to keep track of them all. To help with this problem I decided to put together a complete list of talks replete with links to slide decks. Enjoy!
 ---
 
 Last week the OrgSync development team was out _en masse_ at [Big Ruby Conf](http://www.bigrubyconf.com) in our own backyard of Dallas, TX. We had a great time and listened to so many fantastic talks that it's hard to keep track of them all. To help with this problem I decided to put together a complete list of talks replete with links to slide decks. Enjoy!

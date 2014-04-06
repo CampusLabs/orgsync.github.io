@@ -1,12 +1,10 @@
 ---
 title: The Big Ruby Conf
-link: http://devblog.orgsync.com/the-big-ruby-conf/
 layout: single
 author: AaronLasseigne
 comments: true
-post_name: the-big-ruby-conf
 ---
-![Big Ruby Dallas](/wp-content/uploads/2013/03/BigRuby.jpg)
+![Big Ruby Dallas](http://cl.ly/image/1B1L183B1O3V/Screen%20Shot%202014-04-05%20at%207.59.38%20PM.png)
 
 The inaugural [Big Ruby Conf](http://www.bigrubyconf.com) kicked off on February 28 with almost the entire OrgSync development team in attendance. With a few exceptions, most Ruby conferences lack an overarching year-to-year theme. Big Ruby Conf is clearly for the enterprise audience. While this may conjure mental images of suits, marketeers spewing buzzwords and piles of red tape, Big Ruby Conf suffers from none of these ailments.
 
@@ -14,7 +12,9 @@ The conference was held in a theater rather than a hotel, lending a more relaxed
 
 Talks at the conference featured speakers from companies including [Github](https://github.com), [LivingSocial](http://www.livingsocial.com), [Rackspace](http://www.rackspace.com), [Shopify](http://www.shopify.com), [Yammer](https://www.yammer.com) and [Zynga](http://zynga.com). They converged around code as infrastructure, mining large data, concurrence (often via [Celluloid](http://celluloid.io)), and service oriented architecture.
 
-[caption id="attachment_144" align="alignright" width="674"]![OrgSync volunteers](/wp-content/uploads/2013/03/Rubyvolunteer.jpg) OrgSync devs volunteered at Big Ruby Conf.[/caption]
+![OrgSync volunteers](http://cl.ly/image/0e1g1l040K2I/Screen%20Shot%202014-04-05%20at%208.00.12%20PM.png)
+
+OrgSync devs volunteered at Big Ruby Conf.
 
 Having companies share the particulars of technologies and patterns at scale was priceless. [Wynn Netherland](https://github.com/pengwynn) discussed the realities of using [HATEOAS](http://en.wikipedia.org/wiki/HATEOAS) to implement Github's API. Several talks delved into the world of Chef, including one by [Joshua Timberman](https://github.com/jtimberman) from [Opscode](http://www.opscode.com). [Jeremy Hinegardner](https://github.com/copiousfreetime) gave one of several talks on "big data," which he described as "An amount of data and the processing of it that makes you feel uncomfortable." The tribulations of scaling data, page hits, and people were covered by Zynga, Shopify, and Yammer. As part of a company that's growing, it's invaluable to hear the experiences of those walking the path ahead of you. (These talks will be available on [Confreaks](http://www.confreaks.com/events/bigruby2013) in the next few weeks.)
 

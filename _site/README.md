@@ -12,7 +12,7 @@ Basically a standard jekyll setup.
 
 ### To Deploy:
 
-Push to master
+We use plugins so you can't just push to master. You must build Jekyll, so either run `jekyll build`, or `jekyll serve --watch` which will build automatically when a change is made. Then you can push to master.
 
 ### To Write A New Blog Post:
 
