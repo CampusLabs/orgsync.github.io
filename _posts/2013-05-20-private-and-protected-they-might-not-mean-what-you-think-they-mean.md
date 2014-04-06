@@ -1,5 +1,5 @@
 ---
-title: Private and Protected They might not mean what you think they mean
+title: "Private and Protected: They might not mean what you think they mean"
 layout: single
 author: AaronLasseigne
 comments: true
