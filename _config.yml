@@ -5,3 +5,5 @@ description: "OrgSync Developer Musings on: rails, ruby, testing, security, and 
 url: http://devblog.orgsync.com/
 gems:
   - jekyll-redirect-from
+  - jemoji
+  - jekyll-mentions
