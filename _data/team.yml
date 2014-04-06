@@ -24,30 +24,35 @@ macelangelo:
   name: Jim Clark
   email: jwclark@orgsync.com
   picture: http://www.orgsync.com/assets/team/jim-clark-bw.png
+  description: "has over 15 years of design and development experience. After graduating from Texas Tech with a bachelor's degree in Design Communication, he started out doing graphic design, then found a unique opportunity to do QA testing/UI design for Macromedia's FreeHand. From there, he moved onto the web, starting out designing and building websites before graduating to building web applications. Jim has spent the last 12 years designing and building web-based applications for the enterprise. Last year, he started his own company focused on building mobile applications. In his free time, Jim continues to tinker with new technologies, writing, and occasional forays into World of Warcraft."
 
 jpowell:
   active: true
   name: Justin Powell
   email: justin@orgsync.com
   picture: http://www.orgsync.com/assets/team/justin-powell-bw.png
+  descriptin: "is an entrepreneur and Computer Science graduate from The University of Texas at Austin."
 
 drywheat:
   active: true
   name: Sonny Garcia
   email: sonny@orgsync.com
   picture: http://www.orgsync.com/assets/team/sonny-garcia-bw.png
+  description: "graduated from Texas State University with a B.S. degree in Physics and then shortly thereafter turned his attention towards software development and computing systems in general. Since 2007, he has been building backend systems, web applications and web service integrations for notable companies such as Dow Chemical and Equifax. These days he spends his time architecting and refining the server infrastructure here at OrgSync to ensure our platform runs smoothly, reliably and scales on demand. He's an odd bird, but we love working with him just the same."
 
 mrwade:
   active: true
   name: Kevin Wade
   email: kevin@orgsync.com
   picture: http://www.orgsync.com/assets/team/kevin-wade-bw.png
+  description: "was born and raised in the Dallas area. At a young age, he formed his own company to serve small businesses in the area to build out server, network, and email solutions. At his high school, he became the first student employee in the Technology Department and went on to graduate valedictorian of his class. Kevin continued his love for technology throughout college, where quickly became a leader in and out of the classroom. He is a graduate of Southern Methodist University in Dallas with a degree in Computer Engineering. Go Mustangs! Kevin joined the OrgSync team in February 2011, bringing both skills in engineering and a love for user experience to the table. He enjoys working closely with both the development and design teams to create a product that people will love to use."
 
 justinsteffy:
   active: true
   name: Justin Steffy
   email: steffy@orgsync.com
   picture: http://www.orgsync.com/assets/team/justin-steffy-bw.png
+  description: "grew up in the suburbs of Dallas and completed his undergraduate degree at Texas A&M University. After receiving his master's degree from the University of North Carolina, he moved to Washington, D.C., to work for Lockheed Martin, developing software systems for the U.S. Navy. When the opportunity arose, Justin moved to L.A. to work for Hulu, developing the backend payments system. When he's not creating complex software systems, he enjoys working on cars, traveling, and watching TV and movies."
 
 tylerlee:
   active: true
@@ -55,7 +60,7 @@ tylerlee:
   twitter: tylerjameslee
   picture: http://www.orgsync.com/assets/team/tyler-lee-bw.png
   email: tyler@orgsync.com
-  description: is a UI Designer / Frontend Developer for OrgSync that tries to do his darndest to make OrgSync more intuitive and easier to use.
+  description: "is a UI Designer / Frontend Developer for OrgSync that tries to do his darndest to make OrgSync more intuitive and easier to use."
 
 vtraweek:
   active: false
