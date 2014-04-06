@@ -12,26 +12,6 @@ body {
 .left { float: left; }
 .right { float: right; }
 
-.media-box {
-  clear: both;
-  overflow: hidden;
-}
-.pull-left {
-  float: left;
-  margin-right: 1.5rem;
-  width: 100px;
-}
-.pull-left img {
-  border-radius: 50%;
-  float: right;
-  width: 50px;
-  opacity: .7;
-}
-.media-body {
-  float: left;
-  width: 80%;
-}
-
 a {
   color: #e97f02;
   text-decoration: underline;
@@ -71,6 +51,27 @@ h3 {
 h4 {
   font-size: 1.2rem;
   line-height: 1.6rem;
+}
+
+/* Media Element */
+.media-box {
+  clear: both;
+  overflow: hidden;
+}
+.pull-left {
+  float: left;
+  margin-right: 1.5rem;
+  width: 100px;
+}
+.pull-left img {
+  border-radius: 50%;
+  float: right;
+  width: 50px;
+  opacity: .7;
+}
+.media-body {
+  float: left;
+  width: 80%;
 }
 
 /* Typography */
@@ -426,5 +427,4 @@ hr {
     font-size: 1rem;
     line-height: 1.4rem;
   }
-
 }
