@@ -5,6 +5,7 @@ author: jpowell
 comments: true
 tags: testing patterns ruby rspec dry
 description: More often than not, tests are treated as an afterthought or a second-class citizen. They are written to fulfill a requirement or to provide a mental safety net for the additions being made. After a while, the tests can become unmanageable. It may reach the point where updating them along with the business logic is such a daunting task that you stop writing tests altogether to meet deadlines.
+redirect_from: "/maintaining-a-large-test-suite-a-dry-approach-to-rspec/"
 ---
 
 More often than not, tests are treated as an afterthought or a second-class citizen. They are written to fulfill a requirement or to provide a mental safety net for the additions being made. After a while, the tests can become unmanageable. It may reach the point where updating them along with the business logic is such a daunting task that you stop writing tests altogether to meet deadlines.

@@ -5,6 +5,7 @@ author: AaronLasseigne
 description: The validation that ships with Rails is useful, albeit generic. It leaves us to construct our own validators as dictated by our domains. The good news is that Rails gives us the tools necessary to build our own validators.
 comments: true
 tags: rails
+redirect_from: "/building-custom-rails-attribute-validators/"
 ---
 The validation that ships with Rails is useful, albeit generic. It leaves us to construct our own validators as dictated by our domains. Most of our domains share some common data types like emails or phone numbers. Individually they might require SSNs, SINs, credit card numbers, URIs, or any other of a million types of data. The good news is that Rails gives us the tools necessary to build our own validators.
 

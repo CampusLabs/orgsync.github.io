@@ -5,6 +5,7 @@ author: tfausak
 comments: true
 tags: security
 description: As a developer, it's your responsibility to protect your users' data. Depending on how you store passwords, it can either be trivial or impossible for attackers to compromise your users' accounts.
+redirect_from: "/upgrading-to-bcrypt/"
 ---
 
 ![crypt](http://cl.ly/image/2L3J3n1I2k3S/Screen%20Shot%202014-04-05%20at%207.02.49%20PM.png)

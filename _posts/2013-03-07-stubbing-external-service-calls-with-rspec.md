@@ -5,6 +5,7 @@ author: jpowell
 comments: true
 tags: testing
 description: When building complex web applications, you'll find there are business needs that require integrating with external services. In other cases, it may be more feasible to leverage a pre-existing service instead of reinventing the wheel.
+redirect_from: "/stubbing-external-service-calls-with-rspec/"
 ---
 
 When building complex web applications, you'll find there are business needs that require integrating with external services. In other cases, it may be more feasible to leverage a pre-existing service instead of reinventing the wheel.

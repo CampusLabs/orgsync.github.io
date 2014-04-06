@@ -5,6 +5,7 @@ author: mrwade
 comments: true
 tags: javascript
 description: I fell so head-first into Backbone that I quickly outgrew the conventions it set in place. I needed a way to nest views without a bunch of boilerplate, a way to clean up views after destroying them, and some sort of way to swap views in and out when switching modes in my app. There really aren't conventions set in place by Backbone to do these types of things.
+redirect_from: "/common-backbone-patterns-simplified-with-marionette/"
 ---
 
 I got my first dose of [Backbone](http://backbonejs.org/) on a side project after having surpassed the level of jQuery code anyone could possibly keep organized. Once I got the concepts down and a working prototype, I was in love. It allowed me to do the things I had been dreaming of doing on the front-end without the code growing into a giant hairball.

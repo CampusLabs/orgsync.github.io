@@ -5,6 +5,7 @@ author: drywheat
 comments: true
 tags: ruby jruby
 description: "JRuby, a Ruby language implementation that runs on the JVM, allows developers to leverage the vast number of powerful libraries that have been written in Java while maintaining the simplicity and terse nature of the Ruby programming language. Since Java allows for method overloading and Ruby does not, at some point we may find ourselves needing to choose which overload we want to invoke. Thankfully, JRuby provides us with a couple of mechanisms."
+redirect_from: "/selecting-overloaded-java-methods-in-jruby/"
 ---
 
 JRuby, a Ruby language implementation that runs on the JVM, allows developers to leverage the vast number of powerful libraries that have been written in Java while maintaining the simplicity and terse nature of the Ruby programming language. Since Java allows for method overloading and Ruby does not, at some point we may find ourselves needing to choose which overload we want to invoke. Thankfully, JRuby provides us with a couple of mechanisms.

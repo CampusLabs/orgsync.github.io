@@ -5,6 +5,7 @@ author: AaronLasseigne
 comments: true
 tags: ruby community
 description: The inaugural Big Ruby Conference kicked off on February 28 with almost the entire OrgSync development team in attendance. With a few exceptions, most Ruby conferences lack an overarching year-to-year theme. Big Ruby Conf is clearly for the enterprise audience. While this may conjure mental images of suits, marketeers spewing buzzwords and piles of red tape, Big Ruby Conf suffers from none of these ailments.
+redirect_from: "/big-ruby-presentation-round-up/"
 ---
 ![Big Ruby Dallas](http://cl.ly/image/1B1L183B1O3V/Screen%20Shot%202014-04-05%20at%207.59.38%20PM.png)
 

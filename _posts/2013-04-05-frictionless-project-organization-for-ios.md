@@ -5,6 +5,7 @@ author: camdez
 comments: true
 tags: iOS
 description: There comes a time in every MVC(-ish) app's life when it starts to get a bit heavy. Sure, a few out-of-place lines of code here or there don't hurt too much when the codebase is young and agile, but in a middle-aged app they start to be a concern. Slovenly habits beget more slovenly habits; refactorings don't come as easily as they used to. And before you know it, your methods won't even fit on a standard-size Cinema Display anymore. Something's gotta give.
+redirect_from: "/frictionless-project-organization-for-ios/"
 ---
 
 There comes a time in every MVC(-ish) app's life when it starts to get a bit heavy. Sure, a few out-of-place lines of code here or there don't hurt too much when the codebase is young and agile, but in a middle-aged app they start to be a concern. Slovenly habits beget more slovenly habits; refactorings don't come as easily as they used to. And before you know it, your methods won't even fit on a standard-size Cinema Display anymore. Something's gotta give.

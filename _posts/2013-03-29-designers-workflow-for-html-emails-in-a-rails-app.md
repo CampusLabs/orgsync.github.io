@@ -5,6 +5,7 @@ author: tylerlee
 comments: true
 tags: design
 description: The emails that our users at OrgSync receive from our app were getting stale, and no one wanted the task of reconfiguring them because of how much a pain it is to work with HTML emails. We have 27 individual views that generate emails, but those views get populated with content from all over our application--so this isn't the easiest of projects to begin with. Add in the list of things that suck about HTML emails and you get a decent-sized headache.
+redirect_from: "/designers-workflow-for-html-emails-in-a-rails-app/"
 ---
 
 You already know why HTML Emails suck, but here's a quick list:

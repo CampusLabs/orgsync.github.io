@@ -5,6 +5,7 @@ author: macelangelo
 comments: true
 tags: iOS
 description: While working on our current project, our UI designer came up with a mockup that displayed photo albums as a small horizontal scrolling filmstrip within a single table cell of a larger table view.
+redirect_from: "/creating_scrolling_filmstrip_within_uitableview/"
 ---
 
 While working on our current project, our UI designer came up with a mockup that displayed photo albums as a small horizontal scrolling filmstrip within a single table cell of a larger table view.

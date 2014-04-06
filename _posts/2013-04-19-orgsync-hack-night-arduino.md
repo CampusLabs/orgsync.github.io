@@ -5,6 +5,7 @@ author: vtraweek
 comments: true
 tags: hack
 description: OrgSync hosts a monthly hack night in partnership with the Dallas Ruby Brigade here in the office. As a software shop, we don't often get a chance to play with hardware. But last Tuesday we mixed things up a bit and experimented with an Arduino using Ruby bootstrapping gems.
+redirect_from: "/orgsync-hack-night-arduino/"
 ---
 
 OrgSync hosts a monthly hack night in partnership with the [Dallas Ruby Brigade](http://www.dallasrb.org) here in the office. As a software shop, we don't often get a chance to play with hardware. But last Tuesday we mixed things up a bit and experimented with an Arduino using Ruby bootstrapping gems.

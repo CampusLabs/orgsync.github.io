@@ -5,6 +5,7 @@ author: tfausak
 description: A while back, I noticed our tests were slowing down for no apparent reason. It turns out our factories were creating a bunch of duplicate objects behind the scenes we didn't need.
 comments: true
 tags: testing ruby rspec
+redirect_from: "/write-faster-tests-factory-context/"
 ---
 
 At [OrgSync](http://www.orgsync.com), we test our Ruby code with [RSpec](http://rspec.info) and [factory_girl](https://github.com/thoughtbot/factory_girl). A while back, I noticed our tests were slowing down for no apparent reason. It turns out our factories were creating a bunch of duplicate objects behind the scenes. For example, the event factory creates all these objects:

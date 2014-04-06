@@ -5,6 +5,7 @@ author: justinsteffy
 comments: true
 tags: testing
 description: I've decided to try a tool that is meant for stress/load testing; that tool is Gatling.
+redirect_from: "/rest-api-integration-testing-with-gatling/"
 ---
 
 In the world of [software testing](http://en.wikipedia.org/wiki/Software_testing), there are many types of tests and many tools to create them. Often the distinction among the types of tests is not always clear (e.g. integration, system, functional, acceptance). In this post, I am going to use the term "integration test" to denote a test that exercises the full end-to-end functionality of our system from a user's perspective.

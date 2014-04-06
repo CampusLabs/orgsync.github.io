@@ -1,12 +1,11 @@
 ---
 title: Confidently Manage Business Logic with ActiveInteraction
-link: http://devblog.orgsync.com/confidently-manage-business-logic-activeinteraction/
 layout: single
 author: AaronLasseigne
 description: ActiveInteraction is a gem for managing application specific business logic. Instead of living in controllers or models, business logic can find a home in interactions. They are designed to integrate seamlessly with Rails by behaving like ActiveModels. Use ActiveInteraction to shrink your controllers, slim your models, and DRY your code.
 comments: true
-post_name: confidently-manage-business-logic-activeinteraction
 tags: patterns rails
+redirect_from: "/confidently-manage-business-logic-activeinteraction/"
 ---
 
 _Co-authored by Taylor Fausak_

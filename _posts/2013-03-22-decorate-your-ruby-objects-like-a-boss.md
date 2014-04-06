@@ -5,6 +5,7 @@ author: drywheat
 comments: true
 tags: ruby patterns activerecord
 description: The "Decorator Pattern" is used to extend the functionality of a single object without affecting any other instances of the same class. You can easily add functionality to an entire class via inheritance, but it is impossible to extend a single object using this approach. This pattern allows you to apply your extensions in either a static or dynamic fashion.
+redirect_from: "/decorate-your-ruby-objects-like-a-boss/"
 ---
 
 The "Decorator Pattern" is used to extend the functionality of a single object without affecting any other instances of the same class. You can easily add functionality to an entire class via inheritance, but it is impossible to extend a single object using this approach. This pattern allows you to apply your extensions in either a static or dynamic fashion.

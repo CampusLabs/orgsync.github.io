@@ -5,6 +5,7 @@ author: tfausak
 comments: true
 tags: hack
 description: Right before last week's dallas.rb hack night, my coworker planted an idea in my head. He thought programming Hubot on the fly would be neat. I agreed with him; modifying Hubot from within the chat room simply by talking to him would be awesome. Since I spent last week hacking on Node.js, I figured I'd take a crack at it.
+redirect_from: "/hacking-hubot-with-hubot/"
 ---
 
 Right before last week's [Dallas Ruby Brigade](http://www.dallasrb.org) hack night, my coworker [Aaron](http://ficate.com) planted an idea in my head. He thought programming [Hubot](http://hubot.github.com) on the fly would be neat. I agreed with him; modifying Hubot from within the chat room simply by talking to him would be awesome. Since I spent last week hacking on Node.js and working on other Hubot scripts like [bang-bang](https://github.com/github/hubot-scripts/blob/master/src/scripts/bang-bang.coffee), I figured I'd take a crack at it.

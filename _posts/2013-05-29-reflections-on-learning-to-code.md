@@ -5,6 +5,7 @@ layout: single
 author: vtraweek
 comments: true
 post_name: reflections-on-learning-to-code
+redirect_from: "/reflections-on-learning-to-code/"
 ---
 
 I’ve been working now as a coding intern at OrgSync for about two months. I really enjoy my job. My coworkers are super cool. I’m challenged on a daily basis. I like what I’m doing.

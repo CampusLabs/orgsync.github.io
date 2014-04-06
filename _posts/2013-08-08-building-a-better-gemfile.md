@@ -5,6 +5,7 @@ author: tfausak
 description: If you've been hacking on a Rails project for a while, chances are your Gemfile has spiraled out of control.
 comments: true
 tags: rails
+redirect_from: "/building-a-better-gemfile/"
 ---
 
 If you've been hacking on a Rails project for a while, chances are your Gemfile has spiraled out of control. For instance, the main OrgSync Gemfile contains 127 gems. That's a ton of dependencies, and they slow us down. Running `bundle exec rake environment` takes at least 15 seconds. That might not sound like much, but it adds up. Think of it as a 15 second tax every time you do anything.
