@@ -62,11 +62,6 @@ tylerlee:
   email: tyler@orgsync.com
   description: "is a UI Designer / Frontend Developer for OrgSync that tries to do his darndest to make OrgSync more intuitive and easier to use."
 
-vtraweek:
-  active: false
-  name: Virginia Traweek
-  picture: http://ecx.images-amazon.com/images/I/51NhtW9exnL._SX300_.jpg
-
 tommyschaefer:
   active: true
   name: Tommy Schaefer
@@ -101,4 +96,9 @@ hadronzoo:
   email: joshua@orgsync.com
   picture: http://www.orgsync.com/assets/team/joshua-griffith-bw.png
   description: "grew up in North Carolina and has been working with early-stage technology companies since 1997. After receiving his bachelors degree in Electrical Engineering from North Carolina State University in 2003, he moved to Dallas and has since worked on projects as diverse as designing a concentrating solar collector, engineering a broadband wireless system, and co-founding a facility-maintenance technology startup. In his free time, Joshua enjoys writing Clojure, reading philosophy, and spending time with his wife and three children."
+
+vtraweek:
+  active: false
+  name: Virginia Traweek
+  picture: http://ecx.images-amazon.com/images/I/51NhtW9exnL._SX300_.jpg
 
