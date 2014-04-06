@@ -18,7 +18,7 @@ Right now we don't use any plugins so you can just push to master to deploy.
 
 ### To Write A New Blog Post:
 
-- Create a new file in _posts named with the convention: YYYY-MM-DD-title-dasherized
+- Create a new file in `_posts` named with the convention: YYYY-MM-DD-title-dasherized. (You can also draft your post in `_drafts`)
 
 - Fill out the following FrontMatter fields:
 ````
