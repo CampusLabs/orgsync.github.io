@@ -1,11 +1,10 @@
 ---
 title: OrgSync Hack Night Arduino
-link: http://devblog.orgsync.com/orgsync-hack-night-arduino/
 layout: single
-author: Virgina Traweek
+author: vtraweek
 comments: true
-post_name: orgsync-hack-night-arduino
 tags: hack
+description: OrgSync hosts a monthly hack night in partnership with the Dallas Ruby Brigade here in the office. As a software shop, we don't often get a chance to play with hardware. But last Tuesday we mixed things up a bit and experimented with an Arduino using Ruby bootstrapping gems.
 ---
 
 OrgSync hosts a monthly hack night in partnership with the [Dallas Ruby Brigade](http://www.dallasrb.org) here in the office. As a software shop, we don't often get a chance to play with hardware. But last Tuesday we mixed things up a bit and experimented with an Arduino using Ruby bootstrapping gems.
@@ -18,45 +17,45 @@ The result of our evening of hacking was three blinking LED’s (by changing the
 
 For those who are curious, here’s the code we ended up using:
 
+{% highlight ruby %}
+  require 'bundler/setup'
+  require 'dino'
 
-    require 'bundler/setup'
-    require 'dino'
+  board = Dino::Board.new(Dino::TxRx.new)
 
-    board = Dino::Board.new(Dino::TxRx.new)
+  threads = []
+  threads << Thread.new do
+    led = Dino::Components::Led.new(pin: 6, board: board)
 
-    threads = []
     threads << Thread.new do
-      led = Dino::Components::Led.new(pin: 6, board: board)
-
-      threads << Thread.new do
-        [:on, :off].cycle do |switch|
-          led.send(switch)
-          sleep 0.5
-        end
+      [:on, :off].cycle do |switch|
+        led.send(switch)
+        sleep 0.5
       end
     end
-    threads << Thread.new do
-      led = Dino::Components::Led.new(pin: 7, board: board)
+  end
+  threads << Thread.new do
+    led = Dino::Components::Led.new(pin: 7, board: board)
 
-      threads << Thread.new do
-        [:on, :off].cycle do |switch|
-          led.send(switch)
-          sleep 0.1
-        end
+    threads << Thread.new do
+      [:on, :off].cycle do |switch|
+        led.send(switch)
+        sleep 0.1
       end
     end
-    threads << Thread.new do
-      led = Dino::Components::Led.new(pin: 13, board: board)
+  end
+  threads << Thread.new do
+    led = Dino::Components::Led.new(pin: 13, board: board)
 
-      threads << Thread.new do
-        [:on, :off].cycle do |switch|
-          led.send(switch)
-          sleep 1
-        end
+    threads << Thread.new do
+      [:on, :off].cycle do |switch|
+        led.send(switch)
+        sleep 1
       end
     end
+  end
 
-    threads.each { |thr| thr.join }
-
+  threads.each { |thr| thr.join }
+{% endhighlight %}
 
 At future hack nights, we’re going to be playing with our new hardware more and trying to program larger numbers of blinking lights and, maybe if we’re feeling ambitious, we'll even program in some interactivity.

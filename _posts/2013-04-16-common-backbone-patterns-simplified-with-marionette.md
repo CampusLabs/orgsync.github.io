@@ -1,11 +1,10 @@
 ---
 title: Common Backbone Patterns Simplified with Marionette
-link: http://devblog.orgsync.com/common-backbone-patterns-simplified-with-marionette/
 layout: single
 author: mrwade
 comments: true
-post_name: common-backbone-patterns-simplified-with-marionette
 tags: javascript
+description: I fell so head-first into Backbone that I quickly outgrew the conventions it set in place. I needed a way to nest views without a bunch of boilerplate, a way to clean up views after destroying them, and some sort of way to swap views in and out when switching modes in my app. There really aren't conventions set in place by Backbone to do these types of things.
 ---
 
 I got my first dose of [Backbone](http://backbonejs.org/) on a side project after having surpassed the level of jQuery code anyone could possibly keep organized. Once I got the concepts down and a working prototype, I was in love. It allowed me to do the things I had been dreaming of doing on the front-end without the code growing into a giant hairball.
@@ -34,46 +33,46 @@ First, let's look at how this might be accomplished in a pure Backbone app:
 
 _See it on [JSFiddle](http://jsfiddle.net/mrwade/RK54t/)_
 
+{% highlight javascript %}
+  # Data Model
+  class User extends Backbone.Model
+  class Users extends Backbone.Collection
+    model: User
 
-    # Data Model
-    class User extends Backbone.Model
-    class Users extends Backbone.Collection
-      model: User
+  users = new Users([
+    {name: 'Jeremy Ashkenas', twitter: 'jashkenas'},
+    {name: 'Brad Dunbar', twitter: 'braddunbar'},
+    {name: 'Casey Foster', twitter: 'caseywebdev'}
+  ])
 
-    users = new Users([
-      {name: 'Jeremy Ashkenas', twitter: 'jashkenas'},
-      {name: 'Brad Dunbar', twitter: 'braddunbar'},
-      {name: 'Casey Foster', twitter: 'caseywebdev'}
-    ])
+  # Views
+  class UserView extends Backbone.View
+    template: _.template('<li><%= name %> (@<%= twitter %>)</li>')
 
-    # Views
-    class UserView extends Backbone.View
-      template: _.template('<li><%= name %> (@<%= twitter %>)</li>')
+    initialize: ->
+      @listenTo @model, 'change', @render
 
-      initialize: ->
-        @listenTo @model, 'change', @render
+    render: =>
+      @$el.html @template(@model.toJSON())
+      this
 
-      render: =>
-        @$el.html @template(@model.toJSON())
-        this
+  class UserListView extends Backbone.View
+    el: '#user_list'
+    tagName: 'ul'
 
-    class UserListView extends Backbone.View
-      el: '#user_list'
-      tagName: 'ul'
+    initialize: ->
+      @listenTo @collection, 'add remove reset', @render
 
-      initialize: ->
-        @listenTo @collection, 'add remove reset', @render
+    render: =>
+      @$el.empty()
+      @collection.each (model) =>
+        itemView = new UserView(model: model)
+        @$el.append itemView.render().el
+      this
 
-      render: =>
-        @$el.empty()
-        @collection.each (model) =>
-          itemView = new UserView(model: model)
-          @$el.append itemView.render().el
-        this
-
-    # Initialize
-    (new UserListView collection: users).render()
-
+  # Initialize
+  (new UserListView collection: users).render()
+{% endhighlight %}
 
 First, we have a simple data model: a `User`, a collection to match, and our data set.
 
@@ -87,31 +86,31 @@ This seems like a pretty common use case, but it's a lot of code just to render 
 
 _See it on [JSFiddle](http://jsfiddle.net/mrwade/fqFSu/)_
 
+{% highlight javascript %}
+  # Data Model
+  class User extends Backbone.Model
+  class Users extends Backbone.Collection
+    model: User
 
-    # Data Model
-    class User extends Backbone.Model
-    class Users extends Backbone.Collection
-      model: User
+  users = new Users([
+    {name: 'Jeremy Ashkenas', twitter: 'jashkenas'},
+    {name: 'Brad Dunbar', twitter: 'braddunbar'},
+    {name: 'Casey Foster', twitter: 'caseywebdev'}
+  ])
 
-    users = new Users([
-      {name: 'Jeremy Ashkenas', twitter: 'jashkenas'},
-      {name: 'Brad Dunbar', twitter: 'braddunbar'},
-      {name: 'Casey Foster', twitter: 'caseywebdev'}
-    ])
+  # Views
+  class UserView extends Backbone.Marionette.ItemView
+    template: (viewObject) ->
+      _.template('<li><%= name %> (@<%= twitter %>)</li>', viewObject)
 
-    # Views
-    class UserView extends Backbone.Marionette.ItemView
-      template: (viewObject) ->
-        _.template('<li><%= name %> (@<%= twitter %>)</li>', viewObject)
+  class UserListView extends Backbone.Marionette.CollectionView
+    el: '#user_list'
+    itemView: UserView
+    tagName: 'ul'
 
-    class UserListView extends Backbone.Marionette.CollectionView
-      el: '#user_list'
-      itemView: UserView
-      tagName: 'ul'
-
-    # Initialize
-    (new UserListView collection: users).render()
-
+  # Initialize
+  (new UserListView collection: users).render()
+{% endhighlight %}
 
 A Marionette [CollectionView](https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.collectionview.md) represents a collection and automatically renders out an [ItemView](https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.itemview.md) for each item. They can be customized to fit your specific needs, but, for basic cases, only a few options need to be set up to get going.
 
@@ -125,35 +124,35 @@ Now let's build up some simple navigation: 'Home' and 'Users'. When clicking eac
 
 _See it on [JSFiddle](http://jsfiddle.net/mrwade/HXLGw/)_
 
+{% highlight javascript %}
+  # extends the previous Marionette example:
 
-    # extends the previous Marionette example:
+      class HomeView extends Backbone.Marionette.ItemView
+        template: -> 'Example App Home'
 
-        class HomeView extends Backbone.Marionette.ItemView
-          template: -> 'Example App Home'
+      # Main Layout
+      class AppLayout extends Backbone.Marionette.Layout
+        el: '#app_layout'
 
-        # Main Layout
-        class AppLayout extends Backbone.Marionette.Layout
-          el: '#app_layout'
+        regions:
+          main: '#main'
 
-          regions:
-            main: '#main'
+        events:
+          'click a[href=#home]': 'showHome'
+          'click a[href=#user-list]': 'showUserList'
 
-          events:
-            'click a[href=#home]': 'showHome'
-            'click a[href=#user-list]': 'showUserList'
+        initialize: ->
+          @showHome()
 
-          initialize: ->
-            @showHome()
+        showHome: =>
+          @main.show new HomeView()
 
-          showHome: =>
-            @main.show new HomeView()
+        showUserList: =>
+          @main.show new UserListView(collection: users)
 
-          showUserList: =>
-            @main.show new UserListView(collection: users)
-
-        # Initialize
-         (new AppLayout()).render()
-
+      # Initialize
+       (new AppLayout()).render()
+{% endhighlight %}
 
 Our layout listens to nav item clicks and responds accordingly to show the respective view. When swapping views, a Layout will automatically utilize a Marionette View's close mechanism to properly remove it and then automatically render in the new view. As demonstrated here, Marionette components work very nicely when used together.
 

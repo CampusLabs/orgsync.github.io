@@ -1,11 +1,10 @@
 ---
 title: Recap of CocoaConf Dallas
-link: http://devblog.orgsync.com/recap-of-cocoaconf-dallas/
 layout: single
 author: macelangelo
 comments: true
-post_name: recap-of-cocoaconf-dallas
-tags: iOS
+tags: iOS community
+description: In the last couple of years, several independent developer conferences have sprung up to help share knowledge about iOS and Mac development with the community, and CocoaConf is one of them. Since late 2011, CocoaConf, presented by Dave Klein, takes a unique approach by hosting multiple shows in both spring and fall in cities around the country.
 ---
 
 Apple's Worldwide Developer Conference (WWDC) has traditionally been the primary source of information about the latest in iOS and Mac development, as well as one of the rare chances for developers of small or one-man shops to meet their peers. Getting a "golden ticket" to WWDC, however, becomes harder each year as the conference quickly sells out. (Last year's 5,000 tickets sold out in under two hours).

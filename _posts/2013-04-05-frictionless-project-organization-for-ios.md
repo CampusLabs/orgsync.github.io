@@ -1,11 +1,10 @@
 ---
 title: Frictionless Project Organization for iOS
-link: http://devblog.orgsync.com/frictionless-project-organization-for-ios/
 layout: single
 author: camdez
 comments: true
-post_name: frictionless-project-organization-for-ios
 tags: iOS
+description: There comes a time in every MVC(-ish) app's life when it starts to get a bit heavy. Sure, a few out-of-place lines of code here or there don't hurt too much when the codebase is young and agile, but in a middle-aged app they start to be a concern. Slovenly habits beget more slovenly habits; refactorings don't come as easily as they used to. And before you know it, your methods won't even fit on a standard-size Cinema Display anymore. Something's gotta give.
 ---
 
 There comes a time in every MVC(-ish) app's life when it starts to get a bit heavy. Sure, a few out-of-place lines of code here or there don't hurt too much when the codebase is young and agile, but in a middle-aged app they start to be a concern. Slovenly habits beget more slovenly habits; refactorings don't come as easily as they used to. And before you know it, your methods won't even fit on a standard-size Cinema Display anymore. Something's gotta give.
@@ -26,19 +25,19 @@ In the iOS development world we have none of this. The default project organizat
 
 So one day I spent way too long on the [C2 wiki](http://c2.com/cgi/wiki), thinking about names and trying different variations, and I what I eventually came up with was the deceptively-simple formula I'm now using for all of my new projects:
 
-
-    $ mkdir -p ProjectName/{Assets/Images,Frameworks,Logic/Models,Presentation/View{,Controller}s}
-    $ find ProjectName -type d
-    ProjectName
-    ProjectName/Assets
-    ProjectName/Assets/Images
-    ProjectName/Frameworks
-    ProjectName/Logic
-    ProjectName/Logic/Models
-    ProjectName/Presentation
-    ProjectName/Presentation/ViewControllers
-    ProjectName/Presentation/Views
-
+````
+  $ mkdir -p ProjectName/{Assets/Images,Frameworks,Logic/Models,Presentation/View{,Controller}s}
+  $ find ProjectName -type d
+  ProjectName
+  ProjectName/Assets
+  ProjectName/Assets/Images
+  ProjectName/Frameworks
+  ProjectName/Logic
+  ProjectName/Logic/Models
+  ProjectName/Presentation
+  ProjectName/Presentation/ViewControllers
+  ProjectName/Presentation/Views
+````
 
 It's fairly self-explanatory. The pieces worth calling out are:
 
