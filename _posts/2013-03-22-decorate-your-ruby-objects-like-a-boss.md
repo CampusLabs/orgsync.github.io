@@ -1,11 +1,10 @@
 ---
 title: Decorate your Ruby Objects "Like a Boss"
-link: http://devblog.orgsync.com/decorate-your-ruby-objects-like-a-boss/
 layout: single
 author: drywheat
 comments: true
-post_name: decorate-your-ruby-objects-like-a-boss
-tags: ruby
+tags: ruby patterns activerecord
+description: The "Decorator Pattern" is used to extend the functionality of a single object without affecting any other instances of the same class. You can easily add functionality to an entire class via inheritance, but it is impossible to extend a single object using this approach. This pattern allows you to apply your extensions in either a static or dynamic fashion.
 ---
 
 The "Decorator Pattern" is used to extend the functionality of a single object without affecting any other instances of the same class. You can easily add functionality to an entire class via inheritance, but it is impossible to extend a single object using this approach. This pattern allows you to apply your extensions in either a static or dynamic fashion.
@@ -18,38 +17,38 @@ The decorator is a simple yet extremely powerful concept. It is key in achieving
 
 Ruby defines a couple of different ways to decorate objects in its 'delegate' standard library. The easiest to use the `SimpleDelegator` class. In this, you pass an object to the constructor and all the methods supported by the object will be delegated.
 
+{% highlight ruby %}
+  require 'delegate'
 
-    require 'delegate'
-
-    class Person
-      def speak
-        'hello'
-      end
-
-      def age
-        30
-      end
+  class Person
+    def speak
+      'hello'
     end
 
-    class LatinDecorator < SimpleDelegator
-      # modifies existing functionality
-      def speak
-        "'hola' means '#{__getobj__.speak}'"
-      end
+    def age
+      30
+    end
+  end
 
-      # adds new functionality
-      def dance
-        'cha-cha-cha'
-      end
+  class LatinDecorator < SimpleDelegator
+    # modifies existing functionality
+    def speak
+      "'hola' means '#{__getobj__.speak}'"
     end
 
-    person  = Person.new
-    wrapper = LatinDecorator.new(person)
+    # adds new functionality
+    def dance
+      'cha-cha-cha'
+    end
+  end
 
-    wrapper.speak # => "'hola' means 'hello'"
-    wrapper.age # => 30
-    wrapper.dance # => 'cha-cha-cha'
+  person  = Person.new
+  wrapper = LatinDecorator.new(person)
 
+  wrapper.speak # => "'hola' means 'hello'"
+  wrapper.age # => 30
+  wrapper.dance # => 'cha-cha-cha'
+{% endhighlight %}
 
 See online docs for API details: [Ruby Delegator](http://www.ruby-doc.org/stdlib-1.9.3/libdoc/delegate/rdoc/Delegator.html)
 
@@ -59,29 +58,29 @@ In Rails, sometimes you have a model that should behave differently based on the
 
 An example: if your system allows you to create events but you want to extend eventing to allow for room reservation, you could use an approach like this:
 
+{% highlight ruby %}
+  # Used to manage events
+  class Event < ActiveRecord::Base
+    # ...
+  end
 
-    # Used to manage events
-    class Event < ActiveRecord::Base
-      # ...
+  class RoomReservationEventDecorator < SimpleDelegator
+    def create_reservation
+      # read in some extra data
+      # create a reservation in a remote system
+      # store a reference to that new remote reservation
+
+      # lastly, save the changes to the wrapped event
+      ___getobj__.save
     end
+  end
 
-    class RoomReservationEventDecorator < SimpleDelegator
-      def create_reservation
-        # read in some extra data
-        # create a reservation in a remote system
-        # store a reference to that new remote reservation
+  # this is a decorator, but we treat it like a regular event
+  event = RoomReservationEventDecorator.new(Event.find(12345))
 
-        # lastly, save the changes to the wrapped event
-        ___getobj__.save
-      end
-    end
-
-    # this is a decorator, but we treat it like a regular event
-    event = RoomReservationEventDecorator.new(Event.find(12345))
-
-    event.title # => 'Super cool student event'
-    event.create_reservation # => true
-
+  event.title # => 'Super cool student event'
+  event.create_reservation # => true
+{% endhighlight %}
 
 ### Ruby 1.8.7 Caveats
 
@@ -89,37 +88,37 @@ This Ruby 1.9.3 implementation is clean, simple, and highly effective because th
 
 #### Re-define the constructor so that it behaves more like the 1.9.3 version and allows for existing method modification
 
-
-    class MyDecorator < SimpleDelegator
-      # mimicks 1.9.3 constructor
-      def initialize(obj)
-        __setobj__(obj)
-      end
-
-      # do some other work then invoke the original #work method
-      def work
-        other_work()
-        __getobj__.work
-      end
-
-      private
-
-      def other_work
-        # ...
-      end
+{% highlight ruby %}
+  class MyDecorator < SimpleDelegator
+    # mimicks 1.9.3 constructor
+    def initialize(obj)
+      __setobj__(obj)
     end
 
+    # do some other work then invoke the original #work method
+    def work
+      other_work()
+      __getobj__.work
+    end
+
+    private
+
+    def other_work
+      # ...
+    end
+  end
+{% endhighlight %}
 
 #### Explicitly delegate when defined Object methods get in your way
 
-
-    class MyDecorator < SimpleDelegator
-      # sometimes activesupport magic sauce hurts
-      def to_param
-        __getobj__.to_param
-      end
+{% highlight ruby %}
+  class MyDecorator < SimpleDelegator
+    # sometimes activesupport magic sauce hurts
+    def to_param
+      __getobj__.to_param
     end
-
+  end
+{% endhighlight %}
 
 ### Conclusion
 
