@@ -4,8 +4,10 @@
     {{ page.content }}
     <div class="main-content team-page">
       {% for member in site.data.team %}
-        {% assign author = member[1] %}
-        {% include author_details.html %}
+        {% if member[1].active %}
+          {% assign author = member[1] %}
+          {% include author_details.html %}
+        {% endif %}
       {% endfor %}
     </div>
   </body>

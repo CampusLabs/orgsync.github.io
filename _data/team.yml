@@ -1,45 +1,54 @@
 tfausak:
+  active: true
   name: Taylor Fausak
   email: taylor@orgsync.com
   picture: http://www.orgsync.com/assets/team/taylor-fausak-bw.png
 
 AaronLasseigne:
+  active: true
   name: Aaron Lasseigne
   picture: http://www.orgsync.com/assets/team/aaron-lasseigne-bw.png
   email: aaron@orgsync.com
   description: strives to design comprehensive solutions that provide structural stability and a positive customer experience. He is a graduate of The Ohio State University with a degree in Computer and Information Science. Before coming to OrgSync, Aaron worked as a Developer for Monster Worldwide in their FastWeb division and then as a Manager of Application Development at HRsmart Inc. Outside of work Aaron likes to travel, read, cook, and is an avid fan of Chicago Bears and Buckeye football.
 
 camdez:
+  active: true
   name: Cameron Desautels
   email: cameron@orgsync.com
   picture: http://www.orgsync.com/assets/team/cameron-desautels-bw.png
 
 macelangelo:
+  active: true
   name: Jim Clark
   email: jwclark@orgsync.com
   picture: http://www.orgsync.com/assets/team/jim-clark-bw.png
 
 jpowell:
+  active: true
   name: Justin Powell
   email: justin@orgsync.com
   picture: http://www.orgsync.com/assets/team/justin-powell-bw.png
 
 drywheat:
+  active: true
   name: Sonny Garcia
   email: sonny@orgsync.com
   picture: http://www.orgsync.com/assets/team/sonny-garcia-bw.png
 
 mrwade:
+  active: true
   name: Kevin Wade
   email: kevin@orgsync.com
   picture: http://www.orgsync.com/assets/team/kevin-wade-bw.png
 
 justinsteffy:
+  active: true
   name: Justin Steffy
   email: steffy@orgsync.com
   picture: http://www.orgsync.com/assets/team/justin-steffy-bw.png
 
 tylerlee:
+  active: true
   name: Tyler Lee
   twitter: tylerjameslee
   picture: http://www.orgsync.com/assets/team/tyler-lee-bw.png
@@ -47,25 +56,30 @@ tylerlee:
   description: is a UI Designer / Frontend Developer for OrgSync that tries to do his darndest to make OrgSync more intuitive and easier to use.
 
 vtraweek:
+  active: false
   name: Virginia Traweek
   picture: http://ecx.images-amazon.com/images/I/51NhtW9exnL._SX300_.jpg
 
 tommyschaefer:
+  active: true
   name: Tommy Schaefer
   email: tommy@orgsync.com
   picture: http://ecx.images-amazon.com/images/I/51NhtW9exnL._SX300_.jpg
 
 valariems:
+  active: true
   name: Valarie Stuart
   email: valarie@orgsync.com
   picture: http://www.orgsync.com/assets/team/valarie-stuart-bw.png
 
 caseywebdev:
+  active: true
   name: Casey Foster
   email: casey@orgsync.com
   picture: http://www.orgsync.com/assets/team/casey-foster-bw.png
 
 hadronzoo:
+  active: true
   name: Joshua Griffith
   email: joshua@orgsync.com
   picture: http://www.orgsync.com/assets/team/joshua-griffith-bw.png
