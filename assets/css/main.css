@@ -39,7 +39,12 @@ body{
 .main-content.summary article{
   max-width: 760px;
 }
-
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
 .media-box{
   align-items: flex-start;
   display: flex;
@@ -127,6 +132,11 @@ nav li a:hover{
   background: rgba(255,255,255,0.2);
 }
 
+nav li svg{
+  opacity: .5;
+  position: relative;
+  top: 2px;
+}
 article{
   margin-bottom: 4rem;
 }
