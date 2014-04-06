@@ -1,6 +1,5 @@
-*{
-  box-sizing: border-box;
-}
+/* Globals */
+*{ box-sizing: border-box; }
 body{
   color: #818486;
   font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
@@ -10,46 +9,12 @@ body{
   margin: 0;
   -webkit-font-smoothing: antialiased;
 }
-
-.page-header{
-  background-image: url('/assets/images/dev-logo-bg.png');
-  background-position: -40px 0;
-  background-repeat: no-repeat;
-  height: 130px;
-  margin: 0 auto;
-  max-width: 960px;
-}
-.page-header h1{
-  margin-top: 0;
-  position: relative;
-  top: 70px;
-}
-.page-header h1 a{
-  color: #258bb5;
-  text-decoration: none;
-}
-.main-content{
-  margin: 0 auto 5rem auto;
-  max-width: 960px;
-}
-
-.main-content.summary h3{
-  margin: 0;
-}
-.main-content.summary article{
-  max-width: 760px;
-}
-.left{
-  float: left;
-}
-.right{
-  float: right;
-}
+.left{ float: left; }
+.right{ float: right; }
 .media-box{
   align-items: flex-start;
   display: flex;
 }
-
 .pull-left{
   margin-right: 1.5rem;
   width: 100px;
@@ -60,32 +25,51 @@ body{
   width: 50px;
   opacity: .7;
 }
-
-.main-content.summary article{
-  display: flex;
-  margin-bottom: 3rem;
-}
 .media-body{
   flex: 1;
 }
 
-.tags{
-  clear: both;
-  float: right;
-  margin-top: 1rem;
-  width: 100%;
+a{
+  color: #e97f02;
+  text-decoration: underline;
 }
-.tag{
-  border-radius: 3px;
-  clear: both;
-  color: #999;
-  float: right;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 18px;
-  margin-bottom: 3px;
-  padding: 1px 5px;
+
+/* Headers */
+
+h1, h2, h3, h4, h5, h6,
+h2 a, h3 a, h4 a, h5 a, h6 a{
+  color: #333;
+  font-family: 'Arvo', serif;
+  font-weight: 100;
+  text-decoration: none;
 }
+
+h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{
+  color: #e97f02;
+  text-decoration: underline;
+}
+
+h1{
+  font-size: 1.5rem;
+  line-height: 3.8rem;
+}
+
+h2{
+  font-size: 2.2rem;
+  line-height: 2.8rem;
+}
+
+h3{
+  font-size: 1.7rem;
+  line-height: 2.4rem;
+}
+
+h4{
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+/* Typography */
 
 blockquote{
   border-left: 2px solid #dedede;
@@ -97,6 +81,74 @@ blockquote p:last-child{
   margin-bottom: 0;
 }
 
+p{ margin-top: 0; }
+p code{ font-weight: bold; }
+.highlight pre{
+  background: #f4f4f4;
+  border-radius: 3px;
+  overflow-x: scroll;
+  padding: 1em;
+}
+
+/* Page Header */
+.page-header{
+  background-image: url('/assets/images/dev-logo-bg.png');
+  background-position: -40px 0;
+  background-repeat: no-repeat;
+  height: 130px;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.page-header h1{
+  margin-top: 0;
+  position: relative;
+  top: 70px;
+}
+
+.page-header h1 a{
+  color: #258bb5;
+  text-decoration: none;
+}
+
+/* Content Div */
+.main-content{
+  margin: 0 auto 5rem auto;
+  max-width: 960px;
+}
+
+/* Articles */
+.main-content article{
+  margin-bottom: 4rem;
+  max-width: 760px;
+}
+
+/* summary is the index */
+.main-content.summary{
+  padding-top: 4rem;
+}
+.main-content.summary h3{
+  margin: 0;
+}
+.main-content.summary .media-box{
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+/* Show article is the show (single) page */
+.show-article h2:first-child{
+  margin-top: 4rem;
+  margin-bottom: .5rem;
+}
+
+.show-article .posted-at{
+  border-bottom: 3px dotted #dedede;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+}
+
+
+/* Elements of Navigation */
 .nav-wrap{
   background: #258bb5;
   overflow: hidden;
@@ -137,32 +189,6 @@ nav li svg{
   position: relative;
   top: 2px;
 }
-article{
-  margin-bottom: 4rem;
-}
-
-.main-content.show-article article{
-  max-width: 760px;
-}
-.show-article h2:first-child{
-  margin-bottom: .5rem;
-}
-
-.show-article .posted-at{
-  border-bottom: 3px dotted #dedede;
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-}
-
-.main-content article:first-child{
-  margin-top: 4rem;
-}
-
-h1{
-  font-size: 1.5rem;
-  font-weight: 100;
-  line-height: 3.8rem;
-}
 
 nav h1{
   float: left;
@@ -178,46 +204,9 @@ nav h1 a:hover{
   opacity: .6;
 }
 
-h1,h2,h3,h4,h5,h6{
-  color: #333;
-}
-
-h2{
-  font-size: 2.2rem;
-  line-height: 2.8rem;
-}
-
-h3{
-  font-size: 1.7rem;
-  line-height: 2.4rem;
-}
-
-h4{
-  font-size: 1.2rem;
-  line-height: 1.6rem;
-}
-
-h1,h2,h3,h4,h5,h6{
-  font-family: 'Arvo', serif;
-  font-weight: 100;
-}
-
 hr{
   border: 1px solid #eee;
   margin: 2rem 0;
-}
-
-p{
-  margin-top: 0;
-}
-p code{
-  font-weight: bold;
-}
-.highlight pre{
-  background: #f4f4f4;
-  border-radius: 3px;
-  overflow-x: scroll;
-  padding: 1em;
 }
 
 .posted-at{
@@ -226,22 +215,8 @@ p code{
   margin-left: 2px;
 }
 
-a{
-  color: #e97f02;
-  text-decoration: underline;
-}
 
-h2 a, h3 a, h4 a, h5 a, h6 a{
-  color: #222;
-  text-decoration: none;
-}
-
-h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{
-  color: #e97f02;
-  text-decoration: underline;
-}
-
-
+/* Hero (top of pages */
 .hero{
   background: #eaf0f2;
   width: 100%;
@@ -270,7 +245,23 @@ h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover{
 }
 
 /* Tags */
-
+.tags{
+  clear: both;
+  float: right;
+  margin-top: 1rem;
+  width: 100%;
+}
+.tag{
+  border-radius: 3px;
+  clear: both;
+  color: #999;
+  float: right;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 18px;
+  margin-bottom: 3px;
+  padding: 1px 5px;
+}
 .tag-patterns{
   background: #d6b42a;
   color: white;
