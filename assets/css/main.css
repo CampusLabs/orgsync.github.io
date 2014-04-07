@@ -365,6 +365,7 @@ hr {
 
 .error-page .content{
   background: rgba(255,255,255,0.8);
+  border-radius: 3px;
   color: #333;
   font-weight: bold;
   max-width: 300px;
@@ -372,6 +373,25 @@ hr {
   padding: 20px;
   text-align: center;
   width: 100%;
+}
+
+.error-page nav{
+  margin-top: 1rem;
+}
+.error-page nav li{
+  float: left;
+  width: 100%;
+}
+.error-page nav li a{
+  border-radius: 3px;
+  color: #222;
+  font-weight: normal;
+  font-size: 1rem;
+  text-align: left;
+  width: 100%;
+}
+.error-page nav li a:hover{
+  background: white;
 }
 
 
