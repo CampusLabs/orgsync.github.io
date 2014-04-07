@@ -346,6 +346,35 @@ hr {
   opacity: .6;
 }
 
+
+.error-page{
+  background: url('http://25.media.tumblr.com/0aa66ea23571beb03e93a8eb8f2e9e42/tumblr_mgq0kvl1Oy1s39tb9o1_1280.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.error-page h1{
+  color: white;
+  font-size: 8em;
+  margin: 100px auto 0 auto;
+  text-align: center;
+  text-shadow: 1px 1px 3px #333;
+}
+
+.error-page .content{
+  background: rgba(255,255,255,0.8);
+  color: #333;
+  font-weight: bold;
+  max-width: 300px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+
 @media only screen and (max-width: 768px) {
   /* Sets the padding for the window */
   article {
@@ -426,5 +455,9 @@ hr {
   h4 {
     font-size: 1rem;
     line-height: 1.4rem;
+  }
+  .error-page{
+    background-size: 400%;
+    background-position: 90% 80%;
   }
 }
