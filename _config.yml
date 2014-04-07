@@ -2,7 +2,9 @@ highlighter: pygments
 markdown: redcarpet
 name: The OrgSync DevBlog
 description: "OrgSync Developer Musings on: rails, ruby, testing, security, and development in general"
-url: http://devblog.orgsync.com/
+url: http://devblog.orgsync.com
+permalink: pretty
+
 gems:
   - jekyll-redirect-from
   - jemoji
