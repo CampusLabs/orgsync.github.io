@@ -6,4 +6,3 @@ url: http://devblog.orgsync.com/
 gems:
   - jekyll-redirect-from
   - jemoji
-  - jekyll-mentions
