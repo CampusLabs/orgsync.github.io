@@ -5,6 +5,7 @@ description: "OrgSync Developer Musings on: rails, ruby, testing, security, and 
 url: http://devblog.orgsync.com
 permalink: pretty
 timezone: America/Chicago
+encoding: UTF-8
 
 gems:
   - jekyll-redirect-from
