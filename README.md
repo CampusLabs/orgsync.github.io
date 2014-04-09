@@ -1,7 +1,7 @@
 The OrgSync DevBlog
 =======
 
-Basically a standard jekyll setup.
+Basically a standard jekyll setup!
 
 ### To Run Locally:
 
