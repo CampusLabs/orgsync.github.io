@@ -331,10 +331,11 @@ hr {
   float: left;
   list-style-type: none;
   margin-right: 5%;
-  min-height: 400px;
+  min-height: 200px;
   width: 28%;
 }
 .open-source li img {
+  display: none;
   width: 80%;
 }
 .open-source li a {
