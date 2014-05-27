@@ -69,7 +69,7 @@ anything other than `.===` and `#is_a?`, you're doing it wrong. However, I was
 interested in creating a class that is indistinguishable from another class. In
 other words, the perfect mock.
 
-## Creating the Perfect Mock
+### Creating the Perfect Mock
 
 Before we create the mock, we need to create the class we'll be mocking.
 
@@ -110,7 +110,7 @@ With those defined, we can move on to faking the comparisons.
 - [`#to_s`](#tos-1)
 - [`#inspect`](#inspect-1)
 
-### `.===`
+#### `.===`
 
 We hit a problem right out of the gate:
 
@@ -160,7 +160,7 @@ in `.===`, but remember that we're trying to build the perfect mock. If
 `Cheese === american` is `false`, `FakeCheese === american` should be too.
 (We'll see later that falling back to `super` doesn't always make sense.)
 
-### `#is_a?`
+#### `#is_a?`
 
 Since we can't make `case` statements work without monkey patching, let's move
 on to something we can fix.
@@ -204,7 +204,7 @@ american.is_a?(Cheese)
 
 Great! That was a little tricky, but ultimately not too bad.
 
-### `#kind_of?`
+#### `#kind_of?`
 
 Even though `#kind_of?` and `#is_a?` do the same thing, they aren't aliases.
 
@@ -220,7 +220,7 @@ american.kind_of?(Cheese)
 # => true
 {% endhighlight %}
 
-### `#instance_of?`
+#### `#instance_of?`
 
 Unlike `#is_a?` and `#kind_of?`, `#instance_of?` checks for an exact match.
 
@@ -236,7 +236,7 @@ american.instance_of?(Cheese)
 # => true
 {% endhighlight %}
 
-### `#class`
+#### `#class`
 
 Instead of using a predicate method, we can look directly at the object's
 class.
@@ -255,7 +255,7 @@ american.class
 
 This is the first method where falling back to `super` doesn't make sense.
 
-### `.==`
+#### `.==`
 
 We can check the classes themselves for equality.
 
@@ -271,7 +271,7 @@ FakeCheese == Cheese
 # => true
 {% endhighlight %}
 
-### `.eql?`
+#### `.eql?`
 
 Or slightly stricter equality.
 
@@ -287,7 +287,7 @@ FakeCheese.eql?(Cheese)
 # => true
 {% endhighlight %}
 
-### `.equal?`
+#### `.equal?`
 
 Or the strictest equality.
 
@@ -303,7 +303,7 @@ FakeCheese.equal?(Cheese)
 # => true
 {% endhighlight %}
 
-### `.object_id`
+#### `.object_id`
 
 We can also use the object IDs to compare object equality by hand.
 
@@ -319,7 +319,7 @@ FakeCheese.object_id
 # => 70241271152880
 {% endhighlight %}
 
-### `.__id__`
+#### `.__id__`
 
 Ruby provides another way to get at the object IDs.
 
@@ -335,7 +335,7 @@ FakeCheese.__id__
 # => 70241271152880
 {% endhighlight %}
 
-### `.<=>`
+#### `.<=>`
 
 Now that we've faked all of the ways to check equality, let's move on to
 inequality. The obvious place to start is with the spaceship operator.
@@ -355,7 +355,7 @@ FakeCheese <=> Cheese
 Even though `Class` implements `.<=>`, it doesn't include `Comparable`. So we
 have to manually override all of the associated methods.
 
-### `.<`
+#### `.<`
 
 {% highlight rb %}
 FakeCheese < Cheese
@@ -369,7 +369,7 @@ FakeCheese < Cheese
 # => false
 {% endhighlight %}
 
-### `.>`
+#### `.>`
 
 {% highlight rb %}
 FakeCheese > Cheese
@@ -383,7 +383,7 @@ FakeCheese > Cheese
 # => false
 {% endhighlight %}
 
-### `.<=`
+#### `.<=`
 
 {% highlight rb %}
 FakeCheese <= Cheese
@@ -397,7 +397,7 @@ FakeCheese <= Cheese
 # => true
 {% endhighlight %}
 
-### `.>=`
+#### `.>=`
 
 {% highlight rb %}
 FakeCheese >= Cheese
@@ -411,7 +411,7 @@ FakeCheese >= Cheese
 # => true
 {% endhighlight %}
 
-### `.ancestors`
+#### `.ancestors`
 
 Another way to see if two classes are the same is to see if they have the same
 ancestors. Let's make `FakeCheese` pretend like it has the same family tree as
@@ -429,7 +429,7 @@ FakeCheese.ancestors
 # => [Cheese, Object, PP::ObjectMixin, Kernel, BasicObject]
 {% endhighlight %}
 
-### `.to_s`
+#### `.to_s`
 
 Having exhausted all of the somewhat reasonable ways to compare classes, let's
 move on to comparing their string representations.
@@ -446,7 +446,7 @@ FakeCheese.to_s
 # => "Cheese"
 {% endhighlight %}
 
-### `.inspect`
+#### `.inspect`
 
 By default, `.to_s` and `.inspect` do the same thing, but they aren't aliased.
 
@@ -462,7 +462,7 @@ FakeCheese.inspect
 # => "Cheese"
 {% endhighlight %}
 
-### `.name`
+#### `.name`
 
 `.name` is just like `.to_s` and `.inspect`. It's not aliased either.
 
@@ -478,7 +478,7 @@ FakeCheese.name
 # => "Cheese"
 {% endhighlight %}
 
-### `#to_s`
+#### `#to_s`
 
 Instances of classes in Ruby don't use their class's string representation in
 their own string representation.
@@ -503,7 +503,7 @@ american.to_s
 # => "#<Cheese:0x7fa3e09ccd00>"
 {% endhighlight %}
 
-### `#inspect`
+#### `#inspect`
 
 Unsurprisingly, this is not an alias.
 
@@ -519,7 +519,7 @@ american.inspect
 # => "#<Cheese:0x7fa3e09ccd00>"
 {% endhighlight %}
 
-## Shorter & More Generic
+### Shorter & More Generic
 
 We created the perfect mock, but it took a lot of code and we repeated
 ourselves quite a bit. We can make it a lot simpler. Let's write a function
