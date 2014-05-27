@@ -607,6 +607,8 @@ And it passes all the checks!
 # => true
 {% endhighlight %}
 
+*[Originally posted to [my blog](http://taylor.fausak.me/2014/05/24/class-comparison-in-ruby/).]*
+
 [1]: https://github.com/orgsync/active_interaction/issues/179
 [2]: http://devblog.orgsync.com/active_interaction/
 [3]: http://en.wikipedia.org/wiki/Command_pattern
