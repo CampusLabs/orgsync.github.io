@@ -2,7 +2,9 @@
 title: Class Comparison in Ruby
 layout: single
 author: tfausak
-description: TODO
+description: How do you know if an object is an instance of a class? I did some
+  research and discovered that there are at least 18 different ways to answer
+  that question. But if you're using anything other than .=== and
 comments: true
 tags: ruby
 ---
