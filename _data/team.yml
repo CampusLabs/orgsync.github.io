@@ -27,7 +27,7 @@ macelangelo:
   description: "has over 15 years of design and development experience. After graduating from Texas Tech with a bachelor's degree in Design Communication, he started out doing graphic design, then found a unique opportunity to do QA testing/UI design for Macromedia's FreeHand. From there, he moved onto the web, starting out designing and building websites before graduating to building web applications. Jim has spent the last 12 years designing and building web-based applications for the enterprise. Last year, he started his own company focused on building mobile applications. In his free time, Jim continues to tinker with new technologies, writing, and occasional forays into World of Warcraft."
 
 jpowell:
-  active: true
+  active: false
   name: Justin Powell
   email: justin@orgsync.com
   picture: http://www.orgsync.com/assets/team/justin-powell-bw.png
@@ -63,7 +63,7 @@ tylerlee:
   description: "is a UI Designer / Frontend Developer for OrgSync that tries to do his darndest to make OrgSync more intuitive and easier to use."
 
 tommyschaefer:
-  active: true
+  active: false
   name: Tommy Schaefer
   email: tommy@orgsync.com
   picture: http://ecx.images-amazon.com/images/I/51NhtW9exnL._SX300_.jpg
