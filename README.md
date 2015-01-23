@@ -7,7 +7,7 @@ Basically a standard jekyll setup.
 
 - clone repo
 - bundle install
-- jekyll serve --watch
+- jekyll serve --watch --port 4001
 - view at localhost:4000
 
 ### To Deploy:
