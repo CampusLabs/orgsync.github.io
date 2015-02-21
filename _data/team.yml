@@ -102,3 +102,10 @@ vtraweek:
   name: Virginia Traweek
   picture: http://ecx.images-amazon.com/images/I/51NhtW9exnL._SX300_.jpg
 
+mfarmer: 
+  active: true
+  name: Matthew Farmer
+  picture: http://www.orgsync.com/assets/team/matthew-farmer-bw.png
+  description: "Matthew joined OrgSync in August 2014 as a Software Developer. He grew up in Lawton, Oklahoma and earned a masters degree in Computer Science from Midwestern State University in 2013. Prior to joining OrgSync, he worked as an independent contractor (developing both web and iOS applications) and a computer science lab assistant at Midwestern State University. Matthew's hobbies include playing piano, video games, and programming."
+
+
