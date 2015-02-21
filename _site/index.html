@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width" />
   <title></title>
 
-  <meta name="description" content="A diatribe on rails, servers, things that developers talk about" />
-  <meta name="keywords" content="ruby,rails,RoR,software development" />
+  <meta name="description" content="The OrgSync developers center" />
+  <meta name="keywords" content="ruby,rails,RoR,software development, orgsync, hiring, developers, clojure, scala" />
   <meta property="og:type" content="blog" />
-  <meta property="og:title" content="OrgSync Developer Blog" />
+  <meta property="og:title" content="OrgSync Dev Center" />
   <meta property="og:description" content="A diatribe on rails, servers, things that developers talk about" />
-  <meta property="og:url" content="http://devblog.orgsync.com/" />
-  <meta property="og:site_name" content="OrgSync Developer Blog" />
+  <meta property="og:url" content="http://orgsync.github.io" />
+  <meta property="og:site_name" content="OrgSync Dev" />
   <meta name="twitter:card" content="summary" />
   <meta name="google-site-verification" content="8LWd8KL9rKVucWlDxoy9FPR6Njg3gsMY0qTY00q2EBo" />
 
@@ -26,794 +26,84 @@
   <link href="http://devblog.orgsync.com" rel="canonical">
 </head>
 
-  <div class="page-header">
-  <h1 class="page-title"><a href="">OrgSync Dev Blog</a></h1>
-</div>
-<div class="nav-wrap">
-  <nav>
-    <ul>
-      <li>
-        <a href="">
-          <svg viewBox="0 0 32 32">
-            <g></g>
-            <path d="M28 8v-4h-28v22c0 1.105 0.895 2 2 2h27c1.657 0 3-1.343 3-3v-17h-4zM26 26h-24v-20h24v20zM4 10h20v2h-20zM16 14h8v2h-8zM16 18h8v2h-8zM16 22h6v2h-6zM4 14h10v10h-10z" fill="#ffffff" />
-          </svg>
-          The Articles
-        </a>
-      </li>
-      <li>
-        <a href="/open_source">
-          <svg viewBox="0 0 32 32">
-            <g></g>
-            <path d="M14 18l-2-2-6 6 6 6 2-2-4-4zM18 26l2 2 6-6-6-6-2 2 4 4zM28.232 6.232l-4.465-4.464c-0.972-0.972-2.893-1.768-4.268-1.768h-15c-1.375 0-2.5 1.125-2.5 2.5v27c0 1.375 1.125 2.5 2.5 2.5h23c1.375 0 2.5-1.125 2.5-2.5v-19c0-1.375-0.796-3.296-1.768-4.268zM26.818 7.646c0.098 0.098 0.195 0.218 0.29 0.354h-5.108v-5.108c0.136 0.095 0.256 0.192 0.354 0.29l4.465 4.464zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5h15c0.151 0 0.32 0.019 0.5 0.053v7.947h7.947c0.034 0.18 0.053 0.349 0.053 0.5v19z" fill="#ffffff" />
-          </svg>
-          Open Source Projects
-        </a>
-      </li>
-      <li>
-        <a href="/team">
-          <svg viewBox="0 0 32 32">
-            <g></g>
-            <path d="M22.969 25.168c-0.592-0.093-0.606-1.708-0.606-1.708s1.74-1.708 2.119-4.005c1.020 0 1.65-2.442 0.63-3.301 0.043-0.904 1.311-7.099-5.112-7.099-6.424 0-5.155 6.195-5.112 7.099-1.020 0.859-0.39 3.301 0.63 3.301 0.379 2.297 2.12 4.005 2.12 4.005s-0.014 1.615-0.606 1.708c-1.908 0.301-9.031 3.416-9.031 6.832h24c0-3.416-7.124-6.531-9.031-6.832zM10.752 25.713c1.378-0.848 3.051-1.635 4.423-2.107-0.492-0.701-1.040-1.654-1.385-2.783-0.481-0.393-0.873-0.954-1.125-1.644-0.252-0.691-0.348-1.464-0.269-2.178 0.056-0.512 0.202-0.99 0.427-1.409-0.136-1.456-0.232-4.314 1.639-6.398 0.725-0.808 1.642-1.389 2.741-1.74-0.196-2.024-1.224-4.399-5.202-4.399-6.424 0-5.155 6.195-5.112 7.099-1.020 0.859-0.39 3.301 0.63 3.301 0.379 2.297 2.12 4.005 2.12 4.005s-0.014 1.615-0.606 1.708c-1.908 0.301-9.031 3.416-9.031 6.832h10.3c0.147-0.096 0.297-0.192 0.452-0.287z" fill="#ffffff" />
-          </svg>
-          Our Team
-        </a>
-      </li>
-      <li class="right">
-        <a href="http://www.orgsync.com/company/careers">
-        <svg viewBox="0 0 32 32">
-          <g></g>
-          <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13zM12 8c-1.105 0-2 0.895-2 2s0.895 2 2 2h5.172l-8.586 8.586c-0.781 0.781-0.781 2.047 0 2.829 0.39 0.39 0.902 0.586 1.414 0.586s1.024-0.195 1.414-0.586l8.586-8.586v5.172c0 1.105 0.895 2 2 2s2-0.895 2-2v-12h-12z" fill="#ffffff" />
-        </svg>
-        Careers</a></li>
-    </ul>
-  </nav>
-</div>
-
   <body>
-    <div class="hero">
-  <div class="content">
-    <h2>Articles</h2>
-    <p>
-      OrgSync started out as a small Rails application but now has to serve millions of users. So we are learning the best way to scale Rails, exploring other languages,
-      implementing new features and plugging security issues. That's what we're here to talk about.
-    </p>
-  </div>
-</div>
+    <h1>Join Our Team</h1>
 
-    <div class="main-content index-page">
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/tyler-lee-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-design">design</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2015/01/23/my-design-review-manifesto/">My Design Review Manifesto</a></h3>
-            <div class="posted-at">
-              Posted January 23, 2015
-              
-                by Tyler Lee
-              
-            </div>
-            A design review is a fundamental part of any designer or developers daily work life but when was the last time you looked at the process in place around it?
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/taylor-fausak-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-ruby">ruby</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2014/05/24/class-comparison-in-ruby/">Class Comparison in Ruby</a></h3>
-            <div class="posted-at">
-              Posted May 24, 2014
-              
-                by Taylor Fausak
-              
-            </div>
-            How do you know if an object is an instance of a class? I did some research and discovered that there are at least 18 different ways to answer that question. But if you're using anything other than .=== and
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/aaron-lasseigne-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-patterns">patterns</span>
-                
-                  <span class="tag tag-rails">rails</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2014/01/23/confidently-manage-business-logic-activeinteraction/">Confidently Manage Business Logic with ActiveInteraction</a></h3>
-            <div class="posted-at">
-              Posted January 23, 2014
-              
-                by Aaron Lasseigne
-              
-            </div>
-            ActiveInteraction is a gem for managing application specific business logic. Instead of living in controllers or models, business logic can find a home in interactions. They are designed to integrate seamlessly with Rails by behaving like ActiveModels. Use ActiveInteraction to shrink your controllers, slim your models, and DRY your code.
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/taylor-fausak-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-testing">testing</span>
-                
-                  <span class="tag tag-ruby">ruby</span>
-                
-                  <span class="tag tag-rspec">rspec</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2014/01/13/write-faster-tests-factory-context/">Write Faster Tests with a Factory Context</a></h3>
-            <div class="posted-at">
-              Posted January 13, 2014
-              
-                by Taylor Fausak
-              
-            </div>
-            A while back, I noticed our tests were slowing down for no apparent reason. It turns out our factories were creating a bunch of duplicate objects behind the scenes we didn't need.
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/aaron-lasseigne-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-rails">rails</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/10/29/building-custom-rails-attribute-validators/">Building Custom Rails Attribute Validators</a></h3>
-            <div class="posted-at">
-              Posted October 29, 2013
-              
-                by Aaron Lasseigne
-              
-            </div>
-            The validation that ships with Rails is useful, albeit generic. It leaves us to construct our own validators as dictated by our domains. The good news is that Rails gives us the tools necessary to build our own validators.
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/taylor-fausak-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-rails">rails</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/08/08/building-a-better-gemfile/">Building a Better Gemfile</a></h3>
-            <div class="posted-at">
-              Posted August 8, 2013
-              
-                by Taylor Fausak
-              
-            </div>
-            If you've been hacking on a Rails project for a while, chances are your Gemfile has spiraled out of control.
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/taylor-fausak-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-security">security</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/06/18/immediately-migrating-existing-passwords-bcrypt/">Immediately Migrating Existing Passwords to bcrypt</a></h3>
-            <div class="posted-at">
-              Posted June 18, 2013
-              
-                by Taylor Fausak
-              
-            </div>
-            Security cannot afford to be "eventually consistent".
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/justin-powell-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-testing">testing</span>
-                
-                  <span class="tag tag-patterns">patterns</span>
-                
-                  <span class="tag tag-ruby">ruby</span>
-                
-                  <span class="tag tag-rspec">rspec</span>
-                
-                  <span class="tag tag-dry">dry</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/06/04/maintaining-a-large-test-suite-a-dry-approach-to-rspec/">Maintaining a Large Test Suite a DRY Approach to RSpec</a></h3>
-            <div class="posted-at">
-              Posted June 4, 2013
-              
-                by Justin Powell
-              
-            </div>
-            More often than not, tests are treated as an afterthought or a second-class citizen. They are written to fulfill a requirement or to provide a mental safety net for the additions being made. After a while, the tests can become unmanageable. It may reach the point where updating them along with the business logic is such a daunting task that you stop writing tests altogether to meet deadlines.
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://ecx.images-amazon.com/images/I/51NhtW9exnL._SX300_.jpg">
-            
-            
-              <div class="tags">
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/05/29/reflections-on-learning-to-code/">Reflections on Learning to Code</a></h3>
-            <div class="posted-at">
-              Posted May 29, 2013
-              
-                by Virginia Traweek
-              
-            </div>
-            
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/aaron-lasseigne-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-ruby">ruby</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/05/20/private-and-protected-they-might-not-mean-what-you-think-they-mean/">Private and Protected: They might not mean what you think they mean</a></h3>
-            <div class="posted-at">
-              Posted May 20, 2013
-              
-                by Aaron Lasseigne
-              
-            </div>
-            If you’ve taken up Ruby after learning another language like C++ or Java and you haven’t reexamined the meaning of “private” and “protected” then you’re almost certainly not using them the right way. Let’s spend a minute investigating their use in Ruby.
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/taylor-fausak-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-security">security</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/05/08/upgrading-to-bcrypt/">Upgrading to bcrypt</a></h3>
-            <div class="posted-at">
-              Posted May 8, 2013
-              
-                by Taylor Fausak
-              
-            </div>
-            As a developer, it's your responsibility to protect your users' data. Depending on how you store passwords, it can either be trivial or impossible for attackers to compromise your users' accounts.
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/justin-steffy-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-testing">testing</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/05/03/rest-api-integration-testing-with-gatling/">REST API Integration Testing with Gatling</a></h3>
-            <div class="posted-at">
-              Posted May 3, 2013
-              
-                by Justin Steffy
-              
-            </div>
-            I've decided to try a tool that is meant for stress/load testing; that tool is Gatling.
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/jim-clark-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-iOS">iOS</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/04/26/creating_scrolling_filmstrip_within_uitableview/">Creating a Scrolling Filmstrip Within a UITableView</a></h3>
-            <div class="posted-at">
-              Posted April 26, 2013
-              
-                by Jim Clark
-              
-            </div>
-            While working on our current project, our UI designer came up with a mockup that displayed photo albums as a small horizontal scrolling filmstrip within a single table cell of a larger table view.
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://ecx.images-amazon.com/images/I/51NhtW9exnL._SX300_.jpg">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-hack">hack</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/04/19/orgsync-hack-night-arduino/">OrgSync Hack Night Arduino</a></h3>
-            <div class="posted-at">
-              Posted April 19, 2013
-              
-                by Virginia Traweek
-              
-            </div>
-            OrgSync hosts a monthly hack night in partnership with the Dallas Ruby Brigade here in the office. As a software shop, we don't often get a chance to play with hardware. But last Tuesday we mixed things up a bit and experimented with an Arduino using Ruby bootstrapping gems.
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/kevin-wade-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-javascript">javascript</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/04/16/common-backbone-patterns-simplified-with-marionette/">Common Backbone Patterns Simplified with Marionette</a></h3>
-            <div class="posted-at">
-              Posted April 16, 2013
-              
-                by Kevin Wade
-              
-            </div>
-            I fell so head-first into Backbone that I quickly outgrew the conventions it set in place. I needed a way to nest views without a bunch of boilerplate, a way to clean up views after destroying them, and some sort of way to swap views in and out when switching modes in my app. There really aren't conventions set in place by Backbone to do these types of things.
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/jim-clark-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-iOS">iOS</span>
-                
-                  <span class="tag tag-community">community</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/04/10/recap-of-cocoaconf-dallas/">Recap of CocoaConf Dallas</a></h3>
-            <div class="posted-at">
-              Posted April 10, 2013
-              
-                by Jim Clark
-              
-            </div>
-            In the last couple of years, several independent developer conferences have sprung up to help share knowledge about iOS and Mac development with the community, and CocoaConf is one of them. Since late 2011, CocoaConf, presented by Dave Klein, takes a unique approach by hosting multiple shows in both spring and fall in cities around the country.
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/cameron-desautels-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-iOS">iOS</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/04/05/frictionless-project-organization-for-ios/">Frictionless Project Organization for iOS</a></h3>
-            <div class="posted-at">
-              Posted April 5, 2013
-              
-                by Cameron Desautels
-              
-            </div>
-            There comes a time in every MVC(-ish) app's life when it starts to get a bit heavy. Sure, a few out-of-place lines of code here or there don't hurt too much when the codebase is young and agile, but in a middle-aged app they start to be a concern. Slovenly habits beget more slovenly habits; refactorings don't come as easily as they used to. And before you know it, your methods won't even fit on a standard-size Cinema Display anymore. Something's gotta give.
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/tyler-lee-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-design">design</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/03/29/designers-workflow-for-html-emails-in-a-rails-app/">A Designer's Workflow for HTML Emails in a Rails App</a></h3>
-            <div class="posted-at">
-              Posted March 29, 2013
-              
-                by Tyler Lee
-              
-            </div>
-            The emails that our users at OrgSync receive from our app were getting stale, and no one wanted the task of reconfiguring them because of how much a pain it is to work with HTML emails. We have 27 individual views that generate emails, but those views get populated with content from all over our application--so this isn't the easiest of projects to begin with. Add in the list of things that suck about HTML emails and you get a decent-sized headache.
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/sonny-garcia-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-ruby">ruby</span>
-                
-                  <span class="tag tag-patterns">patterns</span>
-                
-                  <span class="tag tag-activerecord">activerecord</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/03/22/decorate-your-ruby-objects-like-a-boss/">Decorate your Ruby Objects "Like a Boss"</a></h3>
-            <div class="posted-at">
-              Posted March 22, 2013
-              
-                by Sonny Garcia
-              
-            </div>
-            The "Decorator Pattern" is used to extend the functionality of a single object without affecting any other instances of the same class. You can easily add functionality to an entire class via inheritance, but it is impossible to extend a single object using this approach. This pattern allows you to apply your extensions in either a static or dynamic fashion.
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/aaron-lasseigne-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-ruby">ruby</span>
-                
-                  <span class="tag tag-community">community</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/03/11/the-big-ruby-conf/">The Big Ruby Conf</a></h3>
-            <div class="posted-at">
-              Posted March 11, 2013
-              
-                by Aaron Lasseigne
-              
-            </div>
-            The inaugural Big Ruby Conference kicked off on February 28 with almost the entire OrgSync development team in attendance. With a few exceptions, most Ruby conferences lack an overarching year-to-year theme. Big Ruby Conf is clearly for the enterprise audience. While this may conjure mental images of suits, marketeers spewing buzzwords and piles of red tape, Big Ruby Conf suffers from none of these ailments.
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/justin-powell-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-testing">testing</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/03/07/stubbing-external-service-calls-with-rspec/">Stubbing External Service Calls with RSpec</a></h3>
-            <div class="posted-at">
-              Posted March 7, 2013
-              
-                by Justin Powell
-              
-            </div>
-            When building complex web applications, you'll find there are business needs that require integrating with external services. In other cases, it may be more feasible to leverage a pre-existing service instead of reinventing the wheel.
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/sonny-garcia-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-ruby">ruby</span>
-                
-                  <span class="tag tag-jruby">jruby</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/03/04/selecting-overloaded-java-methods-in-jruby/">Selecting Overloaded Java methods in JRuby</a></h3>
-            <div class="posted-at">
-              Posted March 4, 2013
-              
-                by Sonny Garcia
-              
-            </div>
-            JRuby, a Ruby language implementation that runs on the JVM, allows developers to leverage the vast number of powerful libraries that have been written in Java while maintaining the simplicity and terse nature of the Ruby programming language. Since Java allows for method overloading and Ruby does not, at some point we may find ourselves needing to choose which overload we want to invoke. Thankfully, JRuby provides us with a couple of mechanisms.
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/taylor-fausak-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-rails">rails</span>
-                
-                  <span class="tag tag-ruby">ruby</span>
-                
-                  <span class="tag tag-perl">perl</span>
-                
-                  <span class="tag tag-ReDoS">ReDoS</span>
-                
-                  <span class="tag tag-regex">regex</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/03/04/redos_regular_expression_denial_of_service/">ReDoS Regular Expression Denial of Service</a></h3>
-            <div class="posted-at">
-              Posted March 4, 2013
-              
-                by Taylor Fausak
-              
-            </div>
-            On Thursday, I ran into a puzzling issue at work. It first occurred three weeks ago and remained uninvestigated because it appeared to be a duplicate of another issue. When I deployed the fix for the other issue, I expected it to fix this one too. Turns out, it didn't.
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/cameron-desautels-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-ruby">ruby</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/03/04/big-ruby-presentation-round-up/">Big Ruby Presentation Round-up</a></h3>
-            <div class="posted-at">
-              Posted March 4, 2013
-              
-                by Cameron Desautels
-              
-            </div>
-            Last week the OrgSync development team was out en masse at Big Ruby Conf in our own backyard of Dallas, TX. We had a great time and listened to so many fantastic talks that it's hard to keep track of them all. To help with this problem I decided to put together a complete list of talks replete with links to slide decks. Enjoy!
-          </div>
-        </article>
-      
-        
-          
-        
-        <article class="media-box">
-          <div class="pull-left">
-            
-              <img src="http://www.orgsync.com/assets/team/taylor-fausak-bw.png">
-            
-            
-              <div class="tags">
-                
-                  <span class="tag tag-hack">hack</span>
-                
-              </div>
-            
-          </div>
-          <div class="media-body">
-            <h3><a href="/2013/02/26/hacking-hubot-with-hubot/">Hacking Hubot with Hubot</a></h3>
-            <div class="posted-at">
-              Posted February 26, 2013
-              
-                by Taylor Fausak
-              
-            </div>
-            Right before last week's dallas.rb hack night, my coworker planted an idea in my head. He thought programming Hubot on the fly would be neat. I agreed with him; modifying Hubot from within the chat room simply by talking to him would be awesome. Since I spent last week hacking on Node.js, I figured I'd take a crack at it.
-          </div>
-        </article>
-      
-    </div>
+<section>
+  <h3>Culture Statement</h3>
+</section>
+
+<section>
+  <h3>We are polyglot</h3>
+  <ul>
+    <li>Ruby</li>
+    <li>Javascript</li>
+    <li>Clojure</li>
+    <li>Scala</li>
+  </ul>
+</section>
+
+<section>
+  <h3>We ship Open Source too</h3>
+  <ul>
+    <li>Active Interaction</li>
+    <li>React-list</li>
+    <li>Stoplight</li>
+    <li>Jquery Aria</li>
+  </ul>
+</section>
+
+<section>
+  <h3>We Love community</h3>
+  <ul>
+    <li>DFW Clojure</li>
+    <li>Ruby Hacknight</li>
+    <li>Dallas Node</li>
+  </ul>
+</section>
+
+<section>
+  <h3>We have millions of users</h3>
+</section>
+
+<section>
+  <h3>Our team</h3>
+</section>
+
+<section>
+  <h3>Ship/Learn/Play hard</h3>
+</section>
+
+<section>
+  <h3>Find your spot</h3>
+</section>
+
+<section>
+  <h3>Misc Ideas</h3>
+  <ul>
+    <li>
+      Business
+      <ul>
+        <li>Who we are</li>
+        <li>campus count</li>
+        <li>8 years in business</li>
+        <li>location (sell dallas)</li>
+      </ul>
+    </li>
+    <li>Learn "i'm twice the dev"</li>
+    <li>@orgsyncdevs</li>
+    <li>
+      Contact
+      <ul>
+        <li>blog</li>
+        <li>twitter</li>
+        <li>email</li>
+      </ul>
+    </li>
+    <li>continous deployment/ship constantly</li>
+    <li>interview process</li>
+  </ul>
+</section>
     <div class="footer">
   That's All Folks, For now.<br>
   <a href="/feed.xml">Follow the RSS</a>
