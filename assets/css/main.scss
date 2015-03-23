@@ -1,0 +1,254 @@
+@import url('/bower_components/normalize.css/normalize.css');
+
+$gold: #ffbf00;
+$red: #ea5b3a;
+$blue: #4cbad7;
+$teal: #409b88;
+$grey: #5d5c5d;
+$global-radius: 5px;
+$global-margin-bottom: 25px;
+
+
+* {
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p,blockquote{
+  margin-top: 0;
+}
+
+body{
+  background: white;
+  font-family: 'Proxima Nova', 'Helvetica Neue', verdana, arial, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.topper{
+  background-image: url('/assets/images/layout/topper-bg.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  min-height: 600px;
+  position: relative;
+  text-align: center;
+  button{
+    background: white;
+    border: 0;
+    border-radius: $global-radius;
+    color: $gold;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: $global-margin-bottom;
+    padding: 10px 20px;
+  }
+  h1, p{
+    color: white;
+  }
+  h1{
+    font-size: 42px;
+  }
+  p{
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+}
+
+.topper-footer{
+  bottom: -5px;
+  position: absolute;
+  width: 100%;
+  img{ width: 100%; }
+}
+
+.row{
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+h1{
+
+}
+
+h2{
+  color: #5d5c5d;
+  font-size: 48px;
+  font-weight: 100;
+}
+
+h3{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h4{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h1,h2,h3,h4,h5,h6{
+  &.with-subtitle{
+    margin-bottom: 20px;
+  }
+}
+
+.label{
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  font-size: .6em;
+  left: 5px;
+  padding: 4px 8px;
+  position: relative;
+  top: -3px;
+  &.l-js{ background: $blue; }
+  &.l-ruby{ background: $red; }
+}
+
+.open-source-projects{
+  padding: 70px 0;
+  .list-projects{
+    border-left: 5px solid #dedede;
+    padding: 30px 150px 30px 30px;
+    h4{
+      margin-bottom: 10px;
+    }
+    p{
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.our-roles{
+  background: #f2f2f2;
+}
+
+.row {
+  .column{
+    display: inline-block;
+    margin-right: 1%;
+    vertical-align: top;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  .column.half{
+    width: 49%;
+  }
+  .column.third{
+    width: 32%;
+  }
+  .column.two-third{
+    width: 67%;
+  }
+}
+
+p{
+  font-size: 20px;
+  line-height: 1.4em;
+}
+
+p.smaller{
+  font-size: 14px;
+}
+
+.team-box{
+  background: white;
+  display: inline-block;
+  margin-right: 20px;
+  min-height: 200px;
+  padding: 20px;
+  max-width: 20%;
+  vertical-align: top;
+}
+
+// The overly complicated way to do things
+// The teams and their colors in a list. That list then rendered into the css
+// structure we want.
+$teams: frontend $red, backend $teal, design $blue, mobile $grey, ops $gold;
+@each $team in $teams {
+  .team-#{nth($team, 1)}{
+    border-top: 20px solid nth($team, 2);
+    h4{
+      color: nth($team, 2);
+    }
+  }
+}
+
+.box-slant{
+  border: 0;
+  bottom: 0;
+  margin: 0;
+  position: absolute;
+}
+
+$box-icon-padding: 15px;
+$box-icon-size: 40px;
+.box-icon{
+  position: absolute;
+  left: $box-icon-padding;
+  top: $box-icon-padding;
+  width: $box-icon-size;
+}
+
+.top-row{
+  font-weight: bold;
+  overflow: hidden;
+  padding-bottom: 140px;
+  padding-top: 50px;
+  text-align: left;
+  width: 100%;
+  .logo, navigation{
+    display: inline-block;
+  }
+  .logo{
+    font-size: 24px;
+  }
+  navigation{
+    float: right;
+  }
+  navigation ul{
+    list-style-type: none;
+    margin: 0;
+    li{
+      display: inline-block;
+    }
+  }
+  a{
+    color: white;
+    font-size: 18px;
+    padding: 4px 8px;
+    text-decoration: none;
+    &.current, &:hover{
+      border-bottom: 2px solid white;
+    }
+  }
+}
+
+.text-left{ text-align: left; }
+.text-center{ text-align: center; }
+.text-right{ text-align: right; }
+
+.love-community{
+  background: $red;
+  color: white;
+  padding: 70px 0;
+  h2{
+    color: white;
+  }
+  .love-community-top{
+    background: rgba(255,255,255,0.2);
+    height: $box-icon-padding + $box-icon-padding + $box-icon-size;
+    position: relative;
+  }
+  .love-community-bottom{
+    background: white;
+    color: #333;
+    padding: 40px;
+  }
+}
