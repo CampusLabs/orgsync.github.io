@@ -1,0 +1,211 @@
+@import url('/bower_components/normalize.css/normalize.css');
+* {
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6, p, blockquote {
+  margin-top: 0; }
+
+body {
+  background: white;
+  font-family: 'Proxima Nova', 'Helvetica Neue', verdana, arial, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased; }
+
+.topper {
+  background-image: url('/assets/images/layout/topper-bg.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  min-height: 600px;
+  position: relative;
+  text-align: center; }
+  .topper button {
+    background: white;
+    border: 0;
+    border-radius: 5px;
+    color: #ffbf00;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 25px;
+    padding: 10px 20px; }
+  .topper h1, .topper p {
+    color: white; }
+  .topper h1 {
+    font-size: 42px; }
+  .topper p {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0 auto;
+    max-width: 1000px; }
+
+.topper-footer {
+  bottom: -5px;
+  position: absolute;
+  width: 100%; }
+  .topper-footer img {
+    width: 100%; }
+
+.row {
+  margin: 0 auto;
+  max-width: 1200px; }
+
+h2 {
+  color: #5d5c5d;
+  font-size: 48px;
+  font-weight: 100; }
+
+h3 {
+  font-size: 30px;
+  font-weight: bold; }
+
+h4 {
+  font-size: 20px;
+  font-weight: bold; }
+
+h1.with-subtitle, h2.with-subtitle, h3.with-subtitle, h4.with-subtitle, h5.with-subtitle, h6.with-subtitle {
+  margin-bottom: 20px; }
+
+.label {
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  font-size: .6em;
+  left: 5px;
+  padding: 4px 8px;
+  position: relative;
+  top: -3px; }
+  .label.l-js {
+    background: #4cbad7; }
+  .label.l-ruby {
+    background: #ea5b3a; }
+
+.open-source-projects {
+  padding: 70px 0; }
+  .open-source-projects .list-projects {
+    border-left: 5px solid #dedede;
+    padding: 30px 150px 30px 30px; }
+    .open-source-projects .list-projects h4 {
+      margin-bottom: 10px; }
+    .open-source-projects .list-projects p {
+      margin-bottom: 20px; }
+
+.our-roles {
+  background: #f2f2f2; }
+
+.row .column {
+  display: inline-block;
+  margin-right: 1%;
+  vertical-align: top; }
+  .row .column:last-child {
+    margin-right: 0; }
+.row .column.half {
+  width: 49%; }
+.row .column.third {
+  width: 32%; }
+.row .column.two-third {
+  width: 67%; }
+
+p {
+  font-size: 20px;
+  line-height: 1.4em; }
+
+p.smaller {
+  font-size: 14px; }
+
+.team-box {
+  background: white;
+  display: inline-block;
+  margin-right: 20px;
+  padding: 20px;
+  max-width: 20%;
+  vertical-align: top; }
+
+.team-frontend {
+  border-top: 20px solid #ea5b3a; }
+  .team-frontend h4 {
+    color: #ea5b3a; }
+
+.team-backend {
+  border-top: 20px solid #409b88; }
+  .team-backend h4 {
+    color: #409b88; }
+
+.team-design {
+  border-top: 20px solid #4cbad7; }
+  .team-design h4 {
+    color: #4cbad7; }
+
+.team-mobile {
+  border-top: 20px solid #5d5c5d; }
+  .team-mobile h4 {
+    color: #5d5c5d; }
+
+.team-ops {
+  border-top: 20px solid #ffbf00; }
+  .team-ops h4 {
+    color: #ffbf00; }
+
+.box-slant {
+  border: 0;
+  bottom: 0;
+  margin: 0;
+  position: absolute; }
+
+.box-icon {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 40px; }
+
+.top-row {
+  font-weight: bold;
+  overflow: hidden;
+  padding-bottom: 140px;
+  padding-top: 50px;
+  text-align: left;
+  width: 100%; }
+  .top-row .logo, .top-row navigation {
+    display: inline-block; }
+  .top-row .logo {
+    font-size: 24px; }
+  .top-row navigation {
+    float: right; }
+  .top-row navigation ul {
+    list-style-type: none;
+    margin: 0; }
+    .top-row navigation ul li {
+      display: inline-block; }
+  .top-row a {
+    color: white;
+    font-size: 18px;
+    padding: 4px 8px;
+    text-decoration: none; }
+    .top-row a.current, .top-row a:hover {
+      border-bottom: 2px solid white; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.love-community {
+  background: #ea5b3a;
+  color: white;
+  padding: 70px 0; }
+  .love-community h2 {
+    color: white; }
+  .love-community .love-community-top {
+    background: rgba(255, 255, 255, 0.2);
+    height: 70px;
+    position: relative; }
+  .love-community .love-community-bottom {
+    background: white;
+    color: #333;
+    padding: 40px; }
