@@ -19,6 +19,10 @@ a, a:visited{
   box-sizing: border-box;
 }
 
+h1{
+  font-weight: normal;
+}
+
 h1,h2,h3,h4,h5,h6,p,blockquote{
   margin-top: 0;
 }
@@ -227,7 +231,7 @@ $box-icon-size: 40px;
     display: inline-block;
   }
   .logo{
-    font-size: 24px;
+    font-size: 32px;
   }
   navigation{
     float: right;

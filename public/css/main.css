@@ -5,6 +5,9 @@ a, a:visited {
 * {
   box-sizing: border-box; }
 
+h1 {
+  font-weight: normal; }
+
 h1, h2, h3, h4, h5, h6, p, blockquote {
   margin-top: 0; }
 
@@ -183,7 +186,7 @@ p.smaller {
   .top-row .logo, .top-row navigation {
     display: inline-block; }
   .top-row .logo {
-    font-size: 24px; }
+    font-size: 32px; }
   .top-row navigation {
     float: right; }
   .top-row navigation ul {
