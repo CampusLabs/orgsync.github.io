@@ -8,6 +8,12 @@ $grey: #5d5c5d;
 $global-radius: 5px;
 $global-margin-bottom: 25px;
 
+$row-padding: 70px;
+$love-comm-padding: 40px;
+
+a, a:visited{
+  color: #08c;
+}
 
 * {
   box-sizing: border-box;
@@ -17,6 +23,9 @@ h1,h2,h3,h4,h5,h6,p,blockquote{
   margin-top: 0;
 }
 
+h5{
+
+}
 body{
   background: white;
   font-family: 'Proxima Nova', 'Helvetica Neue', verdana, arial, sans-serif;
@@ -38,24 +47,26 @@ body{
   button{
     background: white;
     border: 0;
+    box-shadow: 0px 3px 0px rgba(0,0,0,0.2);
     border-radius: $global-radius;
-    color: $gold;
+    color: #cd860d;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 30px;
     margin-bottom: $global-margin-bottom;
-    padding: 10px 20px;
+    padding: 15px 25px;
   }
   h1, p{
     color: white;
   }
   h1{
-    font-size: 42px;
+    font-size: 60px;
+    text-shadow: 0px 3px 0px rgba(0,0,0,0.2);
   }
   p{
     font-size: 26px;
-    font-weight: bold;
     margin: 0 auto;
     max-width: 1000px;
+    text-align: left;
   }
 }
 
@@ -122,10 +133,14 @@ h1,h2,h3,h4,h5,h6{
       margin-bottom: 20px;
     }
   }
+  .open-source-description{
+    padding-right: 80px;
+  }
 }
 
 .our-roles{
   background: #f2f2f2;
+  padding: $row-padding 0;
 }
 
 .row {
@@ -154,17 +169,22 @@ p{
 }
 
 p.smaller{
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .team-box{
   background: white;
   display: inline-block;
+  margin-bottom: 20px;
   margin-right: 20px;
   min-height: 200px;
   padding: 20px;
   max-width: 20%;
   vertical-align: top;
+  &.special-info{
+    background: none;
+    max-width: 60%;
+  }
 }
 
 // The overly complicated way to do things
@@ -234,12 +254,24 @@ $box-icon-size: 40px;
 .text-center{ text-align: center; }
 .text-right{ text-align: right; }
 
+
 .love-community{
   background: $red;
   color: white;
-  padding: 70px 0;
+  padding: $row-padding 0;
   h2{
     color: white;
+  }
+  h3.with-subtitle{
+    margin-bottom: 10px;
+  }
+  .subheader{
+    color: #aaa;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .love-community-block{
+    margin-top: 30px;
   }
   .love-community-top{
     background: rgba(255,255,255,0.2);
@@ -249,22 +281,58 @@ $box-icon-size: 40px;
   .love-community-bottom{
     background: white;
     color: #333;
-    padding: 40px;
+    min-height: 360px;
+    padding: $love-comm-padding;
+    position: relative;
+    p{
+      font-size: 17px;
+    }
+  }
+  .more-info{
+    position: absolute;
+    bottom: $love-comm-padding;
+    right: $love-comm-padding;
+  }
+}
+
+.team-pics{
+  height: 320px;
+  padding: 40px;
+  img{
+    max-width: 46%;
+  }
+}
+
+a.more-info{
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
   }
 }
 
 .open-positions{
+  padding: $row-padding 0;
+}
+
+.open-positions-list{
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1100px;
   li{
     display: inline-block;
     max-width: 44%;
     padding-left: 100px;
+    margin-bottom: 20px;
     margin-right: 10%;
     position: relative;
     &:nth-child(2){
       margin-right: 0;
+    }
+    &:nth-child(3){
+      margin: 0 auto;
     }
   }
   h3{
@@ -280,10 +348,11 @@ $box-icon-size: 40px;
   }
 }
 
+
+
 $box-padding: 80px;
 .what-am-in-for{
   position: relative;
-  top: 100px;
   .what-bar{
     border-bottom: 1px solid #dedede;
     border-top: 1px solid #dedede;
@@ -310,5 +379,19 @@ $box-padding: 80px;
     top: -10px;
     text-align: center;
     width: 30%;
+  }
+}
+
+.our-team{
+  .left-col,
+  .right-col{
+    display: inline-block;
+    vertical-align: top;
+  }
+  .left-col{
+    width: 39%;
+  }
+  .right-col{
+    width: 60%;
   }
 }

@@ -1,4 +1,7 @@
 @import url('/bower_components/normalize.css/normalize.css');
+a, a:visited {
+  color: #08c; }
+
 * {
   box-sizing: border-box; }
 
@@ -25,21 +28,23 @@ body {
   .topper button {
     background: white;
     border: 0;
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    color: #ffbf00;
+    color: #cd860d;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 30px;
     margin-bottom: 25px;
-    padding: 10px 20px; }
+    padding: 15px 25px; }
   .topper h1, .topper p {
     color: white; }
   .topper h1 {
-    font-size: 42px; }
+    font-size: 60px;
+    text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.2); }
   .topper p {
     font-size: 26px;
-    font-weight: bold;
     margin: 0 auto;
-    max-width: 1000px; }
+    max-width: 1000px;
+    text-align: left; }
 
 .topper-footer {
   bottom: -5px;
@@ -91,9 +96,12 @@ h1.with-subtitle, h2.with-subtitle, h3.with-subtitle, h4.with-subtitle, h5.with-
       margin-bottom: 10px; }
     .open-source-projects .list-projects p {
       margin-bottom: 20px; }
+  .open-source-projects .open-source-description {
+    padding-right: 80px; }
 
 .our-roles {
-  background: #f2f2f2; }
+  background: #f2f2f2;
+  padding: 70px 0; }
 
 .row .column {
   display: inline-block;
@@ -113,16 +121,20 @@ p {
   line-height: 1.4em; }
 
 p.smaller {
-  font-size: 14px; }
+  font-size: 16px; }
 
 .team-box {
   background: white;
   display: inline-block;
+  margin-bottom: 20px;
   margin-right: 20px;
   min-height: 200px;
   padding: 20px;
   max-width: 20%;
   vertical-align: top; }
+  .team-box.special-info {
+    background: none;
+    max-width: 60%; }
 
 .team-frontend {
   border-top: 20px solid #ea5b3a; }
@@ -202,6 +214,14 @@ p.smaller {
   padding: 70px 0; }
   .love-community h2 {
     color: white; }
+  .love-community h3.with-subtitle {
+    margin-bottom: 10px; }
+  .love-community .subheader {
+    color: #aaa;
+    font-size: 16px;
+    font-weight: bold; }
+  .love-community .love-community-block {
+    margin-top: 30px; }
   .love-community .love-community-top {
     background: rgba(255, 255, 255, 0.2);
     height: 70px;
@@ -209,23 +229,51 @@ p.smaller {
   .love-community .love-community-bottom {
     background: white;
     color: #333;
-    padding: 40px; }
+    min-height: 360px;
+    padding: 40px;
+    position: relative; }
+    .love-community .love-community-bottom p {
+      font-size: 17px; }
+  .love-community .more-info {
+    position: absolute;
+    bottom: 40px;
+    right: 40px; }
+
+.team-pics {
+  height: 320px;
+  padding: 40px; }
+  .team-pics img {
+    max-width: 46%; }
+
+a.more-info {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none; }
+  a.more-info:hover {
+    text-decoration: underline; }
 
 .open-positions {
+  padding: 70px 0; }
+
+.open-positions-list {
   list-style-type: none;
   padding: 0;
-  margin: 0; }
-  .open-positions li {
+  margin: 0 auto;
+  max-width: 1100px; }
+  .open-positions-list li {
     display: inline-block;
     max-width: 44%;
     padding-left: 100px;
+    margin-bottom: 20px;
     margin-right: 10%;
     position: relative; }
-    .open-positions li:nth-child(2) {
+    .open-positions-list li:nth-child(2) {
       margin-right: 0; }
-  .open-positions h3 {
+    .open-positions-list li:nth-child(3) {
+      margin: 0 auto; }
+  .open-positions-list h3 {
     margin-bottom: 10px; }
-  .open-positions .icon- {
+  .open-positions-list .icon- {
     background: #ea5b3a;
     border-radius: 3px;
     height: 80px;
@@ -234,8 +282,7 @@ p.smaller {
     width: 80px; }
 
 .what-am-in-for {
-  position: relative;
-  top: 100px; }
+  position: relative; }
   .what-am-in-for .what-bar {
     border-bottom: 1px solid #dedede;
     border-top: 1px solid #dedede;
@@ -260,3 +307,11 @@ p.smaller {
     top: -10px;
     text-align: center;
     width: 30%; }
+
+.our-team .left-col, .our-team .right-col {
+  display: inline-block;
+  vertical-align: top; }
+.our-team .left-col {
+  width: 39%; }
+.our-team .right-col {
+  width: 60%; }
