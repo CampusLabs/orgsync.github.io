@@ -119,6 +119,7 @@ p.smaller {
   background: white;
   display: inline-block;
   margin-right: 20px;
+  min-height: 200px;
   padding: 20px;
   max-width: 20%;
   vertical-align: top; }
@@ -209,3 +210,53 @@ p.smaller {
     background: white;
     color: #333;
     padding: 40px; }
+
+.open-positions {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+  .open-positions li {
+    display: inline-block;
+    max-width: 44%;
+    padding-left: 100px;
+    margin-right: 10%;
+    position: relative; }
+    .open-positions li:nth-child(2) {
+      margin-right: 0; }
+  .open-positions h3 {
+    margin-bottom: 10px; }
+  .open-positions .icon- {
+    background: #ea5b3a;
+    border-radius: 3px;
+    height: 80px;
+    left: 0;
+    position: absolute;
+    width: 80px; }
+
+.what-am-in-for {
+  position: relative;
+  top: 100px; }
+  .what-am-in-for .what-bar {
+    border-bottom: 1px solid #dedede;
+    border-top: 1px solid #dedede;
+    height: 10px;
+    position: relative;
+    top: 40px;
+    z-index: -1; }
+  .what-am-in-for .what-box {
+    background: white;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 80px;
+    z-index: 1; }
+  .what-am-in-for .what-box-title {
+    background: white;
+    display: inline-block;
+    left: 35%;
+    margin: 0;
+    padding: 10px 0;
+    position: absolute;
+    top: -10px;
+    text-align: center;
+    width: 30%; }
