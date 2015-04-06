@@ -135,6 +135,9 @@ p {
 p.smaller {
   font-size: 17px; }
 
+.smallest {
+  font-size: 15px; }
+
 p.bigger {
   font-size: 24px; }
 
@@ -297,27 +300,54 @@ a.more-info {
   list-style-type: none;
   padding: 0;
   margin: 0 auto;
+  margin-top: 50px;
   max-width: 1100px; }
-  .open-positions-list li {
-    display: inline-block;
-    max-width: 44%;
+  .open-positions-list li a {
+    border-radius: 5px;
+    color: #333;
+    display: block;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px;
     padding-left: 100px;
     margin-bottom: 20px;
-    margin-right: 10%;
-    position: relative; }
-    .open-positions-list li:nth-child(2) {
-      margin-right: 0; }
-    .open-positions-list li:nth-child(3) {
-      margin: 0 auto; }
+    position: relative;
+    text-decoration: none; }
+    .open-positions-list li a .hidden-text {
+      display: none;
+      font-weight: bold; }
+    .open-positions-list li a p {
+      margin: 0; }
+    .open-positions-list li a:hover {
+      background: #ea5b3a;
+      display: block;
+      color: white; }
+      .open-positions-list li a:hover .hidden-text {
+        display: inline; }
+      .open-positions-list li a:hover h3 {
+        color: white; }
   .open-positions-list h3 {
     margin-bottom: 10px; }
-  .open-positions-list .icon- {
+  .open-positions-list .icon-shape {
     background: #ea5b3a;
     border-radius: 3px;
     height: 80px;
     left: 0;
     position: absolute;
     width: 80px; }
+  .open-positions-list .icon-software, .open-positions-list .icon-js {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 80px; }
+  .open-positions-list .icon-ops {
+    color: white;
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 17px;
+    text-align: center; }
 
 h5 {
   font-size: 16px;
@@ -373,3 +403,16 @@ h5 {
   border-radius: 3px;
   display: inline-block;
   padding: 10px; }
+
+.best-places {
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+  margin: 100px auto 50px auto;
+  max-width: 400px;
+  padding: 40px; }
+
+footer {
+  margin-bottom: 100px; }
+
+footer a {
+  color: #555; }
