@@ -135,17 +135,28 @@ p {
 p.smaller {
   font-size: 17px; }
 
+p.bigger {
+  font-size: 24px; }
+
+h5.roles {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  text-align: center; }
+
 .team-boxes {
   padding: 20px; }
 
 .team-box {
   background: white;
+  border: 1px solid #dedede;
   display: inline-block;
   margin-bottom: 20px;
   margin-right: 20px;
   padding: 20px;
-  max-width: 80%;
-  vertical-align: top; }
+  max-width: 30%;
+  min-height: 180px;
+  vertical-align: top;
+  text-align: left; }
   .team-box h4 {
     margin-bottom: 10px; }
   .team-box p {
@@ -155,27 +166,27 @@ p.smaller {
     max-width: 60%; }
 
 .team-frontend {
-  border-left: 5px solid #ea5b3a; }
+  border-top: 10px solid #ea5b3a; }
   .team-frontend h4 {
     color: #ea5b3a; }
 
 .team-backend {
-  border-left: 5px solid #409b88; }
+  border-top: 10px solid #409b88; }
   .team-backend h4 {
     color: #409b88; }
 
 .team-design {
-  border-left: 5px solid #4cbad7; }
+  border-top: 10px solid #4cbad7; }
   .team-design h4 {
     color: #4cbad7; }
 
 .team-mobile {
-  border-left: 5px solid #ffbf00; }
+  border-top: 10px solid #ffbf00; }
   .team-mobile h4 {
     color: #ffbf00; }
 
 .team-ops {
-  border-left: 5px solid #5d5c5d; }
+  border-top: 10px solid #5d5c5d; }
   .team-ops h4 {
     color: #5d5c5d; }
 
@@ -351,15 +362,8 @@ h5 {
   background: rgba(255, 255, 255, 0.5);
   border-top: 1px solid rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  padding: 70px 0; }
-  .our-team .left-col, .our-team .right-col {
-    display: inline-block;
-    vertical-align: top; }
-  .our-team .left-col {
-    padding-right: 80px;
-    width: 54%; }
-  .our-team .right-col {
-    width: 45%; }
+  padding: 70px 0;
+  text-align: center; }
 
 .hide {
   display: none; }

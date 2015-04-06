@@ -184,17 +184,30 @@ p.smaller{
   font-size: 17px;
 }
 
+p.bigger{
+  font-size: 24px;
+}
+
+h5.roles{
+  margin-top: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
 .team-boxes{
   padding: 20px;
 }
 .team-box{
   background: white;
+  border: 1px solid #dedede;
   display: inline-block;
   margin-bottom: 20px;
   margin-right: 20px;
   padding: 20px;
-  max-width: 80%;
+  max-width: 30%;
+  min-height: 180px;
   vertical-align: top;
+  text-align: left;
   h4{
     margin-bottom: 10px;
   }
@@ -213,7 +226,7 @@ p.smaller{
 $teams: frontend $red, backend $teal, design $blue, mobile $gold, ops $grey;
 @each $team in $teams {
   .team-#{nth($team, 1)}{
-    border-left: 5px solid nth($team, 2);
+    border-top: 10px solid nth($team, 2);
     h4{
       color: nth($team, 2);
     }
@@ -429,18 +442,7 @@ $box-padding: 80px;
   border-top: 1px solid rgba(0,0,0,0.3);
   border-bottom: 1px solid rgba(0,0,0,0.3);
   padding: $row-padding 0;
-  .left-col,
-  .right-col{
-    display: inline-block;
-    vertical-align: top;
-  }
-  .left-col{
-    padding-right: 80px;
-    width: 54%;
-  }
-  .right-col{
-    width: 45%;
-  }
+  text-align: center;
 }
 
 .hide{
