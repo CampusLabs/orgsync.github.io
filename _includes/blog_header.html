@@ -1,0 +1,27 @@
+{% capture lvl %}{{ page.url | append:'index.html' | split:'/' | size }}{% endcapture %}
+{% capture relative %}{% for i in (3..lvl) %}../{% endfor %}{% endcapture %}
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>{{ page.title }}</title>
+
+  <meta name="description" content="A diatribe on rails, servers, things that developers talk about" />
+  <meta name="keywords" content="ruby,rails,RoR,software development" />
+  <meta property="og:type" content="blog" />
+  <meta property="og:title" content="OrgSync Developer Blog" />
+  <meta property="og:description" content="A diatribe on rails, servers, things that developers talk about" />
+  <meta property="og:url" content="http://devblog.orgsync.com/" />
+  <meta property="og:site_name" content="OrgSync Developer Blog" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="google-site-verification" content="8LWd8KL9rKVucWlDxoy9FPR6Njg3gsMY0qTY00q2EBo" />
+
+  <link href="/assets/css/blog.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="/assets/css/syntax.css" rel="stylesheet" type="text/css" media="all"/>
+  <link href="/publiccss/main.css" rel="stylesheet" type="text/css" media="all"/>
+
+  <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+  <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ relative }}/feed.xml">
+
+  <link href="{{ site.url }}{% if page.url != site.baseurl %}{{ page.url }}{% endif %}" rel="canonical">
+</head>

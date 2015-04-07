@@ -1,0 +1,507 @@
+@import url('/bower_components/normalize.css/normalize.css');
+@import url('/bower_components/animate.css/animate.css');
+
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two);
+
+$gold: #ffbf00;
+$green: #7db033;
+$red: #ea5b3a;
+$blue: #4cbad7;
+$teal: #409b88;
+$grey: #5d5c5d;
+$global-radius: 5px;
+$global-margin-bottom: 25px;
+
+$row-padding: 70px;
+$love-comm-padding: 40px;
+
+a, a:visited{
+  color: #08c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1{
+  font-weight: normal;
+}
+
+h1,h2,h3,h4,h5,h6,p,blockquote{
+  margin-top: 0;
+}
+
+h5{
+
+}
+body{
+  background-color: #f7f7f6;
+  background-image: url('/assets/images/layout/topper-bg.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: 'Proxima Nova', 'Helvetica Neue', verdana, arial, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.topper{
+  background: none;
+  color: #333;
+  min-height: 500px;
+  position: relative;
+  text-align: left;
+  h1{
+    background: $green;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 15px 30px;
+    text-shadow: none;
+    font-size: 60px;
+    display: inline-block;
+    transition: width 1s ease;
+  }
+  p{
+    background: rgba(255,255,255,0.9);
+    color: #333;
+    clear: both;
+    display: inline-block;
+    font-weight: 500;
+    padding: 3px 30px;
+    font-size: 19px;
+    margin-bottom: 5px;
+    max-width: 1000px;
+    text-align: right;
+  }
+}
+
+.row{
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.main-text{
+  max-width: 1000px;
+}
+
+h2{
+  color: #5d5c5d;
+  font-size: 48px;
+  font-weight: 100;
+}
+
+h3{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h4{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h1,h2,h3,h4,h5,h6{
+  &.with-subtitle{
+    margin-bottom: 20px;
+  }
+}
+
+.label{
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  font-size: .6em;
+  left: 5px;
+  padding: 4px 8px;
+  position: relative;
+  top: -3px;
+  &.l-js{ background: $blue; }
+  &.l-ruby{ background: $red; }
+}
+
+.open-source-projects{
+  background: white;
+  padding: 70px 0;
+  .list-projects{
+    border-left: 5px solid #dedede;
+    padding: 10px 130px 10px 10px;
+    h4{
+      margin-bottom: 10px;
+    }
+    a{
+      border-radius: 3px;
+      color: #333;
+      display: block;
+      text-decoration: none;
+      padding: 20px;
+      &:hover{
+        background: #f4f4f4;
+      }
+    }
+    p{
+      margin-bottom: 0;
+    }
+  }
+  .open-source-description{
+    padding-right: 80px;
+  }
+}
+
+.our-roles{
+  background: #f2f2f2;
+  padding: $row-padding 0;
+}
+
+.row {
+  .column{
+    display: inline-block;
+    margin-right: 1%;
+    vertical-align: top;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  .column.half{
+    width: 49%;
+  }
+  .column.third{
+    width: 32%;
+  }
+  .column.two-third{
+    width: 67%;
+  }
+}
+
+p{
+  font-size: 20px;
+  line-height: 1.4em;
+}
+
+p.smaller{
+  font-size: 17px;
+}
+
+.smallest{
+  font-size: 15px;
+}
+
+p.bigger{
+  font-size: 24px;
+}
+
+h5.roles{
+  margin-top: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.team-boxes{
+  padding: 20px;
+}
+.team-box{
+  background: white;
+  border: 1px solid #dedede;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding: 20px;
+  max-width: 30%;
+  min-height: 180px;
+  vertical-align: top;
+  text-align: left;
+  h4{
+    margin-bottom: 10px;
+  }
+  p{
+    margin: 0;
+  }
+  &.special-info{
+    background: none;
+    max-width: 60%;
+  }
+}
+
+// The overly complicated way to do things
+// The teams and their colors in a list. That list then rendered into the css
+// structure we want.
+$teams: frontend $red, backend $teal, design $blue, mobile $gold, ops $grey;
+@each $team in $teams {
+  .team-#{nth($team, 1)}{
+    border-top: 10px solid nth($team, 2);
+    h4{
+      color: nth($team, 2);
+    }
+  }
+}
+
+.box-slant{
+  border: 0;
+  bottom: 0;
+  margin: 0;
+  position: absolute;
+}
+
+$box-icon-padding: 15px;
+$box-icon-size: 40px;
+.box-icon{
+  position: absolute;
+  left: $box-icon-padding;
+  top: $box-icon-padding;
+  width: $box-icon-size;
+}
+
+.top-row{
+  font-weight: bold;
+  overflow: hidden;
+  padding-bottom: 100px;
+  padding-top: 50px;
+  text-align: left;
+  width: 100%;
+  .logo, navigation{
+    display: inline-block;
+  }
+  .logo{
+    font-size: 32px;
+  }
+  navigation{
+    float: right;
+  }
+  navigation ul{
+    list-style-type: none;
+    margin: 0;
+    li{
+      display: inline-block;
+    }
+  }
+  a{
+    color: #222;
+    font-size: 18px;
+    padding: 4px 8px 6px 8px;
+    text-decoration: none;
+    &.current, &:hover{
+      border-bottom: 2px solid #222;
+    }
+  }
+}
+
+.text-left{ text-align: left; }
+.text-center{ text-align: center; }
+.text-right{ text-align: right; }
+
+
+.love-community{
+  background: $red;
+  color: white;
+  padding: $row-padding 0;
+  h2{
+    color: white;
+  }
+  h3.with-subtitle{
+    margin-bottom: 10px;
+  }
+  .subheader{
+    color: #aaa;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .love-community-block{
+    margin-top: 30px;
+  }
+  .love-community-top{
+    background: rgba(255,255,255,0.2);
+    height: $box-icon-padding + $box-icon-padding + $box-icon-size;
+    position: relative;
+  }
+  .love-community-bottom{
+    background: white;
+    color: #333;
+    min-height: 360px;
+    padding: $love-comm-padding;
+    position: relative;
+    p{
+      font-size: 17px;
+    }
+  }
+  .more-info{
+    position: absolute;
+    bottom: $love-comm-padding;
+    right: $love-comm-padding;
+  }
+}
+
+.team-pics{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li{
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 2%;
+    width: 30%;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  img{
+    border: 3px solid white;
+    box-shadow: 0px 0px 5px #dedede;
+  }
+}
+
+a.more-info{
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+.open-positions{
+  padding: $row-padding 0;
+}
+
+.open-positions-list{
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 1100px;
+  li a{
+    border-radius: 5px;
+    color: #333;
+    display: block;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px;
+    padding-left: 100px;
+    margin-bottom: 20px;
+    position: relative;
+    text-decoration: none;
+    .hidden-text{
+      display: none;
+      font-weight: bold;
+    }
+    p{
+      margin: 0;
+    }
+    &:hover{
+      background: $red;
+      display: block;
+      color: white;
+      .hidden-text{
+        display: inline;
+      }
+      h3{
+        color: white;
+      }
+    }
+  }
+  h3{
+    margin-bottom: 10px;
+  }
+  .icon-shape{
+    background: $red;
+    border-radius: 3px;
+    height: 80px;
+    left: 0;
+    position: absolute;
+    width: 80px;
+  }
+  .icon-software, .icon-js{
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 80px;
+  }
+  .icon-ops{
+    color: white;
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 17px;
+    text-align: center;
+  }
+}
+h5{
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #999;
+}
+
+$box-padding: 80px;
+.what-am-in-for{
+  position: relative;
+  .what-bar{
+    border-bottom: 1px solid #dedede;
+    border-top: 1px solid #dedede;
+    height: 10px;
+    position: relative;
+    top: 40px;
+    z-index: -1;
+    &.bar-bottom{
+      top: inherit;
+      bottom: 40px;
+    }
+  }
+  .what-box{
+    background: white;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: $box-padding;
+    z-index: 1;
+  }
+  .what-box-title{
+    background: white;
+    border: 1px solid #dedede;
+    display: inline-block;
+    left: 35%;
+    margin: 0;
+    padding: 10px 0;
+    position: absolute;
+    top: -15px;
+    text-align: center;
+    width: 30%;
+  }
+}
+
+.our-team{
+  background: rgba(255,255,255,0.5);
+  border-top: 1px solid rgba(0,0,0,0.3);
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+  padding: $row-padding 0;
+  text-align: center;
+}
+
+.hide{
+  display: none;
+}
+
+.help-with-wrap{
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  display: inline-block;
+  padding: 10px;
+}
+
+.best-places{
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+  margin: 100px auto 50px auto;
+  max-width: 400px;
+  padding: 40px;
+}
+footer{
+  margin-bottom: 100px;
+}
+footer a{
+  color: #555;
+}

@@ -7,7 +7,9 @@ Basically a standard jekyll setup.
 
 - clone repo
 - bundle install
-- jekyll serve --watch
+- npm install
+- jekyll serve --watch (by default throws it on port 4000)
+- node_modules/.bin/cogs -w (to run cogs and watch it)
 - view at localhost:4000
 
 ### To Deploy:
