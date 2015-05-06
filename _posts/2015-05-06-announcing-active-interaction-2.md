@@ -244,7 +244,7 @@ could not have done it without you.
 - [Matt Buck][21]
 
 [4]: http://devblog.orgsync.com/active_interaction/
-[5]: {% post_url 2014-01-23-confidently-manage-business-logic-with-active-interaction %}
+[5]: http://taylor.fausak.me/2014/01/23/confidently-manage-business-logic-with-active-interaction/
 [6]: https://github.com/orgsync/active_interaction/issues/205
 [7]: https://github.com/orgsync/active_interaction/issues/250
 [8]: https://rubygems.org/gems/active_model-errors_details
