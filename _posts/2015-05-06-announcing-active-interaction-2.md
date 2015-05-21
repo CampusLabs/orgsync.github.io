@@ -69,7 +69,7 @@ its way into Rails 5. Unfortunately their APIs differ slightly. See
 the example below for details.
 
 If you want to use detailed errors in your own code, check out the
-[active_model-errors_details][8] gem.
+[active\_model-errors_details][8] gem.
 
 {% highlight rb %}
 # v1.6
