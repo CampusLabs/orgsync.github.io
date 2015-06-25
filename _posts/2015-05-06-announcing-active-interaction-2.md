@@ -50,7 +50,7 @@ end
 # v2.0
 class Example < ActiveInteraction::Base
   def execute
-    ActiveInteraction::Base.transaction do
+    ActiveRecord::Base.transaction do
       # ...
     end
   end
