@@ -309,10 +309,6 @@ hr {
   color: white;
 }
 
-.team-page hr:nth-child(2n) {
-  display: none;
-}
-
 .footer {
   border-top: 3px dotted #f4f4f4;
   padding: 5rem;
@@ -447,18 +443,6 @@ hr {
   }
   .main-content.index-page .media-box {
     margin-bottom: .5rem;
-  }
-  /* Team Page */
-  .main-content.team-page {
-    padding: 20px;
-  }
-  .main-content.team-page .pull-left {
-    float: left;
-    width: 25%;
-    margin-right: 5%;
-  }
-  .main-content.team-page .media-body {
-    width: 70%;
   }
   .single-page h2:first-child {
     margin-top: 1rem;
