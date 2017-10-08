@@ -1,79 +1,49 @@
 tfausak:
   name: Taylor Fausak
-  picture: http://www.orgsync.com/assets/team/taylor-fausak-bw.png
+  picture: /assets/team/taylor-fausak-bw.png
   description: "was born in California, but he got to Texas as soon as he could. He studied Computer Science at the University of Texas at Austin before entering the wild world of software development. After a brief stint at Cisco, he started his career at Famigo working on all aspects of web development. Then he swapped his Django experience for a chunky slice of Rails bacon and joined OrgSync in the fall of 2012. When he's not slinging code around, he likes riding bikes, playing Magic, and throwing frisbees."
 
 AaronLasseigne:
   name: Aaron Lasseigne
-  picture: http://www.orgsync.com/assets/team/aaron-lasseigne-bw.png
+  picture: /assets/team/aaron-lasseigne-bw.png
   description: "strives to design comprehensive solutions that provide structural stability and a positive customer experience. He is a graduate of The Ohio State University with a degree in Computer and Information Science. Before coming to OrgSync, Aaron worked as a Developer for Monster Worldwide in their FastWeb division and then as a Manager of Application Development at HRsmart Inc. Outside of work Aaron likes to travel, read, cook, and is an avid fan of Chicago Bears and Buckeye football."
 
 camdez:
   name: Cameron Desautels
-  picture: http://www.orgsync.com/assets/team/cameron-desautels-bw.png
+  picture: /assets/team/cameron-desautels-bw.png
   description: "is a polyglot developer originally from Colorado Springs, CO. He holds a masters degree in Computer Science from The University of Texas at Dallas, in OrgSync's own backyard. He joined OrgSync in April of 2012 after a three year foray into mobile app development. Cameron firmly believes that being a good developer implies being a good designer—that developers must have an in-depth understanding of the way non-technical users think and interact with products and should design to align with user intuitions. In his free time he enjoys drinking tea, coding in Lisp, and studying Japanese."
 
 macelangelo:
   name: Jim Clark
-  picture: http://www.orgsync.com/assets/team/jim-clark-bw.png
+  picture: /assets/team/jim-clark-bw.png
   description: "has over 15 years of design and development experience. After graduating from Texas Tech with a bachelor's degree in Design Communication, he started out doing graphic design, then found a unique opportunity to do QA testing/UI design for Macromedia's FreeHand. From there, he moved onto the web, starting out designing and building websites before graduating to building web applications. Jim has spent the last 12 years designing and building web-based applications for the enterprise. Last year, he started his own company focused on building mobile applications. In his free time, Jim continues to tinker with new technologies, writing, and occasional forays into World of Warcraft."
 
 jpowell:
   name: Justin Powell
-  picture: http://www.orgsync.com/assets/team/justin-powell-bw.png
+  picture: /assets/team/unknown.png
   description: "is an entrepreneur and Computer Science graduate from The University of Texas at Austin."
 
 drywheat:
   name: Sonny Garcia
-  picture: http://www.orgsync.com/assets/team/sonny-garcia-bw.png
+  picture: /assets/team/sonny-garcia-bw.png
   description: "graduated from Texas State University with a B.S. degree in Physics and then shortly thereafter turned his attention towards software development and computing systems in general. Since 2007, he has been building backend systems, web applications and web service integrations for notable companies such as Dow Chemical and Equifax. These days he spends his time architecting and refining the server infrastructure here at OrgSync to ensure our platform runs smoothly, reliably and scales on demand. He's an odd bird, but we love working with him just the same."
 
 mrwade:
   name: Kevin Wade
-  picture: http://www.orgsync.com/assets/team/kevin-wade-bw.png
+  picture: /assets/team/kevin-wade-bw.png
   description: "was born and raised in the Dallas area. At a young age, he formed his own company to serve small businesses in the area to build out server, network, and email solutions. At his high school, he became the first student employee in the Technology Department and went on to graduate valedictorian of his class. Kevin continued his love for technology throughout college, where quickly became a leader in and out of the classroom. He is a graduate of Southern Methodist University in Dallas with a degree in Computer Engineering. Go Mustangs! Kevin joined the OrgSync team in February 2011, bringing both skills in engineering and a love for user experience to the table. He enjoys working closely with both the development and design teams to create a product that people will love to use."
 
 justinsteffy:
   name: Justin Steffy
-  picture: http://www.orgsync.com/assets/team/justin-steffy-bw.png
+  picture: /assets/team/justin-steffy-bw.png
   description: "grew up in the suburbs of Dallas and completed his undergraduate degree at Texas A&M University. After receiving his master's degree from the University of North Carolina, he moved to Washington, D.C., to work for Lockheed Martin, developing software systems for the U.S. Navy. When the opportunity arose, Justin moved to L.A. to work for Hulu, developing the backend payments system. When he's not creating complex software systems, he enjoys working on cars, traveling, and watching TV and movies."
 
 tylerlee:
   name: Tyler Lee
-  picture: http://www.orgsync.com/assets/team/tyler-lee-bw.png
+  picture: /assets/team/tyler-lee-bw.png
   description: "is a UI Designer / Frontend Developer for OrgSync that tries to do his darndest to make OrgSync more intuitive and easier to use."
-
-tommyschaefer:
-  name: Tommy Schaefer
-  picture: http://ecx.images-amazon.com/images/I/51NhtW9exnL._SX300_.jpg
-  description: 'is our intern who has failed to fill out his biography yet.'
-
-valariems:
-  name: Valarie Stuart
-  picture: http://www.orgsync.com/assets/team/valarie-stuart-bw.png
-  description: "Her design career began while she was a student at the University of Missouri, when the logo she submitted for the school's campus-wide philanthropy was selected as the winner and was featured on MTV when they broadcast from Mizzou during philanthropy week. Shortly after college and a rough Missouri winter, Valarie left St. Louis for the warmer climate of Dallas, where she worked as a freelance graphic designer for accounts including DFW Airport, La Madeleine, Mary Kay, Nokia, Pepsi, Pizza Hut and more. As the internet's popularity grew in the late 1990s, Valarie shifted her focus to web design, where her background in page layout and typography proved valuable to website design. She believes that user experience and content should drive design, and strives to build user interfaces that delight OrgSync's users. When she's not making the web a more beautiful place, Valarie likes to play golf, work in her garden, and admire her $0 electric bills, thanks to the solar panels she added to the roof of her house."
-
-caseywebdev:
-  name: Casey Foster
-  picture: http://www.orgsync.com/assets/team/casey-foster-bw.png
-  description: "is a full stack developer from Fullerton, California. He started contributing to the web when he was 13 and never looked back. He's worked with PHP, Ruby, ASP and others but has recently found interest in client-side and server-side JavaScript with the help of Node.js. When he's not staring at a computer screen, he likes to hang out with his wife Lacey, wrestle his puppy Gunner, rock out on guitar, play basketball and watch movies."
-
-clifton:
-  name: Clifton King
-  picture: http://www.orgsync.com/assets/team/clifton-king-bw.png
-  description: "is a highly motivated software developer from McAllen, Texas. He attended the University of Texas at Austin and studied Computer Science. As a student he was active in Delta Sigma Phi fraternity, and has also served in the United States Army. Clifton has been designing web-based solutions for small companies since he was in middle school and looks forward to tackling new challenges daily for OrgSync clients. In his spare time he enjoys weightlifting, wakeboarding, and snowboarding."
-
-hadronzoo:
-  name: Joshua Griffith
-  picture: http://www.orgsync.com/assets/team/joshua-griffith-bw.png
-  description: "grew up in North Carolina and has been working with early-stage technology companies since 1997. After receiving his bachelors degree in Electrical Engineering from North Carolina State University in 2003, he moved to Dallas and has since worked on projects as diverse as designing a concentrating solar collector, engineering a broadband wireless system, and co-founding a facility-maintenance technology startup. In his free time, Joshua enjoys writing Clojure, reading philosophy, and spending time with his wife and three children."
 
 vtraweek:
   active: false
   name: Virginia Traweek
-  picture: http://ecx.images-amazon.com/images/I/51NhtW9exnL._SX300_.jpg
-
-mfarmer:
-  name: Matthew Farmer
-  picture: http://www.orgsync.com/assets/team/matthew-farmer-bw.png
-  description: "joined OrgSync in August 2014 as a Software Developer. He grew up in Lawton, Oklahoma and earned a masters degree in Computer Science from Midwestern State University in 2013. Prior to joining OrgSync, he worked as an independent contractor (developing both web and iOS applications) and a computer science lab assistant at Midwestern State University. Matthew's hobbies include playing piano, video games, and programming."
+  picture: /assets/team/unknown.png
